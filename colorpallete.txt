@@ -1,0 +1,7 @@
+#FAFAFA nav-bar
+#FFFFFF body
+#2B2B2B primary-text
+#FFCD02 secondary text
+#F4F4F4 section 1
+#2B2B2B section 2
+#1B1B1B footer

@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------ */
+/* Styling for header part */
+/* ------------------------ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #FAFAFA;
+}
+
+li, a, button{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.logo {
+    cursor: pointer;
+    width: 125px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+nav li:nth-child(1) a{
+    background-color: #FFCD02;
+    padding: 0px 5px;
+}
+
+nav li a {
+    margin: 0px 20px;
+    transition: all 0.5s ease 0s;
+}
+
+nav li a:hover {
+    text-shadow: 2.25px 2.25px #FFCD02;
+    opacity: 0.85;
+}
+
+.login {
+    border: 2px solid #2B2B2B;
+    padding: 0px 7px 3px;
+    transition: all 0.5s ease 0s;
+}
+
+.login:hover {
+    background-color: #FFCD02;
+    border: 2px solid #FFCD02;
+    opacity: 0.85;
+}
+
+/* ------------------------ */
+/* Styling for section part */
+/* ------------------------ */
+
+.section-one {
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.content-one-a{
+
+}
+
+.content-one-bg {
+    margin: 50px 50px 75px;
+    height: 550px;
+    background-image: url("../../media/Home/background-one-a.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+.content-one-text {
+    color: #FFFFFF;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+.content-one-heading-a{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.content-one-heading-b{
+    margin-top: -15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.content-one-desc {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.content-one-button {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 30px;
+    border: 2px solid #FFFFFF;
+    display: inline-block;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.content-one-button:hover{
+    opacity: 0.9;
+}
+
+.content-one-b {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    top: 570px;
+    left: 50px;
+}
