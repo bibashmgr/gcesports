@@ -137,3 +137,40 @@ nav li a:hover {
     top: 570px;
     left: 50px;
 }
+
+#animated-text {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    animation-name: slide-in;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#animated-text:hover {
+    text-shadow: 2px 2px #FFCD02;
+}
+
+@keyframes slide-in {
+    0% {
+        margin-left: 1250px;
+    }
+
+    15% {
+        margin-left: 0px;
+    }
+
+    90% {
+        margin-left: 0px;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+
