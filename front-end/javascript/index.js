@@ -1,6 +1,6 @@
-// ------------- //
-// animated text //
-// ------------- //
+// ----------------------------------- //
+// animated text for first-section part //
+// ----------------------------------- //
 
 const texts = [
     "LIVE: Kathmandu Mayor’s Cup 2021 – Tribhuwan Army Club vs Kathmandu Mayor’s XI",

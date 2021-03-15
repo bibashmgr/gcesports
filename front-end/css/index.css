@@ -63,9 +63,9 @@ nav li a:hover {
     opacity: 0.85;
 }
 
-/* ------------------------ */
-/* Styling for section part */
-/* ------------------------ */
+/* ------------------------------ */
+/* Styling for frist section part */
+/* ------------------------------ */
 
 .section-one {
     background-color: #FFFFFF;
@@ -205,5 +205,9 @@ nav li a:hover {
         
     }
 }
+
+/* ------------------------------ */
+/* styling of second-section part */
+/* ------------------------------ */
 
 
