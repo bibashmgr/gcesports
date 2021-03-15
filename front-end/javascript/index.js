@@ -3,11 +3,11 @@
 // ------------- //
 
 const texts = [
-    "Welcome to GCES",
-    "Hello, How you doing?",
-    "Check this site to be updated about GCES sport meets event",
-    "Hope you find this site interactive",
-    "Thank you, DO VISIT TO STAY UPADTED!"
+    "LIVE: Kathmandu Mayor’s Cup 2021 – Tribhuwan Army Club vs Kathmandu Mayor’s XI",
+    "Gary Phillips Becomes New Head Coach of Women’s Football Team!",
+    "Nepal Selects Preliminary Squad of 32 for ICC WC League 2!",
+    "Nepal to Play Bilateral T20I Series Against Qatar!",
+    "Eight Nepali Cricketers Register for IPL 2021 Player Auction!"
 ]
 
 const txt = document.getElementById("animated-text");

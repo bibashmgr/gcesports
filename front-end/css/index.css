@@ -167,8 +167,8 @@ nav li a:hover {
 #animated-text {
     display: inline-block;
     padding-left: 20px;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -183,19 +183,26 @@ nav li a:hover {
 
 @keyframes slide-in {
     0% {
-        margin-left: 1250px;
+        margin-left: 750px;
+        opacity: 0;
     }
 
     15% {
         margin-left: 0px;
     }
 
+    50% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+
     90% {
         margin-left: 0px;
+        opacity: 1;
     }
 
     100% {
-        display: none;
+        
     }
 }
 
