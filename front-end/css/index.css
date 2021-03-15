@@ -92,13 +92,39 @@ nav li a:hover {
     position: absolute;
     top: 100px;
     left: 150px;
+
+    animation-name: heading-slide-a;
+    animation-duration: 3s;
 }
+
+@keyframes heading-slide-a {
+    0% {
+        margin-left: -250px;
+        opacity: 0;
+    }
+
+    40% {
+        margin-left: 0px;
+        opacity: 0.75;
+    }
+
+    60%{
+        opacity: 0.90;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
 
 .content-one-heading-a{
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 50px;
 }
+
 
 .content-one-heading-b{
     margin-top: -15px;
