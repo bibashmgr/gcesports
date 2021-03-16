@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    background-color: #FAFAFA;
+    background-color: #f8f8f8;
 }
 
 li, a, button{
@@ -214,7 +214,7 @@ nav li a:hover {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 22px;
-    background-color: #FAFAFA;
+    background-color: #f8f8f8;
 }
 
 .content-two {
@@ -315,7 +315,13 @@ nav li a:hover {
 
 .content-two-c-heading {
     cursor: pointer;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
+}
+
+.content-two-c-title {
+    font-size: 35px;
+    font-weight: 700;
+    width: 300px;
 }
 
 .content-two-c-image {
@@ -327,13 +333,19 @@ nav li a:hover {
     width: 400px;
 }
 
-.content-two-c-game {
+.content-two-c-time {
+    border-style: solid solid dashed;
+    border-width: 0.25px;
+    background-color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.content-two-c-extras {
+    font-size: 16px;
+    font-weight: 500;
     opacity: 0.6;
+    padding-top: 10px;
 }
-
-.content-two-c-title {
-    font-size: 30px;
-    font-weight: 700;
-    width: 400px;
-}
-
