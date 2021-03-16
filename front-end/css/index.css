@@ -309,3 +309,31 @@ nav li a:hover {
     text-shadow: 2px 2px #FFCD02;
 }
 
+.content-two-c {
+
+}
+
+.content-two-c-heading {
+    cursor: pointer;
+    padding-bottom: 70px;
+}
+
+.content-two-c-image {
+    background-image: url(../../media/News/news06.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 400px;
+}
+
+.content-two-c-game {
+    opacity: 0.6;
+}
+
+.content-two-c-title {
+    font-size: 30px;
+    font-weight: 700;
+    width: 400px;
+}
+
