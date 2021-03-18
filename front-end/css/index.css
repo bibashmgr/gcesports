@@ -428,7 +428,8 @@ nav li a:hover {
 
 .content-three-name-a, .content-three-name-b, .content-three-name-c, .content-three-name-d {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 275px auto;
+    text-align: center;
 }
 
 .name-a, .name-b, .name-c, .name-d {
@@ -437,6 +438,7 @@ nav li a:hover {
     text-align: center;
     font-size: 22px;
     font-weight: 900px;
+    padding-top: 10px;
 }
 
 .type-a, .type-b, .type-c, .type-d  {
@@ -454,8 +456,27 @@ nav li a:hover {
     color: #FFCD02;
 }
 
+.score-a, .score-b, .score-c, .score-d {
+    display: grid;
+    grid-template-columns: 40px 5px;
+    padding-left: 10px;
+}
+
+.score-a-num, .score-b-num, .score-c-num, .score-d-num {
+    font-size: 45px;
+    text-align: center;
+}
+
+.score-a-unit, .score-b-unit, .score-c-unit, .score-d-unit {
+    font-size: 10px;
+    padding-top: 40px;
+    padding-right: 10px;
+}
+
 /* 
     SECTION FOUR:
     GALLERY SECTION:
 */
+
+
 
