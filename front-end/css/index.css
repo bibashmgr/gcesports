@@ -319,6 +319,10 @@ nav li a:hover {
     padding-bottom: 60px;
 }
 
+.content-two-a-heading:hover, .content-two-b-heading:hover, .content-two-c-heading:hover {
+    text-shadow: 2px 2px #FFCD02;
+}
+
 .content-two-c-title {
     font-size: 35px;
     font-weight: 700;
@@ -340,6 +344,11 @@ nav li a:hover {
     background-size: cover;
     height: 200px;
     width: 400px;
+    cursor: pointer;
+}
+
+.content-two-c-image:hover {
+    opacity: 0.9;
 }
 
 .content-two-c-time {
@@ -449,3 +458,4 @@ nav li a:hover {
     SECTION FOUR:
     GALLERY SECTION:
 */
+
