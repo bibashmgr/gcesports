@@ -92,6 +92,7 @@ nav li a:hover {
     position: absolute;
     top: 100px;
     left: 150px;
+    transition: all 0.5s ease 0s;
 
     animation-name: heading-slide-a;
     animation-duration: 3s;
@@ -123,6 +124,7 @@ nav li a:hover {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 50px;
+    text-transform: uppercase;
 }
 
 
@@ -131,6 +133,7 @@ nav li a:hover {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 50px;
+    text-transform: uppercase;
 }
 
 .content-one-desc {
@@ -138,6 +141,7 @@ nav li a:hover {
     font-weight: 100;
     font-size: 16px;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .content-one-button {
@@ -149,10 +153,12 @@ nav li a:hover {
     display: inline-block;
     padding: 5px 15px;
     cursor: pointer;
+    transition: 0.8s;
 }
 
 .content-one-button:hover{
-    opacity: 0.9;
+    font-size: 15.5px;
+    opacity: 0.7;
 }
 
 .content-one-b {
@@ -171,6 +177,7 @@ nav li a:hover {
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.5s ease 0s;
 
     animation-name: slide-in;
     animation-duration: 5s;
@@ -234,6 +241,8 @@ nav li a:hover {
 .content-two-a-heading, .content-two-b-heading {
     cursor: pointer;
     padding-bottom: 50px;
+    transition: all 0.5s ease 0s;
+    text-transform: uppercase;
 }
 
 .content-two-a-heading:hover .content-two-b-heading:hover{
@@ -304,6 +313,7 @@ nav li a:hover {
     grid-column-start: 2;
     grid-column-end: 4;
     padding-top: 15px;
+    transition: all 0.5s ease 0s;
 }
 
 .content-two-a-news1-heading:hover, .content-two-a-news2-heading:hover, .content-two-b-news1-heading:hover, .content-two-b-news2-heading:hover{
@@ -317,6 +327,8 @@ nav li a:hover {
 .content-two-c-heading {
     cursor: pointer;
     padding-bottom: 60px;
+    transition: all 0.5s ease 0s;
+    text-transform: uppercase;
 }
 
 .content-two-a-heading:hover, .content-two-b-heading:hover, .content-two-c-heading:hover {
@@ -327,11 +339,13 @@ nav li a:hover {
     font-size: 35px;
     font-weight: 700;
     width: 300px;
+    text-transform: uppercase;
 }
 
 .content-two-c-game {
     opacity: 0.6;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .content-two-c-image {
@@ -345,6 +359,7 @@ nav li a:hover {
     height: 200px;
     width: 400px;
     cursor: pointer;
+    transition: all 0.5s ease 0s;
 }
 
 .content-two-c-image:hover {
@@ -386,6 +401,7 @@ nav li a:hover {
 .content-three-heading {
     font-size: 50px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .content-three-details {
@@ -420,6 +436,7 @@ nav li a:hover {
     background-position: center;
     height: 250px;
     cursor: pointer;
+    transition: all 0.5s ease 0s;
 }
 
 .content-three-image-a:hover, .content-three-image-b:hover, .content-three-image-c:hover, .content-three-image-d:hover{
@@ -439,6 +456,7 @@ nav li a:hover {
     font-size: 22px;
     font-weight: 900px;
     padding-top: 10px;
+    text-transform: uppercase;
 }
 
 .type-a, .type-b, .type-c, .type-d  {
@@ -446,6 +464,7 @@ nav li a:hover {
     font-size: 10px;
     color: #FFCD02;
     text-align: center;
+    text-transform: uppercase;
     
 }
 
@@ -498,6 +517,7 @@ nav li a:hover {
 .content-four-a-heading {
     font-size: 35px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* image-slider */
@@ -615,12 +635,66 @@ nav li a:hover {
 }
 
 .content-four-b {
-
+    
 }
 
 .content-four-b-heading {
     font-size: 35px;
     font-weight: 700;
+    text-transform: uppercase;
 }
+
+.content-four-b-game {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.5;
+    padding-top: 45px;
+}
+
+.content-four-b-table {
+    width: 650px;
+}
+
+.content-four-b-table table {
+    width: 600px;
+    height: 300px;
+    border-collapse: collapse;
+}
+
+.content-four-b-table table tr{
+
+}
+
+.content-four-b-table table tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+.content-four-b-table table th {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #2B2B2B;
+    color: #FFFFFF;
+    border-bottom: 5px solid #FFCD02;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.content-four-b-table table td {
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2B2B2B;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+/* FOOTER SECTION */
+/* ABOUT US, LINKS & CONTACT US; */
+
 
 
