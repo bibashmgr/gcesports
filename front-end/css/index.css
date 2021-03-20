@@ -696,5 +696,37 @@ nav li a:hover {
 /* FOOTER SECTION */
 /* ABOUT US, LINKS & CONTACT US; */
 
+footer {
+    background-color: #2B2B2B;
+    color: #f8f8f8;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 50px;
+    height: 375px;
+}
 
+.footer-about-us {
+    font-family: "Oswald", sans-serif;
+    opacity: 0.5;
+}
 
+.about-us-heading {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.about-us-info {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-us-logo {
+    background-image: url("../../media/logo-BW.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    opacity: 0.75;
+}
