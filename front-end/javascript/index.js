@@ -24,3 +24,18 @@ function animatedText(){
     txt.innerHTML = texts[index];
     setTimeout(animatedText,5000);
 }
+
+// gallery section
+// image slider 
+// auto navigation function
+
+let counter = 1;
+setInterval(autoNav,5000);
+
+function autoNav(){
+    document.getElementById('radio'+counter).checked = true;
+    counter++;
+    if(counter > 5){
+        counter = 1;
+    }
+}

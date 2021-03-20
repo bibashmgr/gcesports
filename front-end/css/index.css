@@ -476,7 +476,151 @@ nav li a:hover {
 /* 
     SECTION FOUR:
     GALLERY SECTION:
+    LEADERBOARD SECTION:
 */
 
+.section-four {
+    background-color: #f8f8f8;
+    font-family: "Oswald", sans-serif;
+}
+
+.content-four {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.content-four-a {
+    width: 650px;
+}
+
+.content-four-a-heading {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+/* image-slider */
+
+.content-four-a-slider {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 350px;
+}
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 650px;
+    height: 350px;
+}
+
+/* manual navigation */
+
+.manual-navigation {
+    position: absolute;
+    width: 650px;
+    margin-top: -30px ;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #f8f8f8;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #f8f8f8;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0 ;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20% ;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40% ;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60% ;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80% ;
+}
+
+/*  auto-naviagtion */
+
+.auto-navigation {
+    position: absolute;
+    display: flex;
+    width: 650px;
+    justify-content: center;
+    margin-top: 320px;
+}
+
+.auto-navigation div {
+    border: 2px solid #f8f8f8;
+    padding: 4px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.auto-navigation div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .auto-navigation .auto-btn1{
+    background-color: #f8f8f8;
+}
+
+#radio2:checked ~ .auto-navigation .auto-btn2{
+    background-color: #f8f8f8;
+}
+
+#radio3:checked ~ .auto-navigation .auto-btn3{
+    background-color: #f8f8f8;
+}
+
+#radio4:checked ~ .auto-navigation .auto-btn4{
+    background-color: #f8f8f8;
+}
+
+#radio5:checked ~ .auto-navigation .auto-btn5{
+    background-color: #f8f8f8;
+}
+
+.content-four-b {
+
+}
+
+.content-four-b-heading {
+    font-size: 35px;
+    font-weight: 700;
+}
 
 
