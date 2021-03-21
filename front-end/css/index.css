@@ -501,6 +501,7 @@ nav li a:hover {
 .section-four {
     background-color: #f8f8f8;
     font-family: "Oswald", sans-serif;
+    height: 650px;
 }
 
 .content-four {
@@ -696,11 +697,11 @@ nav li a:hover {
 /* FOOTER SECTION */
 /* ABOUT US, LINKS & CONTACT US; */
 
-footer {
+.footer-container {
     background-color: #2B2B2B;
     color: #f8f8f8;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     padding: 50px;
     height: 375px;
 }
@@ -713,7 +714,7 @@ footer {
 .about-us-heading {
     font-size: 25px;
     font-weight: 700;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 .about-us-info {
@@ -729,4 +730,79 @@ footer {
     width: 150px;
     height: 150px;
     opacity: 0.75;
+    cursor: pointer;
+}
+
+.footer-send-msg {
+    font-family: "Oswald", sans-serif;
+    opacity: 0.5;
+}
+
+.footer-send-msg-heading {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+}
+
+.footer-send-msg-form {
+
+}
+
+.label-email {
+
+}
+
+.label-comments {
+    position: absolute;
+    padding-top: 20px;
+}
+
+#email {
+    font-family: "Open-sans", sans-serif;
+    margin-left: 46px;
+    padding: 3px 10px;
+    transition: all 0.5s;
+}
+
+#comments {
+    font-family: "Open-sans", sans-serif;
+    padding: 3px 10px;
+    margin-left: 90px;
+    margin-top: 20px;
+    transition: all 0.5s;
+}
+
+#submit-btn {
+    border: 2px solid #2B2B2B;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 200px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#submit-btn:hover {
+    background-color: #2B2B2B;
+    color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+}
+
+
+.footer-contact {
+    font-family: "Oswald", sans-serif;
+    opacity: 0.5;
+}
+
+.footer-contact-heading {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.footer-contact div {
+    padding-bottom: 20px;
 }
