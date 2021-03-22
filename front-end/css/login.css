@@ -58,3 +58,105 @@ nav li a:hover {
     border: 2px solid #2B2B2B;
     opacity: 0.85;
 }
+
+/* Section part */
+/* contains form styling */
+
+.section-login {
+    width: 100%;
+    height: 700px;
+    background-color: #FFFFFF;
+}
+
+.login-container {
+    width: 400px;
+    height: 450px;
+    background-color: #F8F8F8;
+    margin: 100px 50%;
+    transform: translate(-50%, 0%);
+}
+
+.login-box {
+    width: 350px;
+}
+
+.login-image {
+    background-image: url(../../media/login.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+    margin-left: 50%;
+    transform: translate(-25%, -65%);
+    cursor: pointer;
+}
+
+.login-container h1 {
+    color: #2B2B2B;
+    margin-left: 50%;
+    margin-bottom: 20px;
+    transform: translate(-20%, -50%);
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.form {
+    margin-left: 25px;
+}
+
+.login-container label{
+    color: #2B2B2B;
+    font-family: "Open sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.login-container input{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"] , .login-container input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #2B2B2B;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #2B2B2B;
+    font-size: 16px;
+}
+
+.login-container input[type="submit"]{
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    height: 40px;
+    background-color:  #FFCD02;
+    color: #2B2B2B;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+.login-container input[type="submit"]:hover{
+    background-color: #2B2B2B;
+    color: #F8F8F8;
+}
+
+.form-control small{
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-control.success small{
+    visibility: hidden;
+}
