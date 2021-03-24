@@ -758,22 +758,24 @@ nav li a:hover {
     padding-top: 20px;
 }
 
-#email {
+#footer-email {
     font-family: "Open-sans", sans-serif;
     margin-left: 46px;
     padding: 3px 10px;
     transition: all 0.5s;
+    outline: none;
 }
 
-#comments {
+#footer-comments {
     font-family: "Open-sans", sans-serif;
     padding: 3px 10px;
     margin-left: 90px;
     margin-top: 20px;
     transition: all 0.5s;
+    outline: none;
 }
 
-#submit-btn {
+#footer-submit-btn {
     border: 2px solid #2B2B2B;
     border-radius: 5px;
     padding: 5px;
@@ -783,6 +785,7 @@ nav li a:hover {
     transition: all 0.5s;
     font-size: 14px;
     font-weight: 500;
+    outline: none;
 }
 
 #submit-btn:hover {
