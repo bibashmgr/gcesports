@@ -16,7 +16,7 @@ header {
     background-color: #F8F8F8;
 }
 
-li, a, button{
+header li, header a, header button{
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 20px;

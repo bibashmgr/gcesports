@@ -90,10 +90,10 @@
             </div>
             <form class="footer-send-msg-form">
                 <label class="label-email">EMAIL:</label>
-                <input type="email" name="email" id="footer-email" placeholder="Enter Email" autocomplete="off"/>
+                <input type="email" name="feedback-email" id="footer-email" placeholder="Enter Email" autocomplete="off"/>
                 <br/>
                 <label class="label-comments">COMMENTS:</label>
-                <textarea name="comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;"></textarea>
+                <textarea name="feeback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;"></textarea>
                 <br/>
                 <input type="button" value="SUBMIT" id="footer-submit-btn" />
             </form>
