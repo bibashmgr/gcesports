@@ -16,7 +16,7 @@ header {
     background-color: #F8F8F8;
 }
 
-li, a, button{
+header li, header a, header button{
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -65,3 +65,48 @@ nav li a:hover {
 }
 
 /* styling for section */
+
+.section-container {
+    width: 100%;
+}
+
+.gallery-container {
+    padding: 100px;
+}
+
+.gallery-heading {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 50%;
+    transform: translate(-10%, 0%);
+    margin-bottom: 100px;
+    text-shadow: 2px 2px #FFCD02;
+    cursor: pointer;
+}
+
+.gallery-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+}
+
+.gallery-section img {
+    width: 350px;
+    height: 250px;
+}
+
+.more-gallery-links {
+    font-family: "Open sans", sans-serif;
+    text-decoration: none;
+    margin-left: 47.5%;
+    transition: 0.5s;
+}
+
+.more-gallery-links:hover {
+    color: #2B2B2B;
+    text-decoration: underline;
+}
