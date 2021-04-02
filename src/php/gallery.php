@@ -8,7 +8,7 @@
 
     <title>Gallery Page</title>
 
-    <link rel="stylesheet" href="../css/gallery.css" />
+    <link rel="stylesheet" href="../css/gallery.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="../css/lightbox.min.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">

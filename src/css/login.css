@@ -169,8 +169,10 @@ nav li a:hover {
     color: #f8f8f8;
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 50px;
+    grid-gap: 250px;
     height: 375px;
+    justify-content: center;
+    align-content: center;
 }
 
 .footer-about-us {
@@ -209,15 +211,6 @@ nav li a:hover {
     font-size: 25px;
     font-weight: 700;
     padding-bottom: 25px;
-}
-}
-
-.footer-send-msg-form {
-
-}
-
-.label-email {
-
 }
 
 .label-comments {

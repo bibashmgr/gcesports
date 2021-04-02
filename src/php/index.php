@@ -8,7 +8,7 @@
 
     <title>Home Page</title>
 
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/index.css?v=<?php echo time(); ?>" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -418,12 +418,12 @@
             </div>
             <form class="footer-send-msg-form">
                 <label class="label-email">EMAIL:</label>
-                <input type="email" name="feedback-email" id="footer-email" placeholder="Enter Email" autocomplete="off"/>
+                <input type="email" name="feedback-email" id="footer-email" placeholder="Enter Email" autocomplete="off" required/>
                 <br/>
                 <label class="label-comments">COMMENTS:</label>
-                <textarea name="feedback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;"></textarea>
+                <textarea name="feedback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;" required></textarea>
                 <br/>
-                <input type="button" value="SUBMIT" id="footer-submit-btn" />
+                <input type="submit" value="SUBMIT" id="footer-submit-btn" />
             </form>
         </div>
         <div class="footer-contact">

@@ -702,8 +702,10 @@ nav li a:hover {
     color: #f8f8f8;
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 50px;
+    grid-gap: 250px;
     height: 375px;
+    justify-content: center;
+    align-content: center;
 }
 
 .footer-about-us {
