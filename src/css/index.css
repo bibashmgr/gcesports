@@ -8,6 +8,8 @@
 /* Styling for header part */
 /* ------------------------ */
 
+/* styling nav-bar */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -72,9 +74,7 @@ nav li a:hover {
     position: relative;
 }
 
-.content-one-a{
-
-}
+/* styling for background-theme */
 
 .content-one-bg {
     margin: 50px 50px 75px;
@@ -87,6 +87,8 @@ nav li a:hover {
     opacity: 0.9;
 }
 
+/* styling for background-text */
+
 .content-one-text {
     color: #FFFFFF;
     position: absolute;
@@ -97,6 +99,8 @@ nav li a:hover {
     animation-name: heading-slide-a;
     animation-duration: 3s;
 }
+
+/* animating background-text */
 
 @keyframes heading-slide-a {
     0% {
@@ -156,7 +160,12 @@ nav li a:hover {
     transition: 0.8s;
 }
 
-.content-one-button:hover{
+.content-one-button a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.content-one-button a:hover{
     font-size: 15.5px;
     opacity: 0.7;
 }
@@ -183,6 +192,8 @@ nav li a:hover {
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
+
+/* animating  marquee(more like slide in and slide out effect) */
 
 #animated-text:hover {
     text-shadow: 2px 2px #FFCD02;
@@ -232,6 +243,8 @@ nav li a:hover {
     padding-top: 50px;
     height: 800px;
 }
+
+/* styling for latest-news and top-news part */
 
 .content-two-a, .content-two-b{
     display: grid;
@@ -316,13 +329,16 @@ nav li a:hover {
     transition: all 0.5s ease 0s;
 }
 
-.content-two-a-news1-heading:hover, .content-two-a-news2-heading:hover, .content-two-b-news1-heading:hover, .content-two-b-news2-heading:hover{
+.content-two-a-news1-heading a, .content-two-a-news2-heading a, .content-two-b-news1-heading a, .content-two-b-news2-heading a{
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.content-two-a-news1-heading a:hover, .content-two-a-news2-heading a:hover, .content-two-b-news1-heading a:hover, .content-two-b-news2-heading a:hover{
     text-shadow: 2px 2px #FFCD02;
 }
 
-.content-two-c {
-
-}
+/* styling for upcoming-events part */
 
 .content-two-c-heading {
     cursor: pointer;
@@ -340,6 +356,15 @@ nav li a:hover {
     font-weight: 700;
     width: 300px;
     text-transform: uppercase;
+}
+
+.content-two-c-title a {
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.content-two-c-title a:hover {
+    text-shadow: 2px 2px #FFCD02;
 }
 
 .content-two-c-game {
@@ -443,6 +468,8 @@ nav li a:hover {
     opacity: 0.75;
 }
 
+/* styling for name and total-score part */
+
 .content-three-name-a, .content-three-name-b, .content-three-name-c, .content-three-name-d {
     display: grid;
     grid-template-columns: 275px auto;
@@ -510,6 +537,8 @@ nav li a:hover {
     padding-top: 50px;
     padding-left: 50px;
 }
+
+/* styling for gallery-section */
 
 .content-four-a {
     width: 650px;
@@ -635,9 +664,7 @@ nav li a:hover {
     background-color: #f8f8f8;
 }
 
-.content-four-b {
-    
-}
+/* styling for leaderboard-section */
 
 .content-four-b-heading {
     font-size: 35px;
@@ -662,10 +689,6 @@ nav li a:hover {
     width: 600px;
     height: 300px;
     border-collapse: collapse;
-}
-
-.content-four-b-table table tr{
-
 }
 
 .content-four-b-table table tr:nth-child(even) {
@@ -708,6 +731,8 @@ nav li a:hover {
     align-content: center;
 }
 
+/* styling for about-us part*/
+
 .footer-about-us {
     font-family: "Oswald", sans-serif;
     opacity: 0.5;
@@ -735,6 +760,8 @@ nav li a:hover {
     cursor: pointer;
 }
 
+/* styling for send-feedback part */
+
 .footer-send-msg {
     font-family: "Oswald", sans-serif;
     opacity: 0.5;
@@ -744,15 +771,6 @@ nav li a:hover {
     font-size: 25px;
     font-weight: 700;
     padding-bottom: 25px;
-}
-}
-
-.footer-send-msg-form {
-
-}
-
-.label-email {
-
 }
 
 .label-comments {
@@ -796,6 +814,7 @@ nav li a:hover {
     border: 2px solid #f8f8f8;
 }
 
+/* styling for contact-us part */
 
 .footer-contact {
     font-family: "Oswald", sans-serif;

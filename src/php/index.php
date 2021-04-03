@@ -65,7 +65,7 @@
                 Of Engineering And Science(GCES) every year.</div>
 
                 <div class="content-one-button">
-                    CONTACT US!
+                    <a href="#footer-feedback">CONTACT US!</a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                             <div class="a-news1-year">2021</div>
                         </div>
                         <div class="content-two-a-news1-heading">
-                            Nepal to Play a friendly match Against Qatar!
+                            <a href="">Nepal to Play a friendly match Against Qatar!</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                             <div class="a-news2-year">2020</div>
                         </div>
                         <div class="content-two-a-news2-heading">
-                            Eight Nepali Cricketers Register for IPL 2021 Player Auction!
+                            <a href="">Eight Nepali Cricketers Register for IPL 2021 Player Auction!</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                             <div class="b-news1-year">2020</div>
                         </div>
                         <div class="content-two-b-news1-heading">
-                            LIVE: Kathmandu Mayor’s Cup 2021 – Tribhuwan Army Club vs Kathmandu Mayor
+                            <a href="">LIVE: Kathmandu Mayor’s Cup 2021 – Tribhuwan Army Club vs Kathmandu Mayor</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                             <div class="b-news2-year">2020</div>
                         </div>
                         <div class="content-two-b-news2-heading">
-                            Gary Phillips Becomes New Head Coach of Men’s Volleyball Team!
+                            <a href="">Gary Phillips Becomes New Head Coach of Men’s Volleyball Team!</a>
                         </div>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                     UPCOMING GAMES
                 </div>
                 <div class="content-two-c-title">
-                    TEAM FOURTH SEM. <span style="opacity: 0.25;"> VS </span> SECOND SEM.
+                    <a href="">TEAM FOURTH SEM. <span style="opacity: 0.25;"> VS </span> SECOND SEM.</a>
                 </div>
                 <div class="content-two-c-game">
                     (CRICKET MATCH)
