@@ -416,7 +416,7 @@
             <div class="footer-send-msg-heading">
                 SEND FEEDBACK
             </div>
-            <form class="footer-send-msg-form">
+            <form action="feedback.php" method="POST" id="footer-feedback">
                 <label class="label-email">EMAIL:</label>
                 <input type="email" name="feedback-email" id="footer-email" placeholder="Enter Email" autocomplete="off" required/>
                 <br/>

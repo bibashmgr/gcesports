@@ -93,7 +93,7 @@
                 <input type="email" name="feedback-email" id="footer-email" placeholder="Enter Email" autocomplete="off" required/>
                 <br/>
                 <label class="label-comments">COMMENTS:</label>
-                <textarea name="feeback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;" required></textarea>
+                <textarea name="feedback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;" required></textarea>
                 <br/>
                 <input type="submit" value="SUBMIT" id="footer-submit-btn" />
             </form>
