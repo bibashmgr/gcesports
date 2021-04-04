@@ -134,7 +134,7 @@
         </div>
     </footer>
 
-    <script src="../javascript/"></script>
+    <script src="../javascript/login.js"></script>
 
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
