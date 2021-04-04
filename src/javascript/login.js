@@ -8,8 +8,6 @@ const password = document.getElementById('password');
 
 
 form.addEventListener('submit', (event) =>{
-    event.preventDefault();
-
     // a function to check whether the inputs are valid or not
     checkInputs();
 });

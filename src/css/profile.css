@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------ */
+/* Styling for header part */
+/* ------------------------ */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #F8F8F8;
+}
+
+header li, header a, header button{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.logo {
+    cursor: pointer;
+    width: 125px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+nav li a {
+    margin: 0px 20px;
+    transition: all 0.5s ease 0s;
+}
+
+nav li a:hover {
+    text-shadow: 2.25px 2.25px #FFCD02;
+    opacity: 0.85;
+}
+
+.login {
+    background-color: #FFCD02;
+    border: 2px solid #FFCD02;
+    padding: 0px 7px 3px;
+    transition: all 0.5s ease 0s;
+}
+
+.login:hover {
+    background-color: #F8F8F8;
+    border: 2px solid #2B2B2B;
+    opacity: 0.85;
+}

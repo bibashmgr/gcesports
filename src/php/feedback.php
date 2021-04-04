@@ -1,6 +1,4 @@
 <?php
-    
-    session_start();
 
     // connecting to mysql server
     $con = mysqli_connect('localhost', 'root');

@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +41,13 @@
             
         </nav>
 
-        <a class="login" href="./login.php"><i class="fas fa-user"></i></a>
+        <a class="login" href="<?php 
+                                    if (isset($_SESSION['login-email'])){
+                                        echo './profile.php';
+                                    }else {
+                                        echo './login.php';
+                                    }
+                                ?>"><i class="fas fa-user"></i></a>
     </header>
 
     <!-- 

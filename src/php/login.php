@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +41,18 @@
             
         </nav>
 
-        <a class="login" href="./login.php"><i class="fas fa-user"></i></a>
+        <a class="login" href="<?php 
+                                    if (isset($_SESSION['login-email'])){
+                                        echo './profile.php';
+                                    }else {
+                                        echo './login.php';
+                                    }
+                                ?>"><i class="fas fa-user"></i></a>
     </header>
+
+    <!-- 
+        login section
+    -->
 
     <section class="section-container">
         <div class="login-container">
@@ -46,15 +60,15 @@
                 <div class="login-image">
                 </div>
                 <h1>Welcome</h1>
-                <form id="form" class="form">
+                <form action="validation.php" method="POST" id="form" class="form">
                     <div class="form-control">
                         <label for="email">Email:</label>
-                        <input id="email" type="text" placeholder="Enter Email" autocomplete="off" />
+                        <input id="email" type="text" name="user-email" placeholder="Enter Email" autocomplete="off" />
                         <small>Error message</small>
                     </div>
                     <div class="form-control">
                         <label for="password">Password:</label>
-                        <input id="password" type="password" placeholder="Enter Password" autocomplete="off" />
+                        <input id="password" type="password" name="user-password" placeholder="Enter Password" autocomplete="off" />
                         <small>Error message</small>
                     </div>
                     <input type="submit" value="Login" />
@@ -120,7 +134,7 @@
         </div>
     </footer>
 
-    <script src="../javascript/login.js"></script>
+    <script src="../javascript/"></script>
 
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
