@@ -52,7 +52,20 @@
                                 ?>"><i class="fas fa-user"></i></a>
     </header>
 
-    <a href="./logout.php">LOGOUT</a>
+    <section class="section-container">
+        <div class="section-heading">
+            WELCOME
+        </div>
+        <div>
+            login as <?php echo $_SESSION['login-email']; ?>
+        </div>
+        <div>
+            <a href="./logout.php">LOGOUT</a>
+        </div>
+        <div>
+            <a href="">GO TO ADMIN PANEL</a>
+        </div>
+    </section>
 
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
