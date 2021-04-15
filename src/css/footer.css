@@ -1,0 +1,115 @@
+/* styling for footer section */
+
+.footer-container {
+    background-color: #2B2B2B;
+    color: #f8f8f8;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 250px;
+    height: 375px;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* styling for about-us part*/
+
+.footer-about-us {
+    font-family: "Oswald", sans-serif;
+    opacity: 0.5;
+}
+
+.about-us-heading {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.about-us-info {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-us-logo {
+    background-image: url("../../media/logo-BW.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+
+/* styling for send-feedback part */
+
+.footer-send-msg {
+    font-family: "Oswald", sans-serif;
+    opacity: 0.5;
+}
+
+.footer-send-msg-heading {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.label-comments {
+    position: absolute;
+    padding-top: 20px;
+}
+
+#footer-email {
+    font-family: "Open-sans", sans-serif;
+    margin-left: 46px;
+    padding: 3px 10px;
+    transition: all 0.5s;
+    outline: none;
+}
+
+#footer-comments {
+    font-family: "Open-sans", sans-serif;
+    padding: 3px 10px;
+    margin-left: 90px;
+    margin-top: 20px;
+    transition: all 0.5s;
+    outline: none;
+}
+
+#footer-submit-btn {
+    border: 2px solid #2B2B2B;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 200px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+}
+
+#submit-btn:hover {
+    background-color: #2B2B2B;
+    color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+}
+
+
+/* styling for contact-us part */
+
+.footer-contact {
+    font-family: "Oswald", sans-serif;
+    opacity: 0.5;
+}
+
+.footer-contact-heading {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.footer-contact div {
+    padding-bottom: 20px;
+}
