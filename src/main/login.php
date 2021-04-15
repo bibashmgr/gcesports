@@ -47,7 +47,7 @@
                         <input id="password" type="password" name="user-password" placeholder="Enter Password" autocomplete="off" />
                         <small>Error message</small>
                     </div>
-                    <input type="submit" value="Login" />
+                    <input type="submit" name="login-btn" value="Login" />
                 </form>
             </div>
         </div>

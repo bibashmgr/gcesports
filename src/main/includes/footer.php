@@ -32,7 +32,7 @@
                 <label class="label-comments">COMMENTS:</label>
                 <textarea name="feedback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;" required></textarea>
                 <br/>
-                <input type="submit" value="SUBMIT" id="footer-submit-btn" />
+                <input type="submit" value="SUBMIT" id="footer-submit-btn" name="comment-btn" />
         </form>
 
     </div>
