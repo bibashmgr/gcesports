@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta-tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,14 +22,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 
-    <!-- header and nav-bar -->
+    <!-- header: nav-bar -->
 
     <?php include('./includes/header.php') ?>
 
-    <!-- news-section -->
+    <!-- section: news -->
 
     <section class="section-container">
         <div class="news-container">

@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,15 +25,11 @@
 </head>
 <body>
 
-    <!-- header and nav-bar -->
+    <!-- header: nav-bar -->
 
     <?php include('./includes/header.php') ?>
 
-    <!-- 
-        SECTION FIRST:
-        Contains background themes for the site
-    -->
-    
+    <!-- section-one: background-theme and text-animation -->
     <section class="section-one">
          <div class="content-one-a">
             <div class="content-one-bg">
@@ -59,22 +56,18 @@
 
          </div>
 
+        <!-- text-animation -->
         <div class="content-one-b">
             LATEST RESULTS:
                         <span id="animated-text"></span>
         </div>
     </section>
 
-    <!-- 
-        SECTION SECOND:
-        Contains latest news, trending news and upcoming games
-    -->
-
+    <!-- section-two: latest-news, top-news and upcoming-events -->
     <section class="section-two">
         <div class="content-two">
 
-            <!-- Latest news part -->
-
+            <!-- Latest news -->
             <div class="content-two-a">
                 <div class="content-two-a-heading">
                     LATEST NEWS
@@ -111,11 +104,10 @@
                 </div>
             </div>
 
-            <!-- Trending news part -->
-
+            <!-- Trending news -->
             <div class="content-two-b">
                 <div class="content-two-b-heading">
-                    TRENDING NEWS
+                    TOP NEWS
                 </div>
                 <div class="content-two-b-news1">
                     <div class="content-two-b-news1-image">
@@ -150,7 +142,7 @@
                 </div>
             </div>
 
-            <!-- Upcoming games part -->
+            <!-- Upcoming games -->
 
             <div class="content-two-c">
                 <div class="content-two-c-heading">
@@ -176,11 +168,7 @@
         </div>
     </section>
 
-    <!-- 
-        SECTION THIRD:
-        TOP PLAYERS SECTION
-    -->
-
+    <!-- section-three: top-players -->
     <section class="section-three">
         <div class="content-three">
             <div class="content-three-heading">
@@ -259,16 +247,11 @@
         </div>
     </section>
 
-    <!-- 
-        SECTION FOUR:
-        GALLERY & LEADERBOARD SECTION
-    -->
-
+    <!-- section-four: gallery and leaderboards -->
     <section class="section-four">
         <div class="content-four">
-            <!-- 
-            GALLERY SECTION
-            -->
+
+            <!-- gallery-section -->
            <div class="content-four-a">
                 <div class="content-four-a-heading">
                     GALLERY
@@ -313,9 +296,8 @@
                     </div>
                 </div>
            </div>
-           <!-- 
-            LEADERBOARD SECTION
-            -->
+
+           <!-- leaderboard-section -->
            <div class="content-four-b">
                 <div class="content-four-b-heading">
                     LEADERBOARD
@@ -383,8 +365,11 @@
 
     <?php include('./includes/footer.php') ?>
 
+    <!-- custom scripting -->
+
     <script src="../javascript/index.js"></script>
 
+    <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
  
 </body>

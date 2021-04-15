@@ -162,13 +162,7 @@ nav li:nth-child(1) a {
 }
 
 
-/* ------------------------------ */
-
-
-/* styling of second-section part */
-
-
-/* ------------------------------ */
+/* styling of second-section */
 
 .section-two {
     font-family: "Oswald", sans-serif;
@@ -187,7 +181,7 @@ nav li:nth-child(1) a {
 }
 
 
-/* styling for latest-news and top-news part */
+/* styling for latest-news and top-news */
 
 .content-two-a,
 .content-two-b {
@@ -386,10 +380,7 @@ nav li:nth-child(1) a {
 }
 
 
-/* SECTION THIRD */
-
-
-/* TOP PLAYERS SECTION */
+/* styling for section-three: top players */
 
 .section-three {
     font-family: "Oswald", sans-serif;
@@ -455,7 +446,7 @@ nav li:nth-child(1) a {
 }
 
 
-/* styling for name and total-score part */
+/* styling for name and total-score */
 
 .content-three-name-a,
 .content-three-name-b,
@@ -527,11 +518,7 @@ nav li:nth-child(1) a {
 }
 
 
-/* 
-    SECTION FOUR:
-    GALLERY SECTION:
-    LEADERBOARD SECTION:
-*/
+/* styling for section-four: gallery and leaderboard */
 
 .section-four {
     background-color: #f8f8f8;

@@ -25,8 +25,8 @@
 
     if($num == 1){
         $_SESSION['login-email'] = $email;
-        header('location:profile.php');
+        header('location: ../profile.php');
     } else {
-        header('location:login.php');
+        header('location: ../login.php');
     }
 ?>

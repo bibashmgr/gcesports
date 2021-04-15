@@ -1,50 +1,11 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ------------------------ */
-/* Styling for header part */
-/* ------------------------ */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: #F8F8F8;
-}
-
-header li, header a, header button{
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #2B2B2B;
-}
-
-.logo {
-    cursor: pointer;
-    width: 125px;
-}
-
-nav li {
-    list-style: none;
-    display: inline-block;
-}
-
-
-nav li a {
-    margin: 0px 20px;
-    transition: all 0.5s ease 0s;
-}
-
-nav li a:hover {
-    text-shadow: 2.25px 2.25px #FFCD02;
-    opacity: 0.85;
-}
+/* styling for header */
 
 .login {
     background-color: #FFCD02;
@@ -59,8 +20,8 @@ nav li a:hover {
     opacity: 0.85;
 }
 
-/* Section part */
-/* contains form styling */
+
+/* styling for login-form */
 
 .section-container {
     width: 100%;
@@ -105,20 +66,21 @@ nav li a:hover {
     margin-left: 25px;
 }
 
-.login-container label{
+.login-container label {
     color: #2B2B2B;
     font-family: "Open sans", sans-serif;
     font-size: 18px;
     font-weight: 700;
 }
 
-.login-container input{
+.login-container input {
     display: block;
     width: 100%;
     margin-bottom: 5px;
 }
 
-.login-container input[type="text"] , .login-container input[type="password"]{
+.login-container input[type="text"],
+.login-container input[type="password"] {
     border: none;
     border-bottom: 1px solid #2B2B2B;
     background: transparent;
@@ -128,12 +90,12 @@ nav li a:hover {
     font-size: 16px;
 }
 
-.login-container input[type="submit"]{
+.login-container input[type="submit"] {
     border: none;
     border-radius: 20px;
     outline: none;
     height: 40px;
-    background-color:  #FFCD02;
+    background-color: #FFCD02;
     color: #2B2B2B;
     font-size: 18px;
     font-weight: bold;
@@ -143,129 +105,20 @@ nav li a:hover {
     margin-top: 20px;
 }
 
-.login-container input[type="submit"]:hover{
+.login-container input[type="submit"]:hover {
     background-color: #2B2B2B;
     color: #F8F8F8;
 }
 
-.form-control small{
+.form-control small {
     visibility: hidden;
 }
 
-.form-control.error small{
+.form-control.error small {
     visibility: visible;
     color: #e74c3c;
 }
 
-.form-control.success small{
+.form-control.success small {
     visibility: hidden;
-}
-
-/* FOOTER SECTION */
-/* ABOUT US, LINKS & CONTACT US; */
-
-.footer-container {
-    background-color: #2B2B2B;
-    color: #f8f8f8;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 250px;
-    height: 375px;
-    justify-content: center;
-    align-content: center;
-}
-
-.footer-about-us {
-    font-family: "Oswald", sans-serif;
-    opacity: 0.5;
-}
-
-.about-us-heading {
-    font-size: 25px;
-    font-weight: 700;
-    padding-bottom: 25px;
-}
-
-.about-us-info {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.about-us-logo {
-    background-image: url("../../media/logo-BW.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-    opacity: 0.75;
-    cursor: pointer;
-}
-
-.footer-send-msg {
-    font-family: "Oswald", sans-serif;
-    opacity: 0.5;
-}
-
-.footer-send-msg-heading {
-    font-size: 25px;
-    font-weight: 700;
-    padding-bottom: 25px;
-}
-
-.label-comments {
-    position: absolute;
-    padding-top: 20px;
-}
-
-#footer-email {
-    font-family: "Open-sans", sans-serif;
-    margin-left: 46px;
-    padding: 3px 10px;
-    transition: all 0.5s;
-    outline: none;
-}
-
-#footer-comments {
-    font-family: "Open-sans", sans-serif;
-    padding: 3px 10px;
-    margin-left: 90px;
-    margin-top: 20px;
-    transition: all 0.5s;
-    outline: none;
-}
-
-#footer-submit-btn {
-    border: 2px solid #2B2B2B;
-    border-radius: 5px;
-    padding: 5px;
-    margin-left: 200px;
-    margin-top: 5px;
-    cursor: pointer;
-    transition: all 0.5s;
-    font-size: 14px;
-    font-weight: 500;
-    outline: none;
-}
-
-#submit-btn:hover {
-    background-color: #2B2B2B;
-    color: #f8f8f8;
-    border: 2px solid #f8f8f8;
-}
-
-
-.footer-contact {
-    font-family: "Oswald", sans-serif;
-    opacity: 0.5;
-}
-
-.footer-contact-heading {
-    font-size: 25px;
-    font-weight: 700;
-    padding-bottom: 20px;
-}
-
-.footer-contact div {
-    padding-bottom: 20px;
 }
