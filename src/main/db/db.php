@@ -35,10 +35,10 @@ function selectAll($table, $conditions = []) // second parameter is optional
     } else {
 
         // returns records that matches the given conditions
-        $i=0;
+        $i = 0;
         foreach ($conditions as $key => $value){
 
-            if($i==0){
+            if($i === 0){
                 $sql = $sql . " WHERE $key=?";
             } else {
                 $sql = $sql . " AND $key=?";
@@ -65,10 +65,10 @@ function selectOne($table, $conditions) // second parameter isnot optional
     $sql = "SELECT * FROM $table";
 
 
-    $i=0;
+    $i = 0;
     foreach ($conditions as $key => $value){
 
-        if($i==0){
+        if($i === 0){
             $sql = $sql . " WHERE $key=?";
         } else {
             $sql = $sql . " AND $key=?";
@@ -83,6 +83,70 @@ function selectOne($table, $conditions) // second parameter isnot optional
     $records = $stmt->get_result()->fetch_assoc();
     return $records;
     
+}
+
+
+// inserts the entered inputs by user into table
+function create($table, $data)
+{
+    global $conn;
+    $sql = "INSERT INTO $table SET";
+
+    $i = 0;
+    foreach ($data as $key => $value){
+
+        if($i === 0){
+            $sql = $sql . " $key=?";
+        } else {
+            $sql = $sql . ", $key=?";
+        }
+        $i++;
+    
+    }
+
+    $stmt = executeQuery($sql, $data);
+
+    $id = $stmt->insert_id;
+    return $id;
+
+}
+
+
+// updates already inserted values in the table
+function update($table, $id, $data)
+{
+    global $conn;
+    $sql = "UPDATE $table SET";
+
+    $i = 0;
+    foreach ($data as $key => $value){
+
+        if($i === 0){
+            $sql = $sql . " $key=?";
+        } else {
+            $sql = $sql . ", $key=?";
+        }
+        $i++;
+    
+    }
+
+    $sql = $sql . " WHERE id=?";
+    $data['id'] = $id;
+    $stmt = executeQuery($sql, $data);
+    return $stmt->affected_rows; // returns 1, if operation is sucessful
+
+}
+
+
+// deletes already inserted values in the table
+function delete($table, $id)
+{
+    global $conn;
+    $sql = "DELETE FROM $table WHERE id=?";
+
+    $stmt = executeQuery($sql, ['id' => $id]);
+    return $stmt->affected_rows; // returns 1, if operation is sucessful
+
 }
 
 ?>
