@@ -3,11 +3,17 @@
 // including connect.php for database connection
 require('./connect.php');
 
-// will be deleted (for testing purpose)
-function dd($users)
+
+function executeQuery($sql, $data)
 {
-    echo '<pre>', print_r($users, true) ,'</pre>';
-    die();
+    global $conn;
+
+    $stmt = $conn->prepare($sql);
+    $values = array_values($data);
+    $types = str_repeat('s', count($values));
+    $stmt->bind_param($types, ...$values);
+    $stmt->execute();
+    return $stmt;
 }
 
 
@@ -31,24 +37,52 @@ function selectAll($table, $conditions = []) // second parameter is optional
         // returns records that matches the given conditions
         $i=0;
         foreach ($conditions as $key => $value){
+
             if($i==0){
-                $sql = $sql . " WHERE $key=$value";
+                $sql = $sql . " WHERE $key=?";
             } else {
-                $sql = $sql . " AND $key=$value";
+                $sql = $sql . " AND $key=?";
             }
             $i++;
+
         }
-        dd($sql);
+        
+        $stmt = executeQuery($sql, $conditions);
+
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+
     }
     
 }
 
-$conditions = [
-    'Email' => 'be2018se635@gces.edu.np',
-    'Password' => '123456789'
-];
 
-$users = selectAll('userlogin', $conditions);
-dd($users);
+// returns only one required record from given table
+function selectOne($table, $conditions) // second parameter isnot optional
+{
+    global $conn;
+
+    $sql = "SELECT * FROM $table";
+
+
+    $i=0;
+    foreach ($conditions as $key => $value){
+
+        if($i==0){
+            $sql = $sql . " WHERE $key=?";
+        } else {
+            $sql = $sql . " AND $key=?";
+        }
+        $i++;
+    }
+
+    $sql = $sql . " LIMIT 1";
+
+    $stmt = executeQuery($sql, $conditions);
+
+    $records = $stmt->get_result()->fetch_assoc();
+    return $records;
+    
+}
 
 ?>

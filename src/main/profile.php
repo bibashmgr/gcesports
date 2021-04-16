@@ -1,8 +1,3 @@
-<?php
-
-    session_start();
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +33,7 @@
             WELCOME
         </div>
         <div>
-            login as <?php echo $_SESSION['login-email']; ?>
+            login as
         </div>
         <div>
             <a href="./controllers/logout.php">LOGOUT</a>
