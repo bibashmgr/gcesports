@@ -1,7 +1,7 @@
 <?php
 
 // including connect.php for database connection
-require('./connect.php');
+require('connect.php');
 
 
 function executeQuery($sql, $data)

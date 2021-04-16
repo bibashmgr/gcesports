@@ -1,3 +1,4 @@
+<?php include('../../path.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@
 
     <!-- header: nav-bar -->
 
-    <?php include('./includes/header.php') ?>
+    <?php include(ROOT_PATH . '/src/main/includes/header.php') ?>
 
     <!-- section: user-profile -->
 

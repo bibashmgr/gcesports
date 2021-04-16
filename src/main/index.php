@@ -1,3 +1,4 @@
+<?php include('../../path.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@
 
     <!-- header: nav-bar -->
 
-    <?php include('./includes/header.php') ?>
+    <?php include(ROOT_PATH . '/src/main/includes/header.php') ?>
 
     <!-- section-one: background-theme and text-animation -->
     <section class="section-one">
@@ -360,7 +361,7 @@
 
     <!-- footer: about-us, send-feedback and contact-us -->
 
-    <?php include('./includes/footer.php') ?>
+    <?php include(ROOT_PATH . '/src/main/includes/footer.php') ?>
 
     <!-- custom scripting -->
 
