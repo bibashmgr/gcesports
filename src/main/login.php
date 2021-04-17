@@ -39,6 +39,7 @@
                         <label for="email">Email:</label>
                         <input id="email" type="text" name="user-email" placeholder="Enter Email" autocomplete="off" />
                         <small>Error message</small>
+                        
                     </div>
                     <div class="form-control">
                         <label for="password">Password:</label>

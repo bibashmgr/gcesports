@@ -114,11 +114,7 @@
     visibility: hidden;
 }
 
-.form-control.error small {
+.error {
     visibility: visible;
     color: #e74c3c;
-}
-
-.form-control.success small {
-    visibility: hidden;
 }

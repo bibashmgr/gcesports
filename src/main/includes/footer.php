@@ -27,10 +27,10 @@
         </div>
         <form action="./controllers/feedback.php" method="POST" id="footer-feedback">
                 <label class="label-email">EMAIL:</label>
-                <input type="email" name="feedback-email" id="footer-email" placeholder="Enter Email" autocomplete="off" required/>
+                <input type="email" name="email" id="footer-email" placeholder="Enter Email" autocomplete="off"/>
                 <br/>
                 <label class="label-comments">COMMENTS:</label>
-                <textarea name="feedback-comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize: none;" required></textarea>
+                <textarea name="comments" id="footer-comments" placeholder="Enter comments" cols="22.5" rows="4" style="resize:vertical"></textarea>
                 <br/>
                 <input type="submit" value="SUBMIT" id="footer-submit-btn" name="comment-btn" />
         </form>

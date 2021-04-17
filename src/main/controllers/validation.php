@@ -1,8 +1,7 @@
 <?php
-    // starting session
-    session_start();
     
-    // including connect.php for database connection
-    require('../db/connect.php');
+    include('../../../path.php');
+
+    include(ROOT_PATH . '/src/main/database/db.php');
     
 ?>
