@@ -1,4 +1,4 @@
-<?php include('../../path.php') ?>
+<?php include('../../path.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@
 
     <!-- header: nav-bar -->
 
-    <?php include(ROOT_PATH . '/src/main/includes/header.php') ?>
+    <?php include(ROOT_PATH . '/src/main/includes/header.php'); ?>
 
     <!-- section: login -->
     <section class="section-container">
@@ -37,13 +37,13 @@
                 <form action="./controllers/validation.php" method="POST" id="form" class="form">
                     <div class="form-control">
                         <label for="email">Email:</label>
-                        <input id="email" type="text" name="user-email" placeholder="Enter Email" autocomplete="off" />
+                        <input id="email" type="text" name="admin-email" placeholder="Enter Email" autocomplete="off" />
                         <small>Error message</small>
                         
                     </div>
                     <div class="form-control">
                         <label for="password">Password:</label>
-                        <input id="password" type="password" name="user-password" placeholder="Enter Password" autocomplete="off" />
+                        <input id="password" type="password" name="password" placeholder="Enter Password" autocomplete="off" />
                         <small>Error message</small>
                     </div>
                     <input type="submit" name="login-btn" value="Login" />
