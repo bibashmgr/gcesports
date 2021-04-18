@@ -4,6 +4,8 @@
 
     include(ROOT_PATH . '/src/main/database/db.php');
 
+    global $conn;
+
     if(isset($_POST['login-btn'])) {
 
         $errors = array();
@@ -19,8 +21,6 @@
         if(count($errors) === 0){
 
             unset($_POST['login-btn']);
-
-            dd($_POST);
             
         }
         
