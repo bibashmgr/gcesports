@@ -1,4 +1,4 @@
-<?php include('../../path.php') ?>
+<?php include('./path.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,9 @@
     <title>Login Page</title>
 
     <!-- custom styling -->
-    <link rel="stylesheet" href="../css/profile.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/header.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/profile.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/header.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/footer.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,7 +25,7 @@
 
     <!-- header: nav-bar -->
 
-    <?php include(ROOT_PATH . '/src/main/includes/header.php') ?>
+    <?php include(ROOT_PATH . '/main/includes/header.php') ?>
 
     <!-- section: user-profile -->
 
@@ -37,7 +37,7 @@
             login as
         </div>
         <div>
-            <a href="./controllers/logout.php">LOGOUT</a>
+            <a href="./main/controllers/logout.php">LOGOUT</a>
         </div>
         <div>
             <a href="">GO TO ADMIN PANEL</a>

@@ -1,4 +1,4 @@
-<?php include('../../path.php') ?>
+<?php include('./path.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,9 @@
     <title>Home Page</title>
 
     <!-- custom styling -->
-    <link rel="stylesheet" href="../css/index.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/header.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/index.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/header.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/footer.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,7 +25,7 @@
 
     <!-- header: nav-bar -->
 
-    <?php include(ROOT_PATH . '/src/main/includes/header.php') ?>
+    <?php include(ROOT_PATH . '/main/includes/header.php') ?>
 
     <!-- section-one: background-theme and text-animation -->
     <section class="section-one">
@@ -48,7 +48,7 @@
                 Of Engineering And Science(GCES) every year.</div>
 
                 <div class="content-one-button">
-                    <a href="#footer-feedback">CONTACT US!</a>
+                    <a href="#footer-email">CONTACT US!</a>
                 </div>
             </div>
 
@@ -263,19 +263,19 @@
                         <input type="radio" name="radio-btn" id="radio5">
                         
                         <div class="slide first">
-                            <img src="../../media/News/news01.jpg" alt="">
+                            <img src="./media/News/news02.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="../../media/News/news02.jpg" alt="">
+                            <img src="./media/News/news02.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="../../media/News/news03.jpg" alt="">
+                            <img src="./media/News/news03.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="../../media/News/news04.jpg" alt="">
+                            <img src="./media/News/news04.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="../../media/News/news05.jpg" alt="">
+                            <img src="./media/News/news05.jpg" alt="">
                         </div>
                         <div class="auto-navigation">
                             <div class="auto-btn1"></div>
@@ -361,11 +361,11 @@
 
     <!-- footer: about-us, send-feedback and contact-us -->
 
-    <?php include(ROOT_PATH . '/src/main/includes/footer.php') ?>
+    <?php include(ROOT_PATH . '/main/includes/footer.php') ?>
 
     <!-- custom scripting -->
 
-    <script src="../javascript/index.js"></script>
+    <script src="./src/script/index.js"></script>
 
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>

@@ -1,8 +1,8 @@
 <?php
     
-    include('../../../path.php');
+    include('../../path.php');
 
-    include(ROOT_PATH . '/src/main/database/db.php');
+    include(ROOT_PATH . '/main/database/db.php');
 
     global $conn;
 

@@ -1,4 +1,5 @@
 <?php
+
     // variables declaration
     $host = 'localhost';
     $user = 'root';

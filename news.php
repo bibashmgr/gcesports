@@ -1,4 +1,4 @@
-<?php include('../../path.php') ?>
+<?php include('./path.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,9 @@
     <title>News Page</title>
 
     <!-- custom styling -->
-    <link rel="stylesheet" href="../css/news.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/header.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/footer.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/news.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/header.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./src/style/footer.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,7 +26,7 @@
 
     <!-- header: nav-bar -->
 
-    <?php include(ROOT_PATH . '/src/main/includes/header.php') ?>
+    <?php include(ROOT_PATH . '/main/includes/header.php') ?>
 
     <!-- section: news -->
 
@@ -145,10 +145,10 @@
 
     <!-- footer: about-us, send-feedback and contact-us -->
 
-    <?php include(ROOT_PATH . '/src/main/includes/footer.php') ?>
+    <?php include(ROOT_PATH . '/main/includes/footer.php') ?>
 
     <!-- custom scripting -->
-    <script src="../javascript/news.js"></script>
+    <script src="./src/script/news.js"></script>
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>

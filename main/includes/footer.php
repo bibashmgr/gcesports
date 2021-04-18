@@ -25,7 +25,7 @@
         <div class="footer-send-msg-heading">
                 SEND FEEDBACK
         </div>
-        <form action="./controllers/feedback.php" method="POST" id="footer-feedback">
+        <form action="./main/controllers/feedback.php" method="POST" id="footer-feedback">
                 <label class="label-email">EMAIL:</label>
                 <input type="email" name="email" id="footer-email" placeholder="Enter Email" autocomplete="off"/>
                 <br/>
