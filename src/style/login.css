@@ -76,7 +76,7 @@
 .login-container input {
     display: block;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .login-container input[type="text"],
@@ -102,7 +102,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: .5s;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .login-container input[type="submit"]:hover {
@@ -111,10 +111,5 @@
 }
 
 .form-control small {
-    visibility: hidden;
-}
-
-.error {
-    visibility: visible;
     color: #e74c3c;
 }

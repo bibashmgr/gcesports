@@ -1,4 +1,6 @@
-<?php include('./path.php') ?>
+<?php 
+    include('./path.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,9 +34,6 @@
     <section class="section-container">
         <div class="section-heading">
             WELCOME
-        </div>
-        <div>
-            login as
         </div>
         <div>
             <a href="./main/controllers/logout.php">LOGOUT</a>

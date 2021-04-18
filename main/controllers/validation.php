@@ -1,26 +1,56 @@
 <?php
-    
-    include('../../path.php');
 
     include(ROOT_PATH . '/main/database/db.php');
 
-    global $conn;
+    $errors = array();
+
+    $adminEmail = '';
+    $password = '';
+
+    // checks errors
+    function validateLogin($user)
+    {
+        
+        $errors = array();
+
+        if(empty($user['admin'])) {
+            array_push($errors, 'Email is required');
+        }
+
+        if(empty($user['password'])) {
+            array_push($errors, 'Password is required');
+        }
+
+        return $errors;
+
+    }
+
 
     if(isset($_POST['login-btn'])) {
 
-        $errors = array();
-
-        if(empty($_POST['admin-email'])) {
-            array_push($errors, 'Email cannot be blanked');
-        }
-
-        if(empty($_POST['password'])) {
-            array_push($errors, 'Password cannot be blanked');
-        }
+        $errors = validateLogin($_POST);
 
         if(count($errors) === 0){
 
-            unset($_POST['login-btn']);
+            unset($_POST['comment-btn']);
+
+            $user = selectOne('adminlogin', ['admin' => $_POST['admin']]);
+
+            if(($user['admin'] == $_POST['admin']) && ($user['password'] == $_POST['password'])) {
+
+                $_SESSION['admin'] = $user['admin'];
+
+                header('location:' . BASE_URL . '/profile.php');
+                exit();
+
+            } else {
+
+                $adminEmail = $_POST['admin'];
+                $password = $_POST['password'];
+
+                array_push($errors, "Failed to login");
+
+            }
             
         }
         

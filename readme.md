@@ -1,2 +1,2 @@
-> # __GCES sports:__
+> ## __GCES sports:__
 A website for college's sports meet event.

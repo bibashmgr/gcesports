@@ -1,4 +1,10 @@
-<?php include('./path.php'); ?>
+<?php 
+
+    include('./path.php');
+
+    include(ROOT_PATH . '/main/controllers/validation.php');
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,17 +40,22 @@
                 <div class="login-image">
                 </div>
                 <h1>Welcome</h1>
-                <form action="./main/controllers/validation.php" method="POST" id="form" class="form">
+                <form action="./login.php" method="POST" id="form" class="form">
                     <div class="form-control">
-                        <label for="email">Email:</label>
-                        <input id="email" type="text" name="admin-email" placeholder="Enter Email" autocomplete="off" />
-                        <small>Error message</small>
+                        <label for="admin">Email:</label>
+                        <input id="admin" type="text" name="admin" placeholder="Enter Email" value="<?php echo $adminEmail; ?>" />
                         
                     </div>
                     <div class="form-control">
                         <label for="password">Password:</label>
-                        <input id="password" type="password" name="password" placeholder="Enter Password" autocomplete="off" />
-                        <small>Error message</small>
+                        <input id="password" type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>" />
+                        <small>
+                            <?php if(count($errors) > 0) :?>
+                                <?php foreach ($errors as $error): ?>
+                                    <div><?php echo $error; ?></div>
+                                <?php endforeach ;?>
+                            <?php endif ; ?>
+                        </small>
                     </div>
                     <input type="submit" name="login-btn" value="Login" />
                 </form>

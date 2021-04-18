@@ -1,4 +1,9 @@
+<?php 
+    session_start();
+?>
+
 <header>
+
         <a href="<?php echo BASE_URL . '/index.php';?>"><img class="logo" src="./media/logo.png" alt="logo" /></a>
         
         <nav>
@@ -14,5 +19,9 @@
             
         </nav>
 
-        <a class="login" href="<?php echo BASE_URL . '/login.php';?>"><i class="fas fa-user"></i></a>
+        <a class="login" href="<?php if(isset($_SESSION['admin'])){
+                                    echo BASE_URL . '/login.php';
+                                } else {
+                                    echo BASE_URL . '/profile.php';
+                                } ?>"><i class="fas fa-user"></i></a>
 </header>
