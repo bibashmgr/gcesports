@@ -36,7 +36,7 @@
 
             $user = selectOne('adminlogin', ['admin' => $_POST['admin']]);
 
-            if(($user['admin'] == $_POST['admin']) && ($user['password'] == $_POST['password'])) {
+            if(($user['admin'] === $_POST['admin']) && ($user['password'] === $_POST['password'])) {
 
                 $_SESSION['admin'] = $user['admin'];
 

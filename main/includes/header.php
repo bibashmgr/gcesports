@@ -1,6 +1,3 @@
-<?php 
-    session_start();
-?>
 
 <header>
 
@@ -20,8 +17,9 @@
         </nav>
 
         <a class="login" href="<?php if(isset($_SESSION['admin'])){
-                                    echo BASE_URL . '/login.php';
-                                } else {
                                     echo BASE_URL . '/profile.php';
+                                } else {
+                                    echo BASE_URL . '/login.php';
                                 } ?>"><i class="fas fa-user"></i></a>
+
 </header>

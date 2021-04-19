@@ -1,5 +1,7 @@
 <?php 
 
+    session_start();
+
     include('./path.php');
 
     include(ROOT_PATH . '/main/controllers/validation.php');
@@ -41,21 +43,20 @@
                 </div>
                 <h1>Welcome</h1>
                 <form action="./login.php" method="POST" id="form" class="form">
-                    <div class="form-control">
-                        <label for="admin">Email:</label>
-                        <input id="admin" type="text" name="admin" placeholder="Enter Email" value="<?php echo $adminEmail; ?>" />
-                        
-                    </div>
-                    <div class="form-control">
-                        <label for="password">Password:</label>
-                        <input id="password" type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>" />
-                        <small>
+                    <div class="error">
                             <?php if(count($errors) > 0) :?>
                                 <?php foreach ($errors as $error): ?>
                                     <div><?php echo $error; ?></div>
                                 <?php endforeach ;?>
                             <?php endif ; ?>
-                        </small>
+                    </div>
+                    <div class="form-control">
+                        <label for="admin">Email:</label>
+                        <input id="admin" type="text" name="admin" placeholder="Enter Email" value="<?php echo $adminEmail; ?>" />
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" name="password" placeholder="Enter Password" value="<?php echo $password; ?>" />
                     </div>
                     <input type="submit" name="login-btn" value="Login" />
                 </form>

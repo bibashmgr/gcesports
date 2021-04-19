@@ -1,7 +1,10 @@
 <?php 
-    include('./path.php');
-?>
 
+    session_start();
+
+    include('./path.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

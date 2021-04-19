@@ -30,15 +30,15 @@
 }
 
 .login-container {
-    width: 400px;
-    height: 450px;
+    width: 425px;
+    height: 500px;
     background-color: #F8F8F8;
     margin: 100px 50%;
     transform: translate(-50%, 0%);
 }
 
 .login-box {
-    width: 350px;
+    width: 375px;
 }
 
 .login-image {
@@ -63,7 +63,7 @@
 }
 
 .form {
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 .login-container label {
@@ -110,6 +110,8 @@
     color: #F8F8F8;
 }
 
-.form-control small {
+.error {
+    padding: 25px 0px;
+    font-size: 15px;
     color: #e74c3c;
 }

@@ -1,4 +1,11 @@
-<?php include('./path.php') ?>
+<?php 
+
+    session_start();
+
+    include('./path.php');
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
