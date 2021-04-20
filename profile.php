@@ -38,10 +38,13 @@
         <div class="section-heading">
             WELCOME
         </div>
-        <div>
+        <div class="admin-name">
+            <?php echo 'login as ' . $_SESSION['admin']; ?>
+        </div>
+        <div class="logout-btn">
             <a href="./main/controllers/logout.php">LOGOUT</a>
         </div>
-        <div>
+        <div class="admin-panel-btn">
             <a href="">GO TO ADMIN PANEL</a>
         </div>
     </section>
