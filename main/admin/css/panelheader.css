@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* styling for header and nav-bar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #f8f8f8;
+}
+
+header a {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.logo {
+    cursor: pointer;
+    width: 125px;
+}
+
+.login {
+    border: 2px solid #2B2B2B;
+    padding: 0px 7px 3px;
+    transition: all 0.5s ease 0s;
+}
+
+.login:hover {
+    background-color: #FFCD02;
+    border: 2px solid #FFCD02;
+    opacity: 0.85;
+}
+
+
+/* Styling for side-bar */
+
+.sidebar-container {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    padding: 80px 40px;
+    background-color: #f8f8f8;
+    transition: all 0.5s;
+}
+
+.sidebar-container ul {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sidebar-container ul li {
+    list-style: none;
+    line-height: 65px;
+}
+
+.sidebar-container ul li a {
+    display: block;
+    border-bottom: 1px solid #2B2B2B;
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.sidebar-container ul li a:hover {
+    text-shadow: 2px 2px #FFCD02;
+}
+
+#check {
+    display: none;
+}
+
+label #hamburger-btn,
+label #cancel-btn {
+    position: absolute;
+    top: 175px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+label #hamburger-btn {
+    font-size: 35px;
+    background-color: #f8f8f8;
+    color: #2B2B2B;
+    left: 40px;
+    padding: 5px 10px;
+    transition: all 0.35s ease-out;
+}
+
+label #cancel-btn {
+    z-index: 11;
+    font-size: 30px;
+    background-color: #2B2B2B;
+    color: #f8f8f8;
+    left: -250px;
+    padding: 4px 8px;
+    transition: all 0.5s;
+}
+
+#check:checked~.sidebar-container {
+    left: 0;
+}
+
+#check:checked~label #hamburger-btn {
+    left: 200px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked~label #cancel-btn {
+    left: 200px;
+}
