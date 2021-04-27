@@ -2,7 +2,7 @@
 
     session_start();
 
-    include('../../path.php');
+    include('../../../path.php');
 
 ?>
 <!DOCTYPE html>
@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GCESports" />
 
-    <title>Admin Panel</title>
+    <title>Add News</title>
 
     <!-- custom styling -->
-    <link rel="stylesheet" href="./css/panelheader.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="./css/adminpanel.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="../css/panelheader.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="../css/newspanel.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,8 +29,8 @@
 
     <!-- header: nav-bar & sidebar -->
 
-    <?php include(ROOT_PATH . '/main/admin/panelheader.php') ?>
-
+    <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
+    
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>

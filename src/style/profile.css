@@ -17,3 +17,42 @@
 
 
 /* styling for section */
+
+.section-container {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.section-heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.admin-name {
+    margin-bottom: 50px;
+}
+
+.logout-btn,
+.admin-panel-btn {
+    margin-top: 25px;
+}
+
+.logout-btn a,
+.admin-panel-btn a {
+    font-family: 'Opensans', sans-serif;
+    background-color: #FFCD02;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #2b2b2b;
+    text-decoration: none;
+    padding: 7.5px 20px;
+    transition: all 0.5s;
+}
+
+.logout-btn a:hover,
+.admin-panel-btn a:hover {
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+}

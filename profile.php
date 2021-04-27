@@ -39,13 +39,13 @@
             WELCOME
         </div>
         <div class="admin-name">
-            <?php echo 'login as ' . $_SESSION['admin']; ?>
+            <i><?php echo 'login as <u>' . $_SESSION['admin'] . '</u>'; ?></i>
         </div>
         <div class="logout-btn">
             <a href="./main/controllers/logout.php">LOGOUT</a>
         </div>
         <div class="admin-panel-btn">
-            <a href="./main/admin/adminpanel.php">GO TO ADMIN PANEL</a>
+            <a href="./main/admin/home/adminpanel.php">GO TO ADMIN PANEL</a>
         </div>
     </section>
     
