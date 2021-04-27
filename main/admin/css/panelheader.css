@@ -99,8 +99,7 @@ label #hamburger-btn {
 label #cancel-btn {
     z-index: 11;
     font-size: 30px;
-    background-color: #2B2B2B;
-    color: #f8f8f8;
+    color: #2B2B2B;
     left: -250px;
     padding: 4px 8px;
     transition: all 0.5s;

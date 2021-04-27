@@ -33,6 +33,11 @@
 
     <!-- section: form -->
     
+    <section>
+        <form action="">
+            
+        </form>
+    </section>
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
