@@ -62,7 +62,7 @@
             </tbody>
         </table>
         <div>
-            <a href="./create.php">Add News</a>
+            <a href="./create.php">ADD NEWS</a>
         </div>
     </section>
     

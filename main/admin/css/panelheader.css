@@ -66,12 +66,13 @@ header a {
 
 .sidebar-container ul li a {
     display: block;
+    text-transform: uppercase;
     text-decoration: none;
     color: #2B2B2B;
 }
 
 .sidebar-container ul li a:hover {
-    text-shadow: 1px 1px #FFCD02;
+    text-shadow: 2px 2px #FFCD02;
 }
 
 #check {

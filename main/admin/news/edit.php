@@ -31,6 +31,31 @@
 
     <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
     
+    <!-- section: news-panel-form -->
+
+    <section class="news-panel-form">
+        <h1>Edit News</h1>
+        <form action="" method="POST">
+            <div>
+                <label for="title">Title:</label><br/>
+                <input type="text" name="title" id="title" required />
+            </div>
+            <div>
+                <label for="body">Body:</label><br/>
+                <textarea name="body" id="body" rows="5" style="resize: none;" required></textarea>
+            </div>
+            <div>
+                <label for="imageurl">Images:</label><br/>
+                <input type="file" id="imageurl" name="imageurl" required>
+            </div>
+            <div>
+                <input type="submit" id="submit-btn" value="UPDATE NEWS">
+            </div>
+        </form>
+        <div>
+            <a href="./newspanel.php">MANAGE NEWS</a>
+        </div>
+    </section>
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
