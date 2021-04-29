@@ -1,7 +1,7 @@
     /* Styling for sidebar */
     
     .sidebar-container ul li:nth-child(2) {
-        text-shadow: 2px 2px #FFCD02;
+        background-color: #FFCD02;
     }
     /* Styling for news-panel-table */
     

@@ -45,7 +45,7 @@
             <a href="./main/controllers/logout.php">LOGOUT</a>
         </div>
         <div class="admin-panel-btn">
-            <a href="./main/admin/home/adminpanel.php">GO TO ADMIN PANEL</a>
+            <a href="./main/admin/home/index.php">GO TO ADMIN PANEL</a>
         </div>
     </section>
     

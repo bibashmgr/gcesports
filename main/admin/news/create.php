@@ -49,11 +49,11 @@
                 <input type="file" id="imageurl" name="imageurl" required>
             </div>
             <div>
-                <input type="submit" id="submit-btn" value="ADD NEWS">
+                <input type="submit" name="addnews" id="submit-btn" value="ADD NEWS">
             </div>
         </form>
         <div>
-            <a href="./newspanel.php">MANAGE NEWS</a>
+            <a href="./index.php">MANAGE NEWS</a>
         </div>
     </section>
     

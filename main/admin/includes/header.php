@@ -20,8 +20,8 @@
 <!-- Side-bar links -->
 <div class="sidebar-container">
     <ul>
-        <li><a href="<?php echo BASE_URL . '/main/admin/home/adminpanel.php';?>">Manage Home</a></li>
-        <li><a href="<?php echo BASE_URL . '/main/admin/news/newspanel.php';?>">Manage News</a></li>
+        <li><a href="<?php echo BASE_URL . '/main/admin/home/index.php';?>">Manage Home</a></li>
+        <li><a href="<?php echo BASE_URL . '/main/admin/news/index.php';?>">Manage News</a></li>
         <li><a href="#">Manage Gallery</a></li>
         <li><a href="#">Manage Teams</a></li>
         <li><a href="#">Manage Fixtures</a></li>

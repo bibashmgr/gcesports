@@ -48,9 +48,10 @@ header a {
     width: 250px;
     height: 100%;
     left: -250px;
-    padding: 80px 40px;
+    padding-top: 80px;
     background-color: #f8f8f8;
     transition: all 0.5s;
+    text-align: center;
 }
 
 .sidebar-container ul {
@@ -60,12 +61,13 @@ header a {
 }
 
 .sidebar-container ul li {
+    display: inline-block;
+    padding: 0px 5px;
     list-style: none;
-    line-height: 65px;
+    margin: 20px 0px;
 }
 
 .sidebar-container ul li a {
-    display: block;
     text-transform: uppercase;
     text-decoration: none;
     color: #2B2B2B;
