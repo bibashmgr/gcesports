@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/newspanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,22 +45,16 @@
                 <th colspan="3">Actions</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Nepal won against India</td>
-                    <td>2021/02/21</td>
-                    <td><a href="./edit.php" style="color: #ffcd02;">Edit</a></td>
-                    <td><a href="#" style="color: red;">Delete</a></td>
-                    <td><a href="#" style="color: #46b344;">Publish</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Nepali Women Volleyball team qualified for Asian Volleyball Cup</td>
-                    <td>2021/02/21</td>
-                    <td><a href="./edit.php" style="color: #ffcd02;">Edit</a></td>
-                    <td><a href="#" style="color: red;">Delete</a></td>
-                    <td><a href="#" style="color: #46b344;">Publish</a></td>
-                </tr>
+                <?php foreach ($news as $key => $new): ?>
+                    <tr>
+                        <td><?php echo $key + 1; ?></td>
+                        <td><?php echo $new['title']; ?></td>
+                        <td><?php echo $new['date']; ?></td>
+                        <td><a href="./edit.php?id=<?php echo $new['id']; ?>" style="color: #ffcd02;">Edit</a></td>
+                        <td></td>
+                        <td><a href="#" style="color: red;">Delete</a></td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <div>

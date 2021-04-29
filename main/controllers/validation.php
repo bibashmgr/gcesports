@@ -55,10 +55,5 @@
         }
         
     }
-
-    function dd($users) // will be deleted
-    {
-        echo '<pre>', print_r($users, true), '</pre>';
-    }
     
 ?>

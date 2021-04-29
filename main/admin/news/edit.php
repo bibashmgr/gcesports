@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/newspanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,21 +37,22 @@
 
     <section class="news-panel-form">
         <h1>Edit News</h1>
-        <form action="" method="POST">
+        <form action="edit.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $id; ?>" />
             <div>
                 <label for="title">Title:</label><br/>
-                <input type="text" name="title" id="title" required />
+                <input type="text" name="title" id="title" value="<?php echo $title; ?>" required />
             </div>
             <div>
                 <label for="body">Body:</label><br/>
-                <textarea name="body" id="body" rows="5" style="resize: none;" required></textarea>
+                <textarea name="body" id="body" rows="5" style="resize: none;" required><?php echo $body; ?></textarea>
             </div>
             <div>
-                <label for="imageurl">Images:</label><br/>
-                <input type="file" id="imageurl" name="imageurl" required>
+                <label for="image">Images:</label><br/>
+                <input type="file" id="image" name="image" required>
             </div>
             <div>
-                <input type="submit" name="editnews" id="submit-btn" value="UPDATE NEWS">
+                <input type="submit" name="edit-news" id="submit-btn" value="UPDATE NEWS">
             </div>
         </form>
         <div>

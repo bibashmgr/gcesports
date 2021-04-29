@@ -4,6 +4,6 @@
     define('ROOT_PATH', realpath(dirname(__FILE__)));
 
     // this is used for url
-    define('BASE_URL', 'http://localhost/GCESports');
+    define('BASE_URL', 'http://localhost/gcesports');
     
 ?>

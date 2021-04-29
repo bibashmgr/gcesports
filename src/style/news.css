@@ -41,40 +41,24 @@ nav li:nth-child(2) a {
     row-gap: 100px;
 }
 
-.news-one,
-.news-two,
-.news-three,
-.news-four,
-.news-five {
+.news-sub-box {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-.news-one-image img,
-.news-two-image img,
-.news-three-image img,
-.news-four-image img,
-.news-five-image img {
+.news-image img {
     width: 450px;
     height: 250px;
 }
 
-.news-one-text,
-.news-two-text,
-.news-three-text,
-.news-four-text,
-.news-five-text {
+.news-text {
     display: grid;
     grid-template-columns: auto auto auto;
     padding-left: 30px;
     height: 250px;
 }
 
-.news-one-date,
-.news-two-date,
-.news-three-date,
-.news-four-date,
-.news-five-date {
+.news-date {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     color: #FFCD02;
@@ -84,39 +68,23 @@ nav li:nth-child(2) a {
     column-gap: 5px;
 }
 
-.news-one-day,
-.news-two-day,
-.news-three-day,
-.news-four-day,
-.news-five-day {
+.news-day {
     grid-row: 1 / span 2;
     font-size: 75px;
     padding-left: 20px;
 }
 
-.news-one-month,
-.news-two-month,
-.news-three-month,
-.news-four-month,
-.news-five-month {
+.news-month {
     font-size: 20px;
     padding-top: 25px;
 }
 
-.news-one-year,
-.news-two-year,
-.news-three-year,
-.news-four-year,
-.news-five-year {
+.news-year {
     font-size: 20px;
     padding-bottom: 50px;
 }
 
-.news-one-heading,
-.news-two-heading,
-.news-three-heading,
-.news-four-heading,
-.news-five-heading {
+.news-heading {
     grid-column: 2 / span 2;
     font-family: "Oswald", sans-serif;
     font-weight: 700;
@@ -126,19 +94,11 @@ nav li:nth-child(2) a {
     padding-top: 20px;
 }
 
-.news-one-heading:hover,
-.news-two-heading:hover,
-.news-three-heading:hover,
-.news-four-heading:hover,
-.news-five-heading:hover {
+.news-heading:hover {
     text-shadow: 2px 2px #FFCD02;
 }
 
-.news-one-desc,
-.news-two-desc,
-.news-three-desc,
-.news-four-desc,
-.news-five-desc {
+.news-desc {
     grid-column: 1 / span 3;
     font-family: "Open sans", sans-serif;
     padding-bottom: 20px;
@@ -146,21 +106,13 @@ nav li:nth-child(2) a {
     overflow: hidden;
 }
 
-.news-one-link a,
-.news-two-link a,
-.news-three-link a,
-.news-four-link a,
-.news-five-link a {
+.news-link a {
     font-family: "Open sans", sans-serif;
     text-decoration: none;
     transition: 0.5s;
 }
 
-.news-one-link a:hover,
-.news-two-link a:hover,
-.news-three-link a:hover,
-.news-four-link a:hover,
-.news-five-link a:hover {
+.news-link a:hover {
     color: #2B2B2B;
     text-decoration: underline;
 }

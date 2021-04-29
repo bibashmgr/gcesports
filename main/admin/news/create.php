@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/newspanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +37,7 @@
 
     <section class="news-panel-form">
         <h1>Add News</h1>
-        <form action="" method="POST">
+        <form action="create.php" method="POST">
             <div>
                 <label for="title">Title:</label><br/>
                 <input type="text" name="title" id="title" required />
@@ -45,11 +47,11 @@
                 <textarea name="body" id="body" rows="5" style="resize: none;" required></textarea>
             </div>
             <div>
-                <label for="imageurl">Images:</label><br/>
-                <input type="file" id="imageurl" name="imageurl" required>
+                <label for="image">Images:</label><br/>
+                <input type="file" id="image" name="image" required>
             </div>
             <div>
-                <input type="submit" name="addnews" id="submit-btn" value="ADD NEWS">
+                <input type="submit" name="add-news" id="submit-btn" value="ADD NEWS">
             </div>
         </form>
         <div>
