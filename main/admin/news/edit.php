@@ -52,6 +52,10 @@
                 <input type="file" id="image" name="image" required>
             </div>
             <div>
+                <label for="date">Date:</label><br/>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
                 <input type="submit" name="edit-news" id="submit-btn" value="UPDATE NEWS">
             </div>
         </form>

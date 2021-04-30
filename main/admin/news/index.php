@@ -52,7 +52,7 @@
                         <td><?php echo $new['date']; ?></td>
                         <td><a href="./edit.php?id=<?php echo $new['id']; ?>" style="color: #ffcd02;">Edit</a></td>
                         <td></td>
-                        <td><a href="#" style="color: red;">Delete</a></td>
+                        <td><a href="./index.php?del_id=<?php echo $new['id']; ?>" style="color: red;">Delete</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

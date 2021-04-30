@@ -21,14 +21,6 @@
 
     if (isset($_POST['add-news'])) {
 
-        /*
-            $image_name = time() . '_' . $_FILES['image']['name'];
-            $destination = ROOT_PATH . '/media/news/' . $image_name;
-
-            $result = move_uploaded_file($_FILES['image']['temp_name'], $destination);
-            $_POST['image'] = $image_name;
-        */
-
         unset($_POST['add-news']);
 
         $news_id = create($table, $_POST);
@@ -60,5 +52,17 @@
 
         header('location: ' . BASE_URL . '/main/admin/news/index.php');
         exit();
+    }
+
+    // deleting news
+
+    if(isset($_GET['del_id'])) {
+
+        $id = $_GET['del_id'];
+        $count = delete($table, $id);
+
+        header('location: ' . BASE_URL . '/main/admin/news/index.php');
+        exit();
+    
     }
 ?>

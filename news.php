@@ -4,6 +4,8 @@
 
     include('./path.php');
 
+    include(ROOT_PATH . '/main/controllers/newspanel.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -43,31 +45,39 @@
             </div>
             <div class="news-box">
 
-                <div class="news-sub-box">
-                    <div class="news-image">
-                        <img src="./media/news/news01.jpg" alt="News01">
+                <?php foreach ($news as $key => $new): ?>
+
+                    <div class="news-sub-box">
+                        <!-- news-image -->
+                        <div class="news-image">
+                            <img src="<?php echo './media/news/' . $new['image'] ; ?>" alt="<?php echo $new['image']; ?>">
+                        </div>
+                        <!-- news-text -->
+                        <div class="news-text">
+                            <!-- news-text-date -->
+                            <div class="news-date">
+                                <div class="news-day">16</div>
+                                <div class="news-month">MAR</div>
+                                <div class="news-year">2021</div>
+                            </div>
+                            <!-- news-text-heading -->
+                            <div class="news-heading">
+                                <?php echo $new['title']; ?>
+                            </div>
+                            <!-- news-text-description -->
+                            <div class="news-desc">
+                                <?php echo $new['body']; ?>
+                            </div>
+                            <!-- news-text-link -->
+                            <div class="news-link">
+                                <a href="#"><i>Read more...</i></a>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="news-text">
-                        <div class="news-date">
-                            <div class="news-day">16</div>
-                            <div class="news-month">MAR</div>
-                            <div class="news-year">2021</div>
-                        </div>
-                        <div class="news-heading">
-                            Nepal to Play a friendly match Against Qatar!
-                        </div>
-                        <div class="news-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, repudiandae! Quasi nulla, 
-                            consequatur quae repudiandae esse itaque quis dicta. Cum provident molestias libero officia 
-                            suscipit ducimus! Minus optio doloribus amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, repudiandae! Quasi nulla, 
-                            consequatur quae repudiandae esse itaque quis dicta. Cum provident molestias libero officia 
-                            suscipit ducimus! Minus optio doloribus amet?
-                        </div>
-                        <div class="news-link">
-                            <a href="#"><i>Read more...</i></a>
-                        </div>
-                    </div>
-                </div>
+
+                <?php endforeach; ?>
                 
             </div>
             <div class="more-news">

@@ -115,6 +115,12 @@
         padding: 10px;
     }
     
+    .news-panel-form form div #date {
+        margin-top: 5px;
+        border: 1px solid #2b2b2b;
+        padding: 10px;
+    }
+    
     .news-panel-form form div #submit-btn {
         color: #2b2b2b;
         text-decoration: none;
