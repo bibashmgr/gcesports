@@ -44,44 +44,53 @@
                 NEWS & UPDATES
             </div>
             <div class="news-box">
+                <?php 
+                    if(isset($_GET['i'])){
+                        $i = $_GET['i'];
+                    } else {
+                        $i = 0;
+                    }
+                    $counter = $i + 5;
+                ?>
+                <?php for($i; $i < $counter; $i++): ?>
 
-                <?php foreach ($news as $key => $new): ?>
-
-                    <div class="news-sub-box">
-                        <!-- news-image -->
-                        <div class="news-image">
-                            <img src="<?php echo './media/news/' . $new['image'] ; ?>" alt="<?php echo $new['image']; ?>">
+                    <?php if($i<count($news)): ?>
+                    
+                        <div class="news-sub-box">
+                            <!-- news-image -->
+                            <div class="news-image">
+                                <img src="<?php echo './media/news/' . $news[$i]['image'] ; ?>" alt="<?php echo $news[$i]['image']; ?>">
+                            </div>
+                            <!-- news-text -->
+                            <div class="news-text">
+                                <!-- news-text-date -->
+                                <div class="news-date">
+                                    <div class="news-day"><?php echo date('d', strtotime($news[$i]['date'])); ?></div>
+                                    <div class="news-month"><?php echo date('M', strtotime($news[$i]['date'])); ?></div>
+                                    <div class="news-year"><?php echo date('Y', strtotime($news[$i]['date'])); ?></div>
+                                </div>
+                                <!-- news-text-heading -->
+                                <div class="news-heading">
+                                    <?php echo $news[$i]['title']; ?>
+                                </div>
+                                <!-- news-text-description -->
+                                <div class="news-desc">
+                                    <?php echo $news[$i]['body']; ?>
+                                </div>
+                                <!-- news-text-link -->
+                                <div class="news-link">
+                                    <a href="#"><i>Read more...</i></a>
+                                </div>
+                            </div>
                         </div>
-                        <!-- news-text -->
-                        <div class="news-text">
-                            <!-- news-text-date -->
-                            <div class="news-date">
-                                <div class="news-day">16</div>
-                                <div class="news-month">MAR</div>
-                                <div class="news-year">2021</div>
-                            </div>
-                            <!-- news-text-heading -->
-                            <div class="news-heading">
-                                <?php echo $new['title']; ?>
-                            </div>
-                            <!-- news-text-description -->
-                            <div class="news-desc">
-                                <?php echo $new['body']; ?>
-                            </div>
-                            <!-- news-text-link -->
-                            <div class="news-link">
-                                <a href="#"><i>Read more...</i></a>
-                            </div>
 
-                        </div>
+                    <?php endif; ?>
 
-                    </div>
-
-                <?php endforeach; ?>
+                <?php endfor; ?>
                 
             </div>
             <div class="more-news">
-                <a href="#" ><i>See More...</i></a>
+                <a href="./news.php?i=<?php echo $i; ?>" ><i>See More...</i></a>
             </div>
         </div>
     </section>

@@ -37,7 +37,7 @@
 
     <section class="news-panel-form">
         <h1>Add News</h1>
-        <form action="create.php" method="POST">
+        <form action="create.php" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="title">Title:</label><br/>
                 <input type="text" name="title" id="title" required />

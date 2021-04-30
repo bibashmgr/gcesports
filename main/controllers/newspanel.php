@@ -21,6 +21,13 @@
 
     if (isset($_POST['add-news'])) {
 
+        $image_name = time() . $_FILES['image']['name'];
+        $destination = ROOT_PATH . '/media/news/' . $image_name;
+
+        $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
+
+        $_POST['image'] = $image_name;
+
         unset($_POST['add-news']);
 
         $news_id = create($table, $_POST);
@@ -65,4 +72,6 @@
         exit();
     
     }
+
+
 ?>

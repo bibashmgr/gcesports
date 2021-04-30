@@ -26,7 +26,7 @@ nav li:nth-child(1) a {
 .content-one-bg {
     margin: 50px 50px 75px;
     height: 550px;
-    background-image: url("../../media/Home/background-one-a.jpg");
+    background-image: url("../../media/index/background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -220,19 +220,19 @@ nav li:nth-child(1) a {
 }
 
 .content-two-a-news1-image {
-    background-image: url(../../media/News/news01.jpg);
+    background-image: url(../../media/index/news01.jpg);
 }
 
 .content-two-a-news2-image {
-    background-image: url(../../media/News/news02.jpg);
+    background-image: url(../../media/index/news02.jpg);
 }
 
 .content-two-b-news1-image {
-    background-image: url(../../media/News/news03.jpg);
+    background-image: url(../../media/index/news03.jpg);
 }
 
 .content-two-b-news2-image {
-    background-image: url(../../media/News/news04.jpg);
+    background-image: url(../../media/index/news04.jpg);
 }
 
 .content-two-a-news1-text,
@@ -345,7 +345,7 @@ nav li:nth-child(1) a {
 }
 
 .content-two-c-image {
-    background-image: url(../../media/News/news06.jpg);
+    background-image: url(../../media/index/upcoming.jpg);
 }
 
 .content-two-c-image {
@@ -411,19 +411,19 @@ nav li:nth-child(1) a {
 }
 
 .content-three-image-a {
-    background-image: url(../../media/Players/players01.jpg);
+    background-image: url(../../media/players/players01.jpg);
 }
 
 .content-three-image-b {
-    background-image: url(../../media/Players/players02.jpg);
+    background-image: url(../../media/players/players02.jpg);
 }
 
 .content-three-image-c {
-    background-image: url(../../media/Players/players03.jpg);
+    background-image: url(../../media/players/players03.jpg);
 }
 
 .content-three-image-d {
-    background-image: url(../../media/Players/players04.jpeg);
+    background-image: url(../../media/players/players04.jpeg);
 }
 
 .content-three-image-a,
