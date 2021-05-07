@@ -94,7 +94,12 @@ nav li:nth-child(2) a {
     padding-top: 20px;
 }
 
-.news-heading:hover {
+.news-heading a {
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.news-heading a:hover {
     text-shadow: 2px 2px #FFCD02;
 }
 

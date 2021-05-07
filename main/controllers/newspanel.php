@@ -44,9 +44,9 @@
         $new = selectOne($table, ['id' => $id]);
 
         $id = $new['id'];
-        $title = $new['title'];;
-        $body = $new['body'];;
-        $image = $new['image'];;
+        $title = $new['title'];
+        $body = $new['body'];
+        $image = $new['image'];
     }
 
     if (isset($_POST['edit-news'])) {
@@ -71,6 +71,12 @@
         header('location: ' . BASE_URL . '/main/admin/news/index.php');
         exit();
     
+    }
+
+    // for news-post
+
+    if(isset($_GET['page_id'])) {
+        $page_id = $_GET['page_id'];
     }
 
 

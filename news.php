@@ -71,7 +71,7 @@
                                 </div>
                                 <!-- news-text-heading -->
                                 <div class="news-heading">
-                                    <?php echo $news[$i]['title']; ?>
+                                    <a href="./page.php?page_id=<?php echo $i; ?>""><?php echo $news[$i]['title']; ?></a>
                                 </div>
                                 <!-- news-text-description -->
                                 <div class="news-desc">
@@ -79,7 +79,7 @@
                                 </div>
                                 <!-- news-text-link -->
                                 <div class="news-link">
-                                    <a href="#"><i>Read more...</i></a>
+                                    <a href="./page.php?page_id=<?php echo $i; ?>""><i>Read more...</i></a>
                                 </div>
                             </div>
                         </div>

@@ -270,19 +270,19 @@
                         <input type="radio" name="radio-btn" id="radio5">
                         
                         <div class="slide first">
-                            <img src="./media/News/news02.jpg" alt="">
+                            <img src="./media/gallery/gallery09.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="./media/News/news02.jpg" alt="">
+                            <img src="./media/gallery/gallery04.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="./media/News/news03.jpg" alt="">
+                            <img src="./media/gallery/gallery12.jpeg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="./media/News/news04.jpg" alt="">
+                            <img src="./media/gallery/gallery18.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="./media/News/news05.jpg" alt="">
+                            <img src="./media/gallery/gallery14.jpg" alt="">
                         </div>
                         <div class="auto-navigation">
                             <div class="auto-btn1"></div>

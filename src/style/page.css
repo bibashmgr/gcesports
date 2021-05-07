@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Styling for section-container */
+
+.section-container {
+    margin: 75px 250px;
+}
+
+.section-image img {
+    width: 1000px;
+    height: 562.5px;
+}
+
+.section-head {
+    display: flex;
+}
+
+.section-date {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: #FFCD02;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 60px;
+    column-gap: 5px;
+}
+
+.news-day {
+    grid-row: 1 / span 2;
+    font-size: 75px;
+    padding-left: 20px;
+}
+
+.news-month {
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+.news-year {
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.section-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 125px;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.section-title:hover {
+    text-shadow: 2px 2px #FFCD02;
+}
+
+.section-body {
+    font-family: "Open sans", sans-serif;
+    padding-bottom: 20px;
+}
