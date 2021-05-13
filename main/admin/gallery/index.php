@@ -31,6 +31,33 @@
 
     <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
 
+    <!-- section: news-panel -->
+
+    <section class="gallery-panel-table">
+        <h1>Gallery Panel</h1>
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th colspan="3">Actions</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td> 
+                    <td>Hello there</td>
+                    <td>2020/20/20</td>
+                    <td><a href="./edit.php" style="color: #ffcd02;">Edit</a></td>
+                    <td></td>
+                    <td><a href="./index.php" style="color: red;">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <a href="./create.php">ADD GALLERY</a>
+        </div>
+    </section>
+
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>

@@ -3,3 +3,164 @@
 .sidebar-container ul li:nth-child(3) {
     background-color: #FFCD02;
 }
+
+
+/* Styling for news-panel-table */
+
+.gallery-panel-table {
+    margin-left: 325px;
+    margin-top: 60px;
+}
+
+.gallery-panel-table h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.gallery-panel-table table {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+.gallery-panel-table th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+    text-align: left;
+}
+
+.gallery-panel-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.gallery-panel-table td {
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.gallery-panel-table td a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.gallery-panel-table td a:hover {
+    text-decoration: underline;
+}
+
+.gallery-panel-table div {
+    margin-top: 25px;
+}
+
+.gallery-panel-table div a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+}
+
+.gallery-panel-table div a:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
+
+
+/* Styling for news-panel-form */
+
+.gallery-panel-form {
+    margin-left: 325px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.gallery-panel-form h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.gallery-panel-form form div {
+    margin-top: 20px
+}
+
+.gallery-panel-form form div label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.gallery-panel-form form div #name {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.gallery-panel-form form div #image {
+    margin-top: 5px;
+    border: 1px solid #2b2b2b;
+    padding: 10px;
+}
+
+.gallery-panel-form form div #date {
+    margin-top: 5px;
+    border: 1px solid #2b2b2b;
+    padding: 10px;
+}
+
+.gallery-panel-form form div #submit-btn {
+    color: #2b2b2b;
+    text-decoration: none;
+    border: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.gallery-panel-form form div #submit-btn:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
+
+.gallery-panel-form div {
+    margin-top: 15px;
+}
+
+.gallery-panel-form div a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+}
+
+.gallery-panel-form div a:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
