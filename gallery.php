@@ -4,6 +4,8 @@
 
     include('./path.php');
 
+    include(ROOT_PATH . '/main/controllers/gallerypanel.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -44,27 +46,31 @@
                 GALLERY
             </div>
             <div class="gallery-section">
-                <a href="./media/Gallery/gallery11.jpeg" data-lightbox="gallery01"><img src="./media/Gallery/gallery11.jpeg" /></a>
-                <a href="./media/Gallery/gallery02.jpg" data-lightbox="gallery02"><img src="./media/Gallery/gallery02.jpg" /></a>
-                <a href="./media/Gallery/gallery03.jpg" data-lightbox="gallery03"><img src="./media/Gallery/gallery03.jpg" /></a>
-                <a href="./media/Gallery/gallery18.jpg" data-lightbox="gallery04"><img src="./media/Gallery/gallery18.jpg" /></a>
-                <a href="./media/Gallery/gallery15.jpg" data-lightbox="gallery05"><img src="./media/Gallery/gallery15.jpg" /></a>
-                <a href="./media/Gallery/gallery13.jpg" data-lightbox="gallery06"><img src="./media/Gallery/gallery13.jpg" /></a>
-                <a href="./media/Gallery/gallery07.jpg" data-lightbox="gallery07"><img src="./media/Gallery/gallery07.jpg" /></a>
-                <a href="./media/Gallery/gallery04.jpg" data-lightbox="gallery08"><img src="./media/Gallery/gallery04.jpg" /></a>
-                <a href="./media/Gallery/gallery09.jpg" data-lightbox="gallery09"><img src="./media/Gallery/gallery09.jpg" /></a>
-                <a href="./media/Gallery/gallery01.jpg" data-lightbox="gallery10"><img src="./media/Gallery/gallery01.jpg" /></a>
-                <a href="./media/Gallery/gallery10.jpg" data-lightbox="gallery11"><img src="./media/Gallery/gallery10.jpg" /></a>
-                <a href="./media/Gallery/gallery12.jpeg" data-lightbox="gallery12"><img src="./media/Gallery/gallery12.jpeg" /></a>
-                <a href="./media/Gallery/gallery16.jpg" data-lightbox="gallery13"><img src="./media/Gallery/gallery16.jpg" /></a>
-                <a href="./media/Gallery/gallery14.jpg" data-lightbox="gallery14"><img src="./media/Gallery/gallery14.jpg" /></a>
-                <a href="./media/Gallery/gallery05.jpg" data-lightbox="gallery15"><img src="./media/Gallery/gallery05.jpg" /></a>
-                <a href="./media/Gallery/gallery06.jpg" data-lightbox="gallery16"><img src="./media/Gallery/gallery06.jpg" /></a>
-                <a href="./media/Gallery/gallery17.jpg" data-lightbox="gallery17"><img src="./media/Gallery/gallery17.jpg" /></a>
-                <a href="./media/Gallery/gallery08.jpg" data-lightbox="gallery18"><img src="./media/Gallery/gallery08.jpg" /></a>
+
+                <?php 
+                    if(isset($_GET['i'])){
+                        $i = $_GET['i'];
+                    } else {
+                        $i = 0;
+                    }
+                    $counter = $i + 18;
+                ?>
+
+                <?php for($i; $i < $counter; $i++): ?>
+
+                    <?php if($i<count($gallerys)): ?>
+
+                        <a href="<?php echo './media/news/' . $gallerys[$i]['image'] ; ?>" data-lightbox="<?php echo $gallerys[$i]['image']; ?>">
+                            <img src="<?php echo './media/news/' . $gallerys[$i]['image'] ; ?>" alt="<?php echo $gallerys[$i]['image']; ?>" />
+                        </a>
+
+                    <?php endif; ?>
+
+                <?php endfor; ?>
+
             </div>
             <div class="more-galley">
-                <a href="#" class="more-gallery-links"><i>See more...</i></a>
+                <a href="./gallery.php?i=<?php echo $i; ?>" class="more-gallery-links"><i>See more...</i></a>
             </div>
         </div>
     </section>
