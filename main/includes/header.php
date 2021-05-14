@@ -8,9 +8,9 @@
                 <li><a href="<?php echo BASE_URL . '/index.php';?>" class="navlink">Home</a></li>
                 <li><a href="<?php echo BASE_URL . '/news.php';?>" class="navlink">News</a></li>
                 <li><a href="<?php echo BASE_URL . '/gallery.php';?>" class="navlink">Gallery</a></li>
-                <li><a href="#" class="navlink">Teams</a></li>
-                <li><a href="#" class="navlink">Fixtures</a></li>
-                <li><a href="#" class="navlink">Results</a></li>
+                <li><a href="<?php echo BASE_URL . '/teams.php';?>" class="navlink">Teams</a></li>
+                <li><a href="<?php echo BASE_URL . '/fixtures.php';?>" class="navlink">Fixtures</a></li>
+                <li><a href="<?php echo BASE_URL . '/results.php';?>" class="navlink">Results</a></li>
                 <li><a href="#" class="navlink">More</a></li>
             </ul>
             

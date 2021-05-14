@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* styling for header */
+
+nav li:nth-child(4) a {
+    background-color: #FFCD02;
+    padding: 0px 5px;
+}

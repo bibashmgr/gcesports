@@ -1,0 +1,5 @@
+    /* Styling for sidebar */
+    
+    .sidebar-container ul li:nth-child(4) {
+        background-color: #FFCD02;
+    }

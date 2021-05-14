@@ -60,8 +60,8 @@
 
                     <?php if($i<count($gallerys)): ?>
 
-                        <a href="<?php echo './media/news/' . $gallerys[$i]['image'] ; ?>" data-lightbox="<?php echo $gallerys[$i]['image']; ?>">
-                            <img src="<?php echo './media/news/' . $gallerys[$i]['image'] ; ?>" alt="<?php echo $gallerys[$i]['image']; ?>" />
+                        <a href="<?php echo './media/gallery/' . $gallerys[$i]['image'] ; ?>" data-lightbox="<?php echo $gallerys[$i]['image']; ?>">
+                            <img src="<?php echo './media/gallery/' . $gallerys[$i]['image'] ; ?>" alt="<?php echo $gallerys[$i]['image']; ?>" />
                         </a>
 
                     <?php endif; ?>

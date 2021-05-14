@@ -23,8 +23,8 @@
         <li><a href="<?php echo BASE_URL . '/main/admin/home/index.php';?>">Manage Home</a></li>
         <li><a href="<?php echo BASE_URL . '/main/admin/news/index.php';?>">Manage News</a></li>
         <li><a href="<?php echo BASE_URL . '/main/admin/gallery/index.php';?>">Manage Gallery</a></li>
-        <li><a href="#">Manage Teams</a></li>
-        <li><a href="#">Manage Fixtures</a></li>
-        <li><a href="#">Manage Results</a></li>
+        <li><a href="<?php echo BASE_URL . '/main/admin/teams/index.php';?>">Manage Teams</a></li>
+        <li><a href="<?php echo BASE_URL . '/main/admin/fixtures/index.php';?>">Manage Fixtures</a></li>
+        <li><a href="<?php echo BASE_URL . '/main/admin/results/index.php';?>">Manage Results</a></li>
     </ul>
 </div>
