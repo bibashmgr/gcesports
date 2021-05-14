@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/gallerypanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GCESports" />
 
-    <title>Edit Gallery</title>
+    <title>Add Gallery</title>
 
     <!-- custom styling -->
     <link rel="stylesheet" href="../css/panelheader.css?v=<?php echo time(); ?>" />

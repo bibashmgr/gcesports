@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/gallerypanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,14 +45,16 @@
                 <th colspan="3">Actions</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td> 
-                    <td>Hello there</td>
-                    <td>2020/20/20</td>
-                    <td><a href="./edit.php" style="color: #ffcd02;">Edit</a></td>
-                    <td></td>
-                    <td><a href="./index.php" style="color: red;">Delete</a></td>
-                </tr>
+                <?php foreach ($gallerys as $key => $gallery): ?>
+                    <tr>
+                        <td><?php echo $key + 1; ?></td>
+                        <td><?php echo $gallery['name']; ?></td>
+                        <td><?php echo $gallery['date']; ?></td>
+                        <td><a href="./edit.php?id=<?php echo $gallery['id']; ?>" style="color: #ffcd02;">Edit</a></td>
+                        <td></td>
+                        <td><a href="./index.php?del_id=<?php echo $gallery['id']; ?>" style="color: red;">Delete</a></td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <div>

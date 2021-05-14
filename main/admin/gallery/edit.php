@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/gallerypanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,18 +38,18 @@
     <section class="gallery-panel-form">
         <h1>Edit News</h1>
         <form action="edit.php" method="POST">
-            <input type="hidden" name="id" />
+            <input type="hidden" name="id" value="<?php echo $id; ?>" />
             <div>
                 <label for="name">Name:</label><br/>
-                <input type="text" name="name" id="name" required />
+                <input type="text" name="name" id="name" value="<?php echo $name; ?>" required />
             </div>
             <div>
                 <label for="image">Images:</label><br/>
-                <input type="file" id="image" name="image" required>
+                <input type="file" id="image" name="image" value="<?php echo $image; ?>" required>
             </div>
             <div>
                 <label for="date">Date:</label><br/>
-                <input type="date" id="date" name="date" required>
+                <input type="date" id="date" name="date" value="<?php echo $date; ?>" required>
             </div>
             <div>
                 <input type="submit" name="edit-gallery" id="submit-btn" value="UPDATE GALLERY">
