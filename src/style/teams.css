@@ -5,9 +5,54 @@
 }
 
 
-/* styling for header */
+/* Styling for header */
 
 nav li:nth-child(4) a {
     background-color: #FFCD02;
     padding: 0px 5px;
+}
+
+
+/* Styling for section: sports-lists */
+
+.sports-lists-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.sports-lists-heading h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+}
+
+.sports-lists {
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+}
+
+.sports-lists div {
+    border: 1px solid #1b1b1b;
+    padding: 12px 40px;
+}
+
+.sports-lists div a {
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1b1b1b;
+    justify-content: center;
+    align-items: center;
 }

@@ -33,7 +33,18 @@
 
     <?php include(ROOT_PATH . '/main/includes/header.php'); ?>
 
-    <!-- section: -->
+    <!-- section: sports-lists -->
+
+    <div class="sports-lists-heading"><h1>Teams</h1></div>
+
+    <section class="sports-lists">
+        <div><a href="#">Football</a></div>
+        <div><a href="#">Basketball</a></div>
+        <div><a href="#">Volleyball</a></div>
+        <div><a href="#">Cricket</a></div>
+        <div><a href="#">Badminton</a></div>
+        <div><a href="#">Table Tennis</a></div>
+    </section>
 
 
 
