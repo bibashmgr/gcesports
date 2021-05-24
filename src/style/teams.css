@@ -15,44 +15,58 @@ nav li:nth-child(4) a {
 
 /* Styling for section: sports-lists */
 
-.sports-lists-heading {
+.section-heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-1%);
     margin-top: 60px;
 }
 
-.sports-lists-heading h1 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    text-transform: uppercase;
-    word-spacing: 5px;
-}
-
-.sports-lists {
-    justify-content: center;
-    align-items: center;
+.sports-list {
     margin-top: 100px;
-    margin-bottom: 100px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 30px;
-}
-
-.sports-lists div {
-    border: 1px solid #1b1b1b;
-    padding: 12px 40px;
-}
-
-.sports-lists div a {
-    display: flex;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #1b1b1b;
+    grid-row-gap: 35px;
+    grid-column-gap: 50px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+}
+
+.sports-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.sports-item:hover {
+    background-color: #f8f8f8;
+}
+
+.item-image {
+    border-radius: 50%;
+    padding: 25px;
+    background-color: #f8f8f8;
+}
+
+.item-image img {
+    width: 100px;
+}
+
+.item-title {
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1b1b1b;
 }

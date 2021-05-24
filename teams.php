@@ -35,18 +35,64 @@
 
     <!-- section: sports-lists -->
 
-    <div class="sports-lists-heading"><h1>Teams</h1></div>
+    <h1 class="section-heading">TEAMS</h1>
+    <section class="sports-list">
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/football.png" alt="football">
+            </div>
+            
+            <div class="item-title">FOOTBALL</div>
+        </a>
 
-    <section class="sports-lists">
-        <div><a href="#">Football</a></div>
-        <div><a href="#">Basketball</a></div>
-        <div><a href="#">Volleyball</a></div>
-        <div><a href="#">Cricket</a></div>
-        <div><a href="#">Badminton</a></div>
-        <div><a href="#">Table Tennis</a></div>
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/basketball.png" alt="basketball">
+            </div>
+            
+            <div class="item-title">BASKETBALL</div>
+        </a>
+
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/volleyball.png" alt="volleyball">
+            </div>
+            
+            <div class="item-title">VOLLEYBALL</div>
+        </a>
+
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/cricket.png" alt="cricket">
+            </div>
+            
+            <div class="item-title">CRICKET</div>
+        </a>
+
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/badminton.png" alt="badminton">
+            </div>
+            
+            <div class="item-title">BADMINTON</div>
+        </a>
+
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/tabletennis.png" alt="table-tennis">
+            </div>
+            
+            <div class="item-title">TABLE TENNIS</div>
+        </a>
+
+        <a href="#" class="sports-item">
+            <div class="item-image">
+                <img src="./media/teams/chess.png" alt="chess">
+            </div>
+            
+            <div class="item-title">CHESS</div>
+        </a>
     </section>
-
-
 
     <!-- footer: about-us, send-feedback and contact-us -->
 
