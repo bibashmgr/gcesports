@@ -23,7 +23,7 @@ nav li:nth-child(4) a {
     justify-content: center;
     align-items: center;
     transform: translateX(-1%);
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .sports-list {
@@ -34,6 +34,7 @@ nav li:nth-child(4) a {
     grid-column-gap: 50px;
     justify-content: center;
     align-items: center;
+    transform: translateX(-1%);
     margin-bottom: 100px;
 }
 

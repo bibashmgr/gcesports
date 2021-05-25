@@ -37,7 +37,7 @@
 
     <h1 class="section-heading">TEAMS</h1>
     <section class="sports-list">
-        <a href="#" class="sports-item">
+        <a href="./football.php" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/football.png" alt="football">
             </div>
