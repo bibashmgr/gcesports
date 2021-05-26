@@ -90,7 +90,13 @@
                 
             </div>
             <div class="more-news">
-                <a href="./news.php?i=<?php echo $i; ?>" ><i>See More...</i></a>
+                <a href="./news.php?i=<?php echo $i; ?>" ><i>
+                    <?php if(count($news) > $i){
+
+                        echo 'See More...';
+                    
+                    }?>    
+                </i></a>
             </div>
         </div>
     </section>

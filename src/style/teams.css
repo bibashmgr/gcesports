@@ -71,3 +71,81 @@ nav li:nth-child(4) a {
     text-transform: uppercase;
     color: #1b1b1b;
 }
+
+
+/* Styling for teams-lists */
+
+.teams-lists {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 13.5%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.teams-lists h1,
+.teams-lists h2,
+.teams-lists h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.teams-lists h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.teams-lists h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.teams-lists h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.table-starting,
+.table-extras {
+    font-family: 'Oswald', sans-serif;
+    border-collapse: collapse;
+}
+
+.table-starting {
+    margin-bottom: 20px;
+}
+
+.table-starting th,
+.table-extras th {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #2B2B2B;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.table-starting tr,
+.table-extras tr {
+    line-height: 35px;
+}
+
+.table-starting tr:nth-child(even),
+.table-extras tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table-starting td,
+.table-extras td {
+    font-weight: 500;
+    font-size: 15px;
+    color: #2B2B2B;
+    text-transform: capitalize;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 20px;
+}

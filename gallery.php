@@ -70,7 +70,13 @@
 
             </div>
             <div class="more-galley">
-                <a href="./gallery.php?i=<?php echo $i; ?>" class="more-gallery-links"><i>See more...</i></a>
+                <a href="./gallery.php?i=<?php echo $i; ?>" class="more-gallery-links"><i>
+                    <?php if(count($gallerys) > $i){
+
+                        echo 'See More...';
+
+                    }?>
+                </i></a>
             </div>
         </div>
     </section>

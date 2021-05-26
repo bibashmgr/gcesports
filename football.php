@@ -35,11 +35,24 @@
 
     <!-- section: -->
 
-    <section>
-        <h1>FOOTBALL TEAMS</h1>
+    <section class="teams-lists">
+
+        <h1>FOOTBALL TEAM</h1>
+        
+        <div class="select-sem">
+            <label for="semester">Semester:</label>
+            <select name="semester" id="semester">
+                <option value="first-sem">First Semester</option>
+                <option value="second-sem">Second Semester</option>
+                <option value="third-sem">Third Semester</option>
+                <option value="fourth-sem">Fourth Semester</option>
+            </select>
+        </div>
+
         <h2>TEAM THIRD SEM.</h2>
+
         <h3>STARTING XI</h3>
-            <table>
+            <table class="table-starting">
                 <thead>
                     <th>S.N</th>
                     <th>NAME</th>
@@ -115,8 +128,9 @@
                     </tr>
                 </tbody>
             </table>
+
         <h3>EXTRAS</h3>
-            <table>
+            <table class="table-extras">
                 <thead>
                     <th>S.N</th>
                     <th>NAME</th>
