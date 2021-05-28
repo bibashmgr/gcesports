@@ -49,10 +49,10 @@
             </select>
         </div>
 
-        <h2>TEAM THIRD SEM.</h2>
+        <h2>TEAM FIRST SEM.</h2>
 
-        <h3>STARTING XI</h3>
-            <table class="table-starting">
+        <h2 style="margin-top:30px;">SOFTWARE:</h2>
+            <table class="table-first">
                 <thead>
                     <th>S.N</th>
                     <th>NAME</th>
@@ -61,76 +61,114 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>RAM BAHADUR</td>
+                        <td>STARTING XI</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Ram Bahadur</td>
                         <td>GK</td>
                         <td>99</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>SHYAM BAHADUR</td>
-                        <td>DF</td>
-                        <td>4</td>
+                        <td>02</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>HARI BAHADUR</td>
-                        <td>DF</td>
-                        <td>5</td>
+                        <td>03</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>KUMAR BAHADUR</td>
-                        <td>DF</td>
-                        <td>22</td>
+                        <td>04</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td>KRISHNA BAHADUR</td>
-                        <td>DF</td>
-                        <td>33</td>
+                        <td>05</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>6</td>
-                        <td>SHREE BAHADUR</td>
-                        <td>MF</td>
-                        <td>17</td>
+                        <td>06</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td>LOK BAHADUR</td>
-                        <td>MF</td>
-                        <td>21</td>
+                        <td>07</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>8</td>
-                        <td>TULARAM BAHADUR</td>
-                        <td>MF</td>
-                        <td>13</td>
+                        <td>08</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td>RISHI BAHADUR</td>
-                        <td>FW</td>
-                        <td>7</td>
+                        <td>09</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
                         <td>10</td>
-                        <td>KADAK BAHADUR</td>
-                        <td>FW</td>
-                        <td>10</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
                         <td>11</td>
-                        <td>PARSAD BAHADUR</td>
-                        <td>FW</td>
-                        <td>11</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
+
+                    <tr>
+                        <td>EXTRAS</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    
                 </tbody>
             </table>
-
-        <h3>EXTRAS</h3>
-            <table class="table-extras">
+        
+        <h2>COMPUTER:</h2>
+            <table class="table-second">
                 <thead>
                     <th>S.N</th>
                     <th>NAME</th>
@@ -139,35 +177,109 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>SITA RAM PRASAD</td>
+                        <td>STARTING XI</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Ram Bahadur</td>
                         <td>GK</td>
-                        <td>66</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>RAM KUMAR</td>
-                        <td>DF</td>
-                        <td>36</td>
+                        <td>02</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>HARI PRASAD</td>
-                        <td>DF</td>
-                        <td>3</td>
+                        <td>03</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>TIGER PRASAD</td>
-                        <td>MF</td>
-                        <td>15</td>
+                        <td>04</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td>MAX BAHADUR</td>
-                        <td>FW</td>
-                        <td>8</td>
+                        <td>05</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
                     </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+
+                    <tr>
+                        <td>EXTRAS</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Ram Bahadur</td>
+                        <td>GK</td>
+                        <td>99</td>
+                    </tr>
+                    
                 </tbody>
             </table>
     </section>

@@ -105,18 +105,26 @@ nav li:nth-child(4) a {
     margin-bottom: 10px;
 }
 
-.table-starting,
-.table-extras {
+.select-sem {
+    margin-bottom: 20px;
+}
+
+.select-sem label {
+    font-family: 'Oswald', sans-serif;
+}
+
+.table-first,
+.table-second {
     font-family: 'Oswald', sans-serif;
     border-collapse: collapse;
 }
 
-.table-starting {
-    margin-bottom: 20px;
+.table-first {
+    margin-bottom: 40px;
 }
 
-.table-starting th,
-.table-extras th {
+.table-first th,
+.table-second th {
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
@@ -129,18 +137,18 @@ nav li:nth-child(4) a {
     padding-left: 20px;
 }
 
-.table-starting tr,
-.table-extras tr {
+.table-first tr,
+.table-second tr {
     line-height: 35px;
 }
 
-.table-starting tr:nth-child(even),
-.table-extras tr:nth-child(even) {
+.table-first tr:nth-child(even),
+.table-second tr:nth-child(even) {
     background-color: #f8f8f8;
 }
 
-.table-starting td,
-.table-extras td {
+.table-first td,
+.table-second td {
     font-weight: 500;
     font-size: 15px;
     color: #2B2B2B;
