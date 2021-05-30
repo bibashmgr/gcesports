@@ -1,10 +1,18 @@
+/* setting root element size */
+
+html {
+    /* 62.5% ==> 10px */
+    font-size: 62.5%;
+}
+
+
 /* styling for header and nav-bar */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 1rem 5%;
     background-color: #f8f8f8;
 }
 
@@ -13,7 +21,7 @@ header a,
 header button {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 2rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #2B2B2B;
@@ -21,7 +29,7 @@ header button {
 
 .logo {
     cursor: pointer;
-    width: 125px;
+    width: 12.5rem;
 }
 
 nav li {
@@ -30,23 +38,47 @@ nav li {
 }
 
 nav li a {
-    margin: 0px 20px;
+    margin: 0rem 2rem;
     transition: all 0.5s ease 0s;
 }
 
 nav li a:hover {
-    text-shadow: 2.25px 2.25px #FFCD02;
+    text-shadow: 0.225rem 0.225rem #FFCD02;
     opacity: 0.85;
 }
 
 .login {
-    border: 2px solid #2B2B2B;
-    padding: 0px 7px 3px;
+    border: 0.2rem solid #2B2B2B;
+    padding: 0rem 0.7rem 0.3rem;
     transition: all 0.5s ease 0s;
 }
 
 .login:hover {
     background-color: #FFCD02;
-    border: 2px solid #FFCD02;
+    border: 0.2rem solid #FFCD02;
     opacity: 0.85;
+}
+
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    html {
+        font-size: 37.5%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    html {
+        font-size: 30%;
+    }
 }

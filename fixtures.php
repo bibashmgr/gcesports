@@ -33,9 +33,28 @@
 
     <?php include(ROOT_PATH . '/main/includes/header.php'); ?>
 
-    <!-- section: -->
+    <!-- section: fixtures-container -->
 
-
+    <section class="fixtures-container">
+        <h1>UPCOMING FIXTURES</h1>
+        <table>
+            <thead>
+                <th>Match Details</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Learn More</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>25.05.2020 - 12:00</td>
+                    <td>First Sem</td>
+                    <td>VS</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <!-- footer: about-us, send-feedback and contact-us -->
 

@@ -43,19 +43,19 @@
         <div class="footer-contact-heading" >
             CONTACT
         </div>
-         <div>
+         <div class="footer-contact-info">
             <i class="fas fa-envelope"></i>
-            <span style="padding: 0px 5px;"></span>
+            <span style="padding: 0rem 0.5rem;"></span>
             be2018se637@gces.edu.np
         </div>
-        <div>
+        <div class="footer-contact-info">
             <i class="fas fa-phone-alt"></i>
-            <span style="padding: 0px 5px;"></span>
+            <span style="padding: 0rem 0.5rem;"></span>
             +977-9806628788
         </div>
-        <div>
+        <div class="footer-contact-info">
             <i class="fas fa-map-marker-alt"></i>
-            <span style="padding: 0px 5px;"></span>
+            <span style="padding: 0rem 0.5rem;"></span>
             Lamachour, Pokhara, Nepal
         </div>
         

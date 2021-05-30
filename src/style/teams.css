@@ -69,7 +69,7 @@ nav li:nth-child(4) a {
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #1b1b1b;
+    color: #2b2b2b;
 }
 
 
@@ -88,6 +88,7 @@ nav li:nth-child(4) a {
 .teams-lists h3 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
+    color: #2b2b2b;
 }
 
 .teams-lists h1 {
@@ -105,12 +106,24 @@ nav li:nth-child(4) a {
     margin-bottom: 10px;
 }
 
-.select-sem {
+.select-year {
     margin-bottom: 20px;
 }
 
-.select-sem label {
+.select-year label,
+.select-year select {
     font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+
+.select-year label {
+    margin-right: 5px;
+}
+
+.select-year select {
+    cursor: pointer;
 }
 
 .table-first,
@@ -128,7 +141,7 @@ nav li:nth-child(4) a {
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
-    background-color: #2B2B2B;
+    background-color: #2b2b2b;
     color: #f8f8f8;
     border-bottom: 5px solid #FFCD02;
     text-align: left;
@@ -140,6 +153,7 @@ nav li:nth-child(4) a {
 .table-first tr,
 .table-second tr {
     line-height: 35px;
+    color: #2b2b2b;
 }
 
 .table-first tr:nth-child(even),
@@ -151,7 +165,7 @@ nav li:nth-child(4) a {
 .table-second td {
     font-weight: 500;
     font-size: 15px;
-    color: #2B2B2B;
+    color: #2b2b2b;
     text-transform: capitalize;
     text-align: left;
     vertical-align: middle;

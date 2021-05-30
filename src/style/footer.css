@@ -5,8 +5,8 @@
     color: #f8f8f8;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 250px;
-    height: 375px;
+    grid-gap: 25rem;
+    height: 37.5rem;
     justify-content: center;
     align-content: center;
 }
@@ -20,13 +20,13 @@
 }
 
 .about-us-heading {
-    font-size: 25px;
+    font-size: 3rem;
     font-weight: 700;
-    padding-bottom: 25px;
+    padding-bottom: 2.5rem;
 }
 
-.about-us-info {
-    font-size: 18px;
+.footer-about-us .about-us-info {
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -35,8 +35,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 15rem;
+    height: 15rem;
     opacity: 0.75;
     cursor: pointer;
 }
@@ -50,50 +50,54 @@
 }
 
 .footer-send-msg-heading {
-    font-size: 25px;
+    font-size: 3rem;
     font-weight: 700;
-    padding-bottom: 25px;
+    padding-bottom: 2.5rem;
+}
+
+.label-email {
+    font-size: 1.5rem;
 }
 
 .label-comments {
+    font-size: 1.5rem;
     position: absolute;
-    padding-top: 20px;
+    padding-top: 2rem;
 }
 
 #footer-email {
     font-family: "Open-sans", sans-serif;
-    margin-left: 46px;
-    padding: 3px 10px;
-    transition: all 0.5s;
+    margin-left: 5rem;
+    padding: 0.3rem 1rem;
     outline: none;
 }
 
 #footer-comments {
     font-family: "Open-sans", sans-serif;
-    padding: 3px 10px;
-    margin-left: 90px;
-    margin-top: 20px;
+    padding: 0.3rem 1rem;
+    margin-left: 9rem;
+    margin-top: 2rem;
     transition: all 0.5s;
     outline: none;
 }
 
 #footer-submit-btn {
-    border: 2px solid #2B2B2B;
-    border-radius: 5px;
-    padding: 5px;
-    margin-left: 200px;
-    margin-top: 5px;
+    border: 0.2rem solid #2B2B2B;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-left: 20.5rem;
+    margin-top: 0.5rem;
     cursor: pointer;
     transition: all 0.5s;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     outline: none;
 }
 
-#submit-btn:hover {
+#footer-submit-btn:hover {
     background-color: #2B2B2B;
     color: #f8f8f8;
-    border: 2px solid #f8f8f8;
+    border: 0.2rem solid #f8f8f8;
 }
 
 
@@ -105,11 +109,12 @@
 }
 
 .footer-contact-heading {
-    font-size: 25px;
+    font-size: 3rem;
     font-weight: 700;
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
 }
 
-.footer-contact div {
-    padding-bottom: 20px;
+.footer-contact-info {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
 }

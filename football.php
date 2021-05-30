@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GCESports" />
 
-    <title>Teams>>Football</title>
+    <title>Teams/Football</title>
 
     <!-- custom styling -->
     <link rel="stylesheet" href="./src/style/teams.css?v=<?php echo time(); ?>" />
@@ -33,19 +33,19 @@
 
     <?php include(ROOT_PATH . '/main/includes/header.php'); ?>
 
-    <!-- section: -->
+    <!-- section: team-lists-->
 
     <section class="teams-lists">
 
         <h1>FOOTBALL TEAM</h1>
         
-        <div class="select-sem">
-            <label for="semester">Semester:</label>
-            <select name="semester" id="semester">
-                <option value="first-sem">First Semester</option>
-                <option value="second-sem">Second Semester</option>
-                <option value="third-sem">Third Semester</option>
-                <option value="fourth-sem">Fourth Semester</option>
+        <div class="select-year">
+            <label for="year">Year:</label>
+            <select name="year" id="year">
+                <option value="first-year">First Year</option>
+                <option value="second-year">Second Year</option>
+                <option value="third-year">Third Year</option>
+                <option value="fourth-year">Fourth Year</option>
             </select>
         </div>
 
