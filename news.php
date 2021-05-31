@@ -79,7 +79,7 @@
                                 </div>
                                 <!-- news-text-link -->
                                 <div class="news-link">
-                                    <a href="./page.php?page_id=<?php echo $i; ?>""><i>Read more...</i></a>
+                                    <a href="./page.php?page_id=<?php echo $i; ?>"><i>Read more...</i></a>
                                 </div>
                             </div>
                         </div>

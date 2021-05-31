@@ -34,14 +34,14 @@ nav li:nth-child(2) a {
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     word-spacing: 5px;
 }
 
 .news-box {
     display: grid;
     grid-template-rows: auto auto auto auto auto;
-    row-gap: 50px;
+    row-gap: 30px;
 }
 
 .news-sub-box {
@@ -118,12 +118,12 @@ nav li:nth-child(2) a {
 .news-link a {
     font-family: "Open sans", sans-serif;
     font-size: 16px;
+    color: #2B2B2B;
     text-decoration: none;
     transition: 0.5s;
 }
 
 .news-link a:hover {
-    color: #2B2B2B;
     text-decoration: underline;
 }
 

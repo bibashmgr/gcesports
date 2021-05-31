@@ -60,6 +60,13 @@
                     <td>Second Year (COM)</td>
                     <td><a href="#" class="info-link">View Info</a></td>
                 </tr>
+                <tr>
+                    <td>25.05.2020 - 12:00</td>
+                    <td>First Year (SOF)</td>
+                    <td>VS</td>
+                    <td>Second Year (COM)</td>
+                    <td><a href="#" class="info-link">View Info</a></td>
+                </tr>
             </tbody>
         </table>
     </section>

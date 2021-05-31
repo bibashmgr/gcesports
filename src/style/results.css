@@ -11,3 +11,86 @@ nav li:nth-child(6) a {
     background-color: #FFCD02;
     padding: 0px 5px;
 }
+
+
+/* styling for section: fixtures-container */
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-1%);
+    margin-top: 40px;
+}
+
+.results-container h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.results-container table {
+    font-family: 'Oswald', sans-serif;
+    border-collapse: collapse;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    width: 70%;
+}
+
+.results-container table th {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+    vertical-align: middle;
+    line-height: 3;
+}
+
+.results-container table tr {
+    line-height: 3;
+    color: #2b2b2b;
+}
+
+.results-container table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.results-container table td {
+    font-weight: 500;
+    font-size: 15px;
+    color: #2b2b2b;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+.results-container table th:nth-child(1),
+.results-container table tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.results-container table th:nth-child(7),
+.results-container table tr td:nth-child(7) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.results-container table tr td:nth-child(2),
+.results-container table tr td:nth-child(3),
+.results-container table tr td:nth-child(4),
+.results-container table tr td:nth-child(5),
+.results-container table tr td:nth-child(6) {
+    text-align: center;
+}
+
+.info-link {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}

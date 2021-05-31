@@ -33,7 +33,51 @@
 
     <?php include(ROOT_PATH . '/main/includes/header.php'); ?>
 
-    <!-- section: -->
+    <!-- section: results-container -->
+
+    <section class="results-container">
+        <h1>RESULTS</h1>
+        <table>
+            <thead>
+                <th>Match Details</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Learn More</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>25.05.2020 - 12:00</td>
+                    <td>First Year (SOF)</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>3</td>
+                    <td>Second Year (COM)</td>
+                    <td><a href="#" class="info-link">View Info</a></td>
+                </tr>
+                <tr>
+                    <td>25.05.2020 - 12:00</td>
+                    <td>First Year (SOF)</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>3</td>
+                    <td>Second Year (COM)</td>
+                    <td><a href="#" class="info-link">View Info</a></td>
+                </tr>
+                <tr>
+                    <td>25.05.2020 - 12:00</td>
+                    <td>First Year (SOF)</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>3</td>
+                    <td>Second Year (COM)</td>
+                    <td><a href="#" class="info-link">View Info</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
 
 

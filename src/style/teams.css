@@ -27,7 +27,7 @@ nav li:nth-child(4) a {
 }
 
 .sports-list {
-    margin-top: 100px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-row-gap: 35px;
