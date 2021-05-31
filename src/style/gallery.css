@@ -54,6 +54,7 @@ nav li:nth-child(3) a {
 
 .more-gallery-links {
     font-family: "Open sans", sans-serif;
+    font-size: 16px;
     text-decoration: none;
     margin-left: 46%;
     transition: 0.5s;

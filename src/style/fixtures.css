@@ -11,3 +11,84 @@ nav li:nth-child(5) a {
     background-color: #FFCD02;
     padding: 0px 5px;
 }
+
+
+/* styling for section: fixtures-container */
+
+.fixtures-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-1%);
+    margin-top: 40px;
+}
+
+.fixtures-container h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.fixtures-container table {
+    font-family: 'Oswald', sans-serif;
+    border-collapse: collapse;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 70%;
+}
+
+.fixtures-container table th {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+    vertical-align: middle;
+    line-height: 3;
+}
+
+.fixtures-container table tr {
+    line-height: 3;
+    color: #2b2b2b;
+}
+
+.fixtures-container table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.fixtures-container table td {
+    font-weight: 500;
+    font-size: 15px;
+    color: #2b2b2b;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+.fixtures-container table th:nth-child(1),
+.fixtures-container table tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.fixtures-container table th:nth-child(5),
+.fixtures-container table tr td:nth-child(5) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.fixtures-container table tr td:nth-child(2),
+.fixtures-container table tr td:nth-child(3),
+.fixtures-container table tr td:nth-child(4) {
+    text-align: center;
+}
+
+.info-link {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}

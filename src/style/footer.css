@@ -5,6 +5,7 @@
     color: #f8f8f8;
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-auto-rows: auto;
     grid-gap: 25rem;
     height: 37.5rem;
     justify-content: center;
@@ -61,7 +62,6 @@
 
 .label-comments {
     font-size: 1.5rem;
-    position: absolute;
     padding-top: 2rem;
 }
 
@@ -75,7 +75,7 @@
 #footer-comments {
     font-family: "Open-sans", sans-serif;
     padding: 0.3rem 1rem;
-    margin-left: 9rem;
+    margin-left: 2rem;
     margin-top: 2rem;
     transition: all 0.5s;
     outline: none;
@@ -85,7 +85,7 @@
     border: 0.2rem solid #2B2B2B;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    margin-left: 20.5rem;
+    margin-left: 20rem;
     margin-top: 0.5rem;
     cursor: pointer;
     transition: all 0.5s;
