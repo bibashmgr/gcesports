@@ -37,7 +37,7 @@
 
     <h1 class="section-heading">TEAMS</h1>
     <section class="sports-list">
-        <a href="./football.php" class="sports-item">
+        <a href="./sports.php?type=football" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/football.png" alt="football">
             </div>
@@ -45,7 +45,7 @@
             <div class="item-title">FOOTBALL</div>
         </a>
 
-        <a href="#" class="sports-item">
+        <a href="./sports.php?type=basketball" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/basketball.png" alt="basketball">
             </div>
@@ -53,7 +53,7 @@
             <div class="item-title">BASKETBALL</div>
         </a>
 
-        <a href="#" class="sports-item">
+        <a href="./sports.php?type=volleyball" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/volleyball.png" alt="volleyball">
             </div>
@@ -61,7 +61,7 @@
             <div class="item-title">VOLLEYBALL</div>
         </a>
 
-        <a href="#" class="sports-item">
+        <a href="./sports.php?type=cricket" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/cricket.png" alt="cricket">
             </div>
@@ -69,7 +69,7 @@
             <div class="item-title">CRICKET</div>
         </a>
 
-        <a href="#" class="sports-item">
+        <a href="./sports.php?type=badminton" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/badminton.png" alt="badminton">
             </div>
@@ -77,7 +77,7 @@
             <div class="item-title">BADMINTON</div>
         </a>
 
-        <a href="#" class="sports-item">
+        <a href="./sports.php?type=table-tennis" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/tabletennis.png" alt="table-tennis">
             </div>
@@ -85,7 +85,7 @@
             <div class="item-title">TABLE TENNIS</div>
         </a>
 
-        <a href="#" class="sports-item">
+        <a href="./sports.php?type=chess" class="sports-item">
             <div class="item-image">
                 <img src="./media/teams/chess.png" alt="chess">
             </div>

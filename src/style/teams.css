@@ -98,7 +98,7 @@ nav li:nth-child(4) a {
 
 .teams-lists h2 {
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .teams-lists h3 {
@@ -106,38 +106,68 @@ nav li:nth-child(4) a {
     margin-bottom: 10px;
 }
 
-.select-year {
-    margin-bottom: 20px;
+.team-search-form {
+    display: flex;
+    margin-bottom: 40px;
 }
 
 .select-year label,
-.select-year select {
+.select-year select,
+.select-gender label,
+.select-gender select,
+.select-faculty label,
+.select-faculty select {
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: #2b2b2b;
 }
 
-.select-year label {
+.select-year label,
+.select-gender label,
+.select-faculty label {
     margin-right: 5px;
 }
 
-.select-year select {
+.select-gender label,
+.select-faculty label {
+    margin-left: 20px;
+}
+
+.select-year select,
+.select-gender select,
+.select-faculty select {
     cursor: pointer;
 }
 
-.table-first,
-.table-second {
+.select-search {
+    margin-left: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 12px;
+    background-color: #FFCD02;
+    color: #2b2b2b;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.select-search:hover {
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+}
+
+.team-table {
     font-family: 'Oswald', sans-serif;
     border-collapse: collapse;
 }
 
-.table-first {
+.team-table {
     margin-bottom: 40px;
 }
 
-.table-first th,
-.table-second th {
+.team-table th {
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
@@ -150,19 +180,16 @@ nav li:nth-child(4) a {
     padding-left: 20px;
 }
 
-.table-first tr,
-.table-second tr {
+.team-table tr {
     line-height: 2;
     color: #2b2b2b;
 }
 
-.table-first tr:nth-child(even),
-.table-second tr:nth-child(even) {
+.team-table tr:nth-child(even) {
     background-color: #f8f8f8;
 }
 
-.table-first td,
-.table-second td {
+.team-table td {
     font-weight: 500;
     font-size: 15px;
     color: #2b2b2b;
