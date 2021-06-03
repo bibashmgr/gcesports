@@ -48,6 +48,10 @@
                 <th>Learn More</th>
             </thead>
             <tbody>
+
+                <tr>
+                    <td style="text-transform: uppercase;">football</td>
+                </tr>
                 <tr>
                     <td>25.05.2020 - 12:00</td>
                     <td>First Year Boys (SOF)</td>
@@ -57,6 +61,10 @@
                     <td>Second Year Boys (COM)</td>
                     <td><a href="#" class="info-link">View Info</a></td>
                 </tr>
+
+                <tr>
+                    <td style="text-transform: uppercase;">Basketball</td>
+                </tr>
                 <tr>
                     <td>25.05.2020 - 12:00</td>
                     <td>First Year Girls (SOF)</td>
@@ -65,6 +73,10 @@
                     <td>3</td>
                     <td>Second Year Girls (COM)</td>
                     <td><a href="#" class="info-link">View Info</a></td>
+                </tr>
+
+                <tr>
+                    <td style="text-transform: uppercase;">Volleyball</td>
                 </tr>
                 <tr>
                     <td>25.05.2020 - 12:00</td>
