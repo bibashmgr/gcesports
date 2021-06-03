@@ -1,2 +1,3 @@
-> ## __GCES sports:__
-A website for college's sports meet event.
+> ## __GCESports:__
+> 
+A website for college's sports meet event for sharing information and memories.
