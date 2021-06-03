@@ -45,7 +45,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>STARTING V</td>
+                <td colspan="4">STARTING V</td>
             </tr>
             <tr>
                 <td>01</td>
@@ -79,7 +79,7 @@
             </tr>
 
             <tr>
-                <td>EXTRAS</td>
+                <td colspan="4">EXTRAS</td>
             </tr>
             <tr>
                 <td>01</td>

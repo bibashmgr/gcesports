@@ -48,7 +48,7 @@
             <tbody>
             
                 <tr>
-                    <td>FOOTBALL</td>
+                    <td colspan="5" style="text-transform: uppercase;">football</td>
                 </tr>
                 <tr>
                     <td>25.05.2020 - 12:00</td>
@@ -59,7 +59,7 @@
                 </tr>
 
                 <tr>
-                    <td>BASKETBALL</td>
+                    <td colspan="5" style="text-transform: uppercase;">basketball</td>
                 </tr>
                 <tr>
                     <td>25.05.2020 - 12:00</td>
@@ -70,7 +70,7 @@
                 </tr>
 
                 <tr>
-                    <td>CRICKET</td>
+                    <td colspan="5" style="text-transform: uppercase;">cricket</td>
                 </tr>
                 <tr>
                     <td>25.05.2020 - 12:00</td>

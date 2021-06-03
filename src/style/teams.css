@@ -116,7 +116,9 @@ nav li:nth-child(4) a {
 .select-gender label,
 .select-gender select,
 .select-faculty label,
-.select-faculty select {
+.select-faculty select,
+.select-group label,
+.select-group select {
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -125,18 +127,21 @@ nav li:nth-child(4) a {
 
 .select-year label,
 .select-gender label,
-.select-faculty label {
+.select-faculty label,
+.select-group label {
     margin-right: 5px;
 }
 
 .select-gender label,
-.select-faculty label {
+.select-faculty label,
+.select-group label {
     margin-left: 20px;
 }
 
 .select-year select,
 .select-gender select,
-.select-faculty select {
+.select-faculty select,
+.select-group select {
     cursor: pointer;
 }
 
