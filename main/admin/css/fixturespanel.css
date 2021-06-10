@@ -58,7 +58,7 @@
     padding-left: 10px;
 }
 
-.fixtures-panel-table .fixtures-panel-table td a {
+.fixtures-panel-table td a {
     color: #2b2b2b;
     text-decoration: none;
 }
@@ -101,7 +101,7 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     text-transform: uppercase;
 }
 
@@ -209,4 +209,17 @@
 .fixtures-panel-form div a:hover {
     color: #f8f8f8;
     background-color: #2b2b2b;
+}
+
+.errors-box {
+    display: inline-block;
+    padding: 5px 10px 15px 0px;
+    line-height: 0.5;
+}
+
+.error {
+    font-family: 'Opensans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: red;
 }

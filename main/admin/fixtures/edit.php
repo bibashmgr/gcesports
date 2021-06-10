@@ -37,11 +37,23 @@
 
     <section class="fixtures-panel-form">
         <h1>Edit Fixtures</h1>
+        <div class="errors-box">
+            <?php if($errors > 0 ): ?>
+                <?php foreach($errors as $key => $error): ?>      
+                    <div class="error">
+                        <?php echo $error; ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif;?>
+        </div>
         <form action="edit.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $id; ?>" />
             <div>
                 <label for="sports">Sports:</label><br/>
                 <select name="sports" id="sports">
+                    <option value="none" selected hidden>
+                        Select a sport
+                    </option>
                     <option value="football">Football</option>
                     <option value="basketball">Basketball</option>
                     <option value="volleyball">Volleyball</option>
@@ -54,6 +66,9 @@
             <div>
                 <label for="firstteam">First Team:</label><br/>
                 <select name="firstname" id="firstname">
+                    <option value="none" selected hidden>
+                        Select a team
+                    </option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
@@ -61,10 +76,16 @@
                     <option value="Staffs">Staffs</option>
                 </select>
                 <select name="firstfaculty" id="firstfaculty">
+                    <option value="none" selected hidden>
+                        Select a faculty
+                    </option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>
                 <select name="firstgender" id="firstgender">
+                    <option value="none" selected hidden>
+                        Select a gender
+                    </option>
                     <option value="Boys">Boys</option>
                     <option value="Girls">Girls</option>
                 </select>
@@ -72,6 +93,9 @@
             <div>
                 <label for="secondteam">Second Team:</label><br/>
                 <select name="secondname" id="secondname">
+                    <option value="none" selected hidden>
+                        Select a team
+                    </option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
@@ -79,22 +103,28 @@
                     <option value="Staffs">Staffs</option>
                 </select>
                 <select name="secondfaculty" id="secondfaculty">
+                    <option value="none" selected hidden>
+                        Select a faculty
+                    </option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>
                 <select name="secondgender" id="secondgender">
+                    <option value="none" selected hidden>
+                        Select a gender
+                    </option>
                     <option value="Boys">Boys</option>
                     <option value="Girls">Girls</option>
                 </select>
             </div>
             <div>
                 <label for="date">Date:</label><br/>
-                <input type="date" id="date" name="date" required>
+                <input type="date" id="date" name="date" value="<?php echo $date;?>">
             </div>
 
             <div>
                 <label for="time">Time:</label><br/>
-                <input type="time" id="time" name="time" required>
+                <input type="time" id="time" name="time" value="<?php echo $time;?>">
             </div>
             
             <div>

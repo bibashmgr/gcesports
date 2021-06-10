@@ -54,7 +54,7 @@
                     <tr>
                         <?php foreach ($fixtures as $key => $fixture): ?>
                             <?php if($fixture['sports'] == $typesof[$i]): ?>
-                                <td style="text-transform: uppercase; font-size:16px;" colspan="8">
+                                <td style="text-transform: uppercase; font-size:15px;" colspan="8">
                                     <?php 
                                         echo $fixture['sports'];
                                         break;

@@ -11,8 +11,20 @@ function dd($users) // to be deleted
 $table = 'fixturespanel';
 
 $id = '';
+$sports ='';
+$firstname = '';
+$firstfaculty = '';
+$firstgender = '';
+$secondname = '';
+$secondfaculty = '';
+$secondgender = '';
+$date = '';
+$time = '';
 $info = '';
 
+$errors = array();
+
+// function to order the records based on date and time
 function selectByAsc($table) // second parameter is optional
 {
     global $conn;
@@ -26,20 +38,89 @@ function selectByAsc($table) // second parameter is optional
     
 }
 
-
 $fixtures = selectByAsc($table);
 
 // adding news
-if (isset($_POST['add-fixtures'])) {
-    unset($_POST['add-fixtures']);
+
+// checks errors
+function validateDatas($datas)
+{
     
-    $fixtures_id = create($table, $_POST);
+    $errors = array();
 
-    header('location: ' . BASE_URL . '/main/admin/fixtures/index.php');
+    if($datas['sports'] === 'none') {
+        array_push($errors, '*Please, select sport');
+    }
 
-    exit();
+    if($datas['firstname'] === 'none' || $datas['secondname'] === 'none') {
+        array_push($errors, '*Please, select team');
+    }
+
+    if($datas['firstfaculty'] === 'none' || $datas['secondfaculty'] === 'none') {
+        array_push($errors, '*Please, select faculty');
+    }
+
+    if($datas['firstgender'] === 'none' || $datas['secondgender'] === 'none'){
+        array_push($errors, '*Please, select gender');
+    }
+
+    if($datas['firstname'] === $datas['secondname'] || $datas['firstfacullty'] === $datas['secondfaculty']) {
+        array_push($errors, '*Please, check your form');
+    }
+
+    if($datas['firstgender'] != $datas['secondgender']) {
+        array_push($errors, '*Sorry, cannot create a match between boys and girls');
+    }
+
+    if(empty($datas['date'])) {
+        array_push($errors, '*Date field cannot be empty');
+    }
+
+    if(empty($datas['time'])) {
+        array_push($errors, '*Time field cannot be empty');
+    }
+
+    if(empty($datas['info'])) {
+        array_push($errors, '*Info field cannot be empty');
+    }
+
+    return $errors;
+
 }
 
+
+if(isset($_POST['add-fixtures'])) {
+
+    $errors = validateDatas($_POST);
+
+    if(count($errors) === 0){
+
+        unset($_POST['add-fixtures']);
+
+        $fixtures_id = create($table, $_POST);
+
+        header('location: ' . BASE_URL . '/main/admin/fixtures/index.php');
+
+        exit();
+        
+    } else {
+
+        $sports = $_POST['sports'];
+        $firstname = $_POST['firstname'];
+        $firstfaculty = $_POST['firstfaculty'];
+        $firstgender = $_POST['firstgender'];
+        $secondname = $_POST['secondname'];
+        $secondfaculty = $_POST['secondfaculty'];
+        $secondgender = $_POST['secondgender'];
+        $date = $_POST['date'];
+        $time = $_POST['time'];
+        $info = $_POST['info'];
+
+        array_push($errors, "*Failed to add!");
+
+    }
+    
+}
 
 // editing news
 
@@ -48,6 +129,8 @@ if(isset($_GET['id'])) {
     $fixture = selectOne($table, ['id' => $id]);
 
     $id = $fixture['id'];
+    $date = $fixture['date'];
+    $time = $fixture['time'];
     $info = $fixture['info'];
 }
 
