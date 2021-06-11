@@ -4,6 +4,8 @@
 
     include('./path.php');
 
+    include(ROOT_PATH . '/main/controllers/resultspanel.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -48,45 +50,46 @@
                 <th>Learn More</th>
             </thead>
             <tbody>
+                
+                <?php $typesof = array(
+                    'football', 'basketball', 'volleyball', 'cricket', 'badminton', 'tabletennis', 'chess'
+                    );
+                ?>
 
-                <tr>
-                    <td colspan="7" style="text-transform: uppercase;">football</td>
-                </tr>
-                <tr>
-                    <td>25.05.2020 - 12:00</td>
-                    <td>First Year Boys (SOF)</td>
-                    <td>2</td>
-                    <td>-</td>
-                    <td>3</td>
-                    <td>Second Year Boys (COM)</td>
-                    <td><a href="#" class="info-link">View Info</a></td>
-                </tr>
+                <?php for($i=0; $i<7; $i++): ?>
+                    <tr>
+                        <?php foreach ($results as $key => $result): ?>
+                            <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
+                                <td style="text-transform: uppercase; font-size:15px;" colspan="8">
+                                    <?php 
+                                        echo $result['sports'];
+                                        break;
+                                        ?>
+                                </td>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </tr>
 
-                <tr>
-                    <td colspan="7" style="text-transform: uppercase;">Basketball</td>
-                </tr>
-                <tr>
-                    <td>25.05.2020 - 12:00</td>
-                    <td>First Year Girls (SOF)</td>
-                    <td>2</td>
-                    <td>-</td>
-                    <td>3</td>
-                    <td>Second Year Girls (COM)</td>
-                    <td><a href="#" class="info-link">View Info</a></td>
-                </tr>
+                    <?php foreach ($results as $key => $result): ?>
+                        <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
+                            <tr>
+                                <td>
+                                    <?php 
+                                        echo date('d', strtotime($result['date'])) . '.' . date('m', strtotime($result['date'])) . '.' . date('Y', strtotime($result['date'])) . 
+                                        ' - ' . date('H', strtotime($result['time'])) . ':' . date('i', strtotime($result['time']));
+                                    ?>
+                                </td>
+                                <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></>
+                                <td><?php echo $result['firstscore'];?></td>
+                                <td>-</td>
+                                <td><?php echo $result['secondscore'];?></td>
+                                <td><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
+                                <td><a href="#" class="info-link">View Info</a></td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
 
-                <tr>
-                    <td colspan="7" style="text-transform: uppercase;">Volleyball</td>
-                </tr>
-                <tr>
-                    <td>25.05.2020 - 12:00</td>
-                    <td>First Year Boys (SOF)</td>
-                    <td>2</td>
-                    <td>-</td>
-                    <td>3</td>
-                    <td>Second Year Boys (COM)</td>
-                    <td><a href="#" class="info-link">View Info</a></td>
-                </tr>
+                <?php endfor; ?>
             </tbody>
         </table>
     </section>

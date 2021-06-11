@@ -54,14 +54,14 @@
                 ?>
 
                 <tr>
-                    <td colspan="8">HELD MATCHES:</td>
+                    <td colspan="8" style="font-weight: 700; font-size:16px;">HELD MATCHES:</td>
                 </tr>
 
                 <?php for($i=0; $i<7; $i++): ?>
                     <?php $counter = 1;?>
                     <tr>
                         <?php foreach ($results as $key => $result): ?>
-                            <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' ): ?>
+                            <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
                                 <td style="text-transform: uppercase; font-size:15px;" colspan="8">
                                     <?php 
                                         echo $result['sports'];
@@ -73,12 +73,12 @@
                     </tr>
 
                     <?php foreach ($results as $key => $result): ?>
-                        <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?'): ?>
+                        <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
                             <tr>
                                 <td><?php echo $counter; ?></td>
-                                <td><?php echo $result['firstname'] . ' ' . $result['firstgender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['firstscore'] . ' - ' . $result['secondscore'];?></td>
-                                <td><?php echo $result['secondname']  . ' ' . $result['firstgender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['date'] . '.' . $result['time']; ?></td>
                                 <td><a href="./edit.php?id=<?php echo $result['id']; ?>" style="color: #ffcd02;">Edit</a></td>
                                 <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td>
@@ -90,7 +90,7 @@
                 <?php endfor; ?>
                 
                 <tr>
-                    <td colspan="8">PENDING MATCHES:</td>
+                    <td colspan="8" style="font-weight: 700; font-size:16px;">PENDING MATCHES:</td>
                 </tr>
 
                 <?php for($i=0; $i<7; $i++): ?>
@@ -112,9 +112,9 @@
                         <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] = '?'): ?>
                             <tr>
                                 <td><?php echo $counter; ?></td>
-                                <td><?php echo $result['firstname'] . ' ' . $result['firstgender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['firstscore'] . ' - ' . $result['secondscore'];?></td>
-                                <td><?php echo $result['secondname']  . ' ' . $result['firstgender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['date'] . '.' . $result['time']; ?></td>
                                 <td><a href="./edit.php?id=<?php echo $result['id']; ?>" style="color: #ffcd02;">Edit</a></td>
                                 <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td>

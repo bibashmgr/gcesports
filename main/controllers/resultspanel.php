@@ -13,7 +13,7 @@ $prevtable = 'fixturespanel';
 $prestable = 'resultspanel';
 
 // function to order the records based on date and time
-function selectExpired($table) // second parameter is optional
+function selectByAsc($table) // second parameter is optional
 {
     global $conn;
     
@@ -28,9 +28,9 @@ function selectExpired($table) // second parameter is optional
 
 $currentDate = getdate();
 
-$prerecords = selectExpired($prevtable);
+$prerecords = selectByAsc($prevtable);
 
-
+// returns already held matches
 foreach($prerecords as $key => $prerecord)
 {
 
@@ -47,5 +47,43 @@ foreach($prerecords as $key => $prerecord)
 }
 
 $results = selectAll($prestable);
+
+
+// editing results
+
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $result = selectOne($prestable, ['id' => $id]);
+
+    $id = $result['id'];
+    $title = $result['title'];
+    $info = $result['info'];
+}
+
+if (isset($_POST['update-results'])) {
+
+    $id = $_POST['id'];
+        
+    unset($_POST['update-results'], $_POST['id']);
+
+    $results_id = update($prestable, $id, $_POST);
+
+    header('location: ' . BASE_URL . '/main/admin/results/index.php');
+
+    exit();
+
+}
+
+// deleting fixtures
+
+if(isset($_GET['del_id'])) {
+
+    $id = $_GET['del_id'];
+    $count = delete($prestable, $id);
+
+    header('location: ' . BASE_URL . '/main/admin/results/index.php');
+    exit();
+
+}
 
 ?>

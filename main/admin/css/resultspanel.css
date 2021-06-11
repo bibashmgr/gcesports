@@ -15,7 +15,7 @@
      font-family: 'Oswald', sans-serif;
      font-weight: 700;
      font-size: 30px;
-     margin-bottom: 30px;
+     margin-bottom: 40px;
      text-transform: uppercase;
  }
  
@@ -70,87 +70,61 @@
  }
  /* Styling for results-panel-form */
  
- .fixtures-panel-form {
+ .results-panel-form {
      margin-left: 325px;
      margin-top: 60px;
      margin-bottom: 60px;
  }
  
- .fixtures-panel-form h1 {
+ .results-panel-form h1 {
      font-family: 'Oswald', sans-serif;
      font-weight: 700;
      font-size: 30px;
-     margin-bottom: 0px;
+     margin-bottom: 40px;
      text-transform: uppercase;
  }
  
- .fixtures-panel-form form div {
+ .results-panel-form form div {
      margin-top: 20px
  }
  
- .fixtures-panel-form form div label {
+ .results-panel-form form div span {
+     font-family: 'Oswald', sans-serif;
+     font-weight: 500;
+     font-size: 16px;
+ }
+ 
+ .results-panel-form form div label {
      font-family: 'Oswald', sans-serif;
      font-weight: 600;
      font-size: 18px;
  }
  
- .fixtures-panel-form form div #sports,
- .fixtures-panel-form form div #firstname,
- .fixtures-panel-form form div #firstfaculty,
- .fixtures-panel-form form div #firstgender,
- .fixtures-panel-form form div #secondname,
- .fixtures-panel-form form div #secondfaculty,
- .fixtures-panel-form form div #secondgender {
+ .fixtures-panel-form form div #firstscore,
+ .fixtures-panel-form form div #secondscore,
+ .fixtures-panel-form form div #title,
+ .fixtures-panel-form form div #info {
      font-family: 'Oswald', sans-serif;
      font-weight: 500;
-     font-size: 14px;
+     font-size: 16px;
      cursor: pointer;
  }
  
- .fixtures-panel-form form div #sports {
-     padding: 5px;
+ .results-panel-form form div #firstscore,
+ .results-panel-form form div #secondscore {
+     text-align: center;
+     margin-left: 10px;
+     padding: 7.5px 0px 5px 0px;
  }
  
- .fixtures-panel-form form div #firstname,
- .fixtures-panel-form form div #firstfaculty,
- .fixtures-panel-form form div #firstgender {
-     padding: 5px;
- }
- 
- .fixtures-panel-form form div #firstfaculty,
- .fixtures-panel-form form div #firstgender {
-     margin-left: 5px;
- }
- 
- .fixtures-panel-form form div #secondname,
- .fixtures-panel-form form div #secondfaculty,
- .fixtures-panel-form form div #secondgender {
-     padding: 5px;
- }
- 
- .fixtures-panel-form form div #secondfaculty,
- .fixtures-panel-form form div #secondgender {
-     margin-left: 5px;
- }
- 
- .fixtures-panel-form form div #date,
- .fixtures-panel-form form div #time {
-     margin-top: 5px;
-     border: 1px solid #2b2b2b;
-     padding: 10px;
-     cursor: pointer;
- }
- 
- .fixtures-panel-form form div #info {
+ .results-panel-form form div #title,
+ .results-panel-form form div #info {
      width: 50%;
      padding: 10px;
      margin-top: 5px;
-     font-family: 'Opensans', sans-serif;
-     font-weight: 500;
-     font-size: 14px;
  }
  
- .fixtures-panel-form form div #submit-btn {
+ .results-panel-form form div #submit-btn {
      color: #2b2b2b;
      text-decoration: none;
      border: none;
@@ -164,16 +138,16 @@
      cursor: pointer;
  }
  
- .fixtures-panel-form form div #submit-btn:hover {
+ .results-panel-form form div #submit-btn:hover {
      color: #f8f8f8;
      background-color: #2b2b2b;
  }
  
- .fixtures-panel-form div {
+ .results-panel-form div {
      margin-top: 15px;
  }
  
- .fixtures-panel-form div a {
+ .results-panel-form div a {
      color: #2b2b2b;
      text-decoration: none;
      font-family: 'Opensans', sans-serif;
@@ -185,20 +159,7 @@
      transition: 0.5s;
  }
  
- .fixtures-panel-form div a:hover {
+ .results-panel-form div a:hover {
      color: #f8f8f8;
      background-color: #2b2b2b;
- }
- 
- .errors-box {
-     display: inline-block;
-     padding: 5px 10px 15px 0px;
-     line-height: 0.5;
- }
- 
- .error {
-     font-family: 'Opensans', sans-serif;
-     font-weight: 400;
-     font-size: 12px;
-     color: red;
  }

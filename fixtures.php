@@ -69,10 +69,10 @@
                     <?php foreach ($fixtures as $key => $fixture): ?>
                         <?php if($fixture['sports'] == $typesof[$i]): ?>
                             <tr>
-                                <td><?php 
-                                    echo 
-                                    date('d', strtotime($fixture['date'])) . '.' . date('m', strtotime($fixture['date'])) . '.' . date('Y', strtotime($fixture['date'])) . 
-                                    ' - ' . date('H', strtotime($fixture['time'])) . ':' . date('i', strtotime($fixture['time']));
+                                <td>
+                                    <?php 
+                                        echo date('d', strtotime($fixture['date'])) . '.' . date('m', strtotime($fixture['date'])) . '.' . date('Y', strtotime($fixture['date'])) . 
+                                        ' - ' . date('H', strtotime($fixture['time'])) . ':' . date('i', strtotime($fixture['time']));
                                     ?>
                                 </td>
                                 <td><?php echo $fixture['firstname'] . ' ' . $fixture['gender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
