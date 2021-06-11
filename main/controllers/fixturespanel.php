@@ -8,6 +8,7 @@ function dd($users) // to be deleted
     exit();
 }
 
+// variables
 $table = 'fixturespanel';
 
 $id = '';
@@ -39,8 +40,6 @@ function selectByAsc($table) // second parameter is optional
 }
 
 $fixtures = selectByAsc($table);
-
-// adding news
 
 // checks errors
 function validateDatas($datas)
@@ -88,6 +87,7 @@ function validateDatas($datas)
 
 }
 
+//adding fixtures
 
 if(isset($_POST['add-fixtures'])) {
 
@@ -122,7 +122,7 @@ if(isset($_POST['add-fixtures'])) {
     
 }
 
-// editing news
+// editing fixtures
 
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -146,7 +146,7 @@ if (isset($_POST['edit-fixtures'])) {
     exit();
 }
 
-// deleting news
+// deleting fixtures
 
 if(isset($_GET['del_id'])) {
 

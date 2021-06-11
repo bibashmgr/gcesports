@@ -4,6 +4,8 @@
 
     include('./path.php');
 
+    include(ROOT_PATH . '/main/controllers/fixturespanel.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -46,40 +48,42 @@
                 <th>Learn More</th>
             </thead>
             <tbody>
-            
-                <tr>
-                    <td colspan="5" style="text-transform: uppercase;">football</td>
-                </tr>
-                <tr>
-                    <td>25.05.2020 - 12:00</td>
-                    <td>First Year Boys (SOF)</td>
-                    <td>VS</td>
-                    <td>Second Year Boys (COM)</td>
-                    <td><a href="#" class="info-link">View Info</a></td>
-                </tr>
+                <?php $typesof = array(
+                    'football', 'basketball', 'volleyball', 'cricket', 'badminton', 'tabletennis', 'chess'
+                ); ?>
 
-                <tr>
-                    <td colspan="5" style="text-transform: uppercase;">basketball</td>
-                </tr>
-                <tr>
-                    <td>25.05.2020 - 12:00</td>
-                    <td>First Year Boys (SOF)</td>
-                    <td>VS</td>
-                    <td>Second Year Boys (COM)</td>
-                    <td><a href="#" class="info-link">View Info</a></td>
-                </tr>
+                <?php for($i=0; $i<7; $i++): ?>
+                    <tr>
+                        <?php foreach ($fixtures as $key => $fixture): ?>
+                            <?php if($fixture['sports'] == $typesof[$i]): ?>
+                                <td style="text-transform: uppercase;" colspan="5">
+                                    <?php 
+                                        echo $fixture['sports'];
+                                        break;
+                                    ?>
+                                </td>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </tr>
 
-                <tr>
-                    <td colspan="5" style="text-transform: uppercase;">cricket</td>
-                </tr>
-                <tr>
-                    <td>25.05.2020 - 12:00</td>
-                    <td>First Year Girls (SOF)</td>
-                    <td>VS</td>
-                    <td>Second Year girls (COM)</td>
-                    <td><a href="#" class="info-link">View Info</a></td>
-                </tr>
+                    <?php foreach ($fixtures as $key => $fixture): ?>
+                        <?php if($fixture['sports'] == $typesof[$i]): ?>
+                            <tr>
+                                <td><?php 
+                                    echo 
+                                    date('d', strtotime($fixture['date'])) . '.' . date('m', strtotime($fixture['date'])) . '.' . date('Y', strtotime($fixture['date'])) . 
+                                    ' - ' . date('H', strtotime($fixture['time'])) . ':' . date('i', strtotime($fixture['time']));
+                                    ?>
+                                </td>
+                                <td><?php echo $fixture['firstname'] . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td>VS</td>
+                                <td><?php echo $fixture['secondname']  . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td><a href="#" class="info-link">View Info</a></td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
 
+                <?php endfor; ?>
             </tbody>
         </table>
     </section>

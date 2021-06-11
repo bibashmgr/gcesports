@@ -48,9 +48,11 @@
 
                 <?php $typesof = array(
                     'football', 'basketball', 'volleyball', 'cricket', 'badminton', 'tabletennis', 'chess'
-                ); ?>
+                    );
+                ?>
 
                 <?php for($i=0; $i<7; $i++): ?>
+                    <?php $counter = 1;?>
                     <tr>
                         <?php foreach ($fixtures as $key => $fixture): ?>
                             <?php if($fixture['sports'] == $typesof[$i]): ?>
@@ -67,7 +69,7 @@
                     <?php foreach ($fixtures as $key => $fixture): ?>
                         <?php if($fixture['sports'] == $typesof[$i]): ?>
                             <tr>
-                                <td><?php echo $key + 1; ?></td>
+                                <td><?php echo $counter; ?></td>
                                 <td><?php echo $fixture['firstname'] . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
                                 <td>VS</td>
                                 <td><?php echo $fixture['secondname']  . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
@@ -75,6 +77,7 @@
                                 <td><a href="./edit.php?id=<?php echo $fixture['id']; ?>" style="color: #ffcd02;">Edit</a></td>
                                 <td><a href="./index.php?del_id=<?php echo $fixture['id']; ?>" style="color: red;">Delete</a></td>
                             </tr>
+                            <?php $counter++ ;?>
                         <?php endif; ?>
                     <?php endforeach; ?>
 
