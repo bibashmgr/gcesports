@@ -75,9 +75,9 @@
                                     ' - ' . date('H', strtotime($fixture['time'])) . ':' . date('i', strtotime($fixture['time']));
                                     ?>
                                 </td>
-                                <td><?php echo $fixture['firstname'] . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $fixture['firstname'] . ' ' . $fixture['gender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
                                 <td>VS</td>
-                                <td><?php echo $fixture['secondname']  . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $fixture['secondname']  . ' ' . $fixture['gender'] . ' (' . $fixture['secondfaculty'] . ')'; ?></td>
                                 <td><a href="#" class="info-link">View Info</a></td>
                             </tr>
                         <?php endif; ?>

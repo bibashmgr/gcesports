@@ -12,15 +12,9 @@ function dd($users) // to be deleted
 $table = 'fixturespanel';
 
 $id = '';
-$sports ='';
-$firstname = '';
-$firstfaculty = '';
-$firstgender = '';
-$secondname = '';
-$secondfaculty = '';
-$secondgender = '';
 $date = '';
 $time = '';
+$title = '';
 $info = '';
 
 $errors = array();
@@ -41,84 +35,17 @@ function selectByAsc($table) // second parameter is optional
 
 $fixtures = selectByAsc($table);
 
-// checks errors
-function validateDatas($datas)
-{
-    
-    $errors = array();
-
-    if($datas['sports'] === 'none') {
-        array_push($errors, '*Please, select sport');
-    }
-
-    if($datas['firstname'] === 'none' || $datas['secondname'] === 'none') {
-        array_push($errors, '*Please, select team');
-    }
-
-    if($datas['firstfaculty'] === 'none' || $datas['secondfaculty'] === 'none') {
-        array_push($errors, '*Please, select faculty');
-    }
-
-    if($datas['firstgender'] === 'none' || $datas['secondgender'] === 'none'){
-        array_push($errors, '*Please, select gender');
-    }
-
-    if($datas['firstname'] === $datas['secondname'] || $datas['firstfacullty'] === $datas['secondfaculty']) {
-        array_push($errors, '*Please, check your form');
-    }
-
-    if($datas['firstgender'] != $datas['secondgender']) {
-        array_push($errors, '*Sorry, cannot create a match between boys and girls');
-    }
-
-    if(empty($datas['date'])) {
-        array_push($errors, '*Date field cannot be empty');
-    }
-
-    if(empty($datas['time'])) {
-        array_push($errors, '*Time field cannot be empty');
-    }
-
-    if(empty($datas['info'])) {
-        array_push($errors, '*Info field cannot be empty');
-    }
-
-    return $errors;
-
-}
-
 //adding fixtures
 
 if(isset($_POST['add-fixtures'])) {
 
-    $errors = validateDatas($_POST);
+    unset($_POST['add-fixtures']);
+    
+    $fixtures_id = create($table, $_POST);
 
-    if(count($errors) === 0){
+    header('location: ' . BASE_URL . '/main/admin/fixtures/index.php');
 
-        unset($_POST['add-fixtures']);
-
-        $fixtures_id = create($table, $_POST);
-
-        header('location: ' . BASE_URL . '/main/admin/fixtures/index.php');
-
-        exit();
-        
-    } else {
-
-        $sports = $_POST['sports'];
-        $firstname = $_POST['firstname'];
-        $firstfaculty = $_POST['firstfaculty'];
-        $firstgender = $_POST['firstgender'];
-        $secondname = $_POST['secondname'];
-        $secondfaculty = $_POST['secondfaculty'];
-        $secondgender = $_POST['secondgender'];
-        $date = $_POST['date'];
-        $time = $_POST['time'];
-        $info = $_POST['info'];
-
-        array_push($errors, "*Failed to add!");
-
-    }
+    exit();
     
 }
 
@@ -131,19 +58,22 @@ if(isset($_GET['id'])) {
     $id = $fixture['id'];
     $date = $fixture['date'];
     $time = $fixture['time'];
+    $title = $fixture['title'];
     $info = $fixture['info'];
 }
 
 if (isset($_POST['edit-fixtures'])) {
 
     $id = $_POST['id'];
-
+        
     unset($_POST['edit-fixtures'], $_POST['id']);
 
     $fixtures_id = update($table, $id, $_POST);
 
     header('location: ' . BASE_URL . '/main/admin/fixtures/index.php');
+
     exit();
+
 }
 
 // deleting fixtures

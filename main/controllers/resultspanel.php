@@ -46,4 +46,6 @@ foreach($prerecords as $key => $prerecord)
 
 }
 
+$results = selectAll($prestable);
+
 ?>

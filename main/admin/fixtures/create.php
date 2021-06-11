@@ -37,22 +37,11 @@
 
     <section class="fixtures-panel-form">
         <h1>Add Fixtures</h1>
-        <div class="errors-box">
-            <?php if($errors > 0 ): ?>
-                <?php foreach($errors as $key => $error): ?>      
-                    <div class="error">
-                        <?php echo $error; ?>
-                    </div>
-                <?php endforeach; ?>
-            <?php endif;?>
-        </div>
         <form action="create.php" method="POST">
             <div>
                 <label for="sports">Sports:</label><br/>
-                <select name="sports" id="sports">
-                    <option value="none" selected hidden>
-                        Select a sport
-                    </option>
+                <select name="sports" id="sports" required>
+                    <option></option>
                     <option value="football">Football</option>
                     <option value="basketball">Basketball</option>
                     <option value="volleyball">Volleyball</option>
@@ -63,75 +52,63 @@
                 </select>
             </div>
             <div>
+                <label for="gender">Gender:</label><br/>
+                <select name="gender" id="gender" required>
+                    <option></option>
+                    <option value="Boys">Boys</option>
+                    <option value="Girls">Girls</option>
+                </select>
+            </div>
+            <div>
                 <label for="firstteam">First Team:</label><br/>
-                <select name="firstname" id="firstname">
-                    <option value="none" selected hidden>
-                        Select a team
-                    </option>
+                <select name="firstname" id="firstname" required>
+                    <option></option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
                     <option value="Fourth Year">Fourth Year</option>
                     <option value="Staffs">Staffs</option>
                 </select>
-                <select name="firstfaculty" id="firstfaculty">
-                    <option value="none" selected hidden>
-                        Select a faculty
-                    </option>
+                <select name="firstfaculty" id="firstfaculty" required>
+                    <option></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
-                </select>
-                <select name="firstgender" id="firstgender">
-                    <option value="none" selected hidden>
-                        Select a gender
-                    </option>
-                    <option value="Boys">Boys</option>
-                    <option value="Girls">Girls</option>
                 </select>
             </div>
             <div>
                 <label for="secondteam">Second Team:</label><br/>
-                <select name="secondname" id="secondname">
-                    <option value="none" selected hidden>
-                        Select a team
-                    </option>
+                <select name="secondname" id="secondname" required>
+                    <option></option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
                     <option value="Fourth Year">Fourth Year</option>
                     <option value="Staffs">Staffs</option>
                 </select>
-                <select name="secondfaculty" id="secondfaculty">
-                    <option value="none" selected hidden>
-                        Select a faculty
-                    </option>
+                <select name="secondfaculty" id="secondfaculty" required>
+                    <option></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
-                </select>
-                <select name="secondgender" id="secondgender">
-                    <option value="none" selected hidden>
-                        Select a gender
-                    </option>
-                    <option value="Boys">Boys</option>
-                    <option value="Girls">Girls</option>
                 </select>
             </div>
             <div>
                 <label for="date">Date:</label><br/>
-                <input type="date" id="date" name="date" value="<?php echo $date;?>" />
+                <input type="date" id="date" name="date" value="<?php echo $date;?>" required />
             </div>
-
             <div>
                 <label for="time">Time:</label><br/>
-                <input type="time" id="time" name="time" value="<?php echo $time;?>" />
+                <input type="time" id="time" name="time" value="<?php echo $time;?>" required />
             </div>
-            
+            <div>
+                <label for="title">Title:</label><br/>
+                <input type="text" id="title" name="title" value="<?php echo $title;?>" required />
+            </div>
             <div>
                 <label for="info">Info:</label><br/>
-                <textarea id="info" name="info" rows="5" style="resize: none;"><?php echo $info; ?></textarea>
+                <textarea id="info" name="info" rows="5" style="resize: none;" required><?php echo $info; ?></textarea>
             </div>
             <div>
-                <input type="submit" name="add-fixtures" id="submit-btn" value="ADD FIXTURES">
+                <input type="submit" name="add-fixtures" id="submit-btn" value="ADD FIXTURES" />
             </div>
         </form>
         <div>

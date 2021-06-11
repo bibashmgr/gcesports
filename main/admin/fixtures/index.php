@@ -33,6 +33,8 @@
 
     <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
 
+
+    <!-- section: fixtures-panel-table -->
     <section class="fixtures-panel-table">
         <h1>Fixtures Panel</h1>
         <table>
@@ -70,9 +72,9 @@
                         <?php if($fixture['sports'] == $typesof[$i]): ?>
                             <tr>
                                 <td><?php echo $counter; ?></td>
-                                <td><?php echo $fixture['firstname'] . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $fixture['firstname'] . ' ' . $fixture['gender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
                                 <td>VS</td>
-                                <td><?php echo $fixture['secondname']  . ' ' . $fixture['firstgender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td><?php echo $fixture['secondname']  . ' ' . $fixture['gender'] . ' (' . $fixture['secondfaculty'] . ')'; ?></td>
                                 <td><?php echo $fixture['date'] . '.' .$fixture['time']; ?></td>
                                 <td><a href="./edit.php?id=<?php echo $fixture['id']; ?>" style="color: #ffcd02;">Edit</a></td>
                                 <td><a href="./index.php?del_id=<?php echo $fixture['id']; ?>" style="color: red;">Delete</a></td>
