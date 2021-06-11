@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/resultspanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
