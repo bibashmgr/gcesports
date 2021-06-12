@@ -59,7 +59,7 @@
                 <?php for($i=0; $i<7; $i++): ?>
                     <tr>
                         <?php foreach ($results as $key => $result): ?>
-                            <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
+                            <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
                                 <td style="text-transform: uppercase; font-size:15px;" colspan="8">
                                     <?php 
                                         echo $result['sports'];
@@ -71,7 +71,7 @@
                     </tr>
 
                     <?php foreach ($results as $key => $result): ?>
-                        <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
+                        <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
                             <tr>
                                 <td>
                                     <?php 

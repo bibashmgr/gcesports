@@ -54,14 +54,14 @@
                 ?>
 
                 <tr>
-                    <td colspan="8" style="font-weight: 700; font-size:16px;">HELD MATCHES:</td>
+                    <td colspan="8" style="font-weight: 700;font-size:16px;">HELD MATCHES:</td>
                 </tr>
 
                 <?php for($i=0; $i<7; $i++): ?>
                     <?php $counter = 1;?>
                     <tr>
                         <?php foreach ($results as $key => $result): ?>
-                            <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
+                            <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
                                 <td style="text-transform: uppercase; font-size:15px;" colspan="8">
                                     <?php 
                                         echo $result['sports'];
@@ -73,7 +73,7 @@
                     </tr>
 
                     <?php foreach ($results as $key => $result): ?>
-                        <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
+                        <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
                             <tr>
                                 <td><?php echo $counter; ?></td>
                                 <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
@@ -90,14 +90,14 @@
                 <?php endfor; ?>
                 
                 <tr>
-                    <td colspan="8" style="font-weight: 700; font-size:16px;">PENDING MATCHES:</td>
-                </tr>
+                    <td colspan="8" style="font-weight: 700;font-size:16px;">PENDING MATCHES:</td>
+                </>
 
                 <?php for($i=0; $i<7; $i++): ?>
                     <?php $counter = 1;?>
                     <tr>
                         <?php foreach ($results as $key => $result): ?>
-                            <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] = '?'): ?>
+                            <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] === '?' && $result['firstscore'] === '?'): ?>
                                 <td style="text-transform: uppercase; font-size:15px;" colspan="8">
                                     <?php 
                                         echo $result['sports'];
@@ -109,7 +109,7 @@
                     </tr>
 
                     <?php foreach ($results as $key => $result): ?>
-                        <?php if($result['sports'] == $typesof[$i] && $result['firstscore'] = '?'): ?>
+                        <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] === '?' && $result['firstscore'] === '?'): ?>
                             <tr>
                                 <td><?php echo $counter; ?></td>
                                 <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>

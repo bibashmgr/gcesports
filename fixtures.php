@@ -53,9 +53,13 @@
                 ); ?>
 
                 <?php for($i=0; $i<7; $i++): ?>
+                    <?php 
+                        $currentDate = getdate();
+                    ?>
                     <tr>
                         <?php foreach ($fixtures as $key => $fixture): ?>
-                            <?php if($fixture['sports'] == $typesof[$i]): ?>
+                            <?php $pastdate = strtotime($fixture['date']); ?>
+                            <?php if($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)): ?>
                                 <td style="text-transform: uppercase;" colspan="5">
                                     <?php 
                                         echo $fixture['sports'];
@@ -67,7 +71,8 @@
                     </tr>
 
                     <?php foreach ($fixtures as $key => $fixture): ?>
-                        <?php if($fixture['sports'] == $typesof[$i]): ?>
+                        <?php $pastdate = strtotime($fixture['date']); ?>
+                        <?php if($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)): ?>
                             <tr>
                                 <td>
                                     <?php 
