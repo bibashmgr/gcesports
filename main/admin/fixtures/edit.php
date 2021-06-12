@@ -42,7 +42,7 @@
             <div>
                 <label for="sports">Sports:</label><br/>
                 <select name="sports" id="sports" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="football">Football</option>
                     <option value="basketball">Basketball</option>
                     <option value="volleyball">Volleyball</option>
@@ -55,7 +55,7 @@
             <div>
                 <label for="gender">Gender:</label><br/>
                 <select name="gender" id="gender" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="Boys">Boys</option>
                     <option value="Girls">Girls</option>
                 </select>
@@ -63,7 +63,7 @@
             <div>
                 <label for="firstteam">First Team:</label><br/>
                 <select name="firstname" id="firstname" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
@@ -71,7 +71,7 @@
                     <option value="Staffs">Staffs</option>
                 </select>
                 <select name="firstfaculty" id="firstfaculty" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>
@@ -79,7 +79,7 @@
             <div>
                 <label for="secondteam">Second Team:</label><br/>
                 <select name="secondname" id="secondname" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
@@ -87,7 +87,7 @@
                     <option value="Staffs">Staffs</option>
                 </select>
                 <select name="secondfaculty" id="secondfaculty" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>

@@ -41,20 +41,25 @@
             <div>
                 <label for="sports">Sports:</label><br/>
                 <select name="sports" id="sports" required>
-                    <option></option>
-                    <option value="football">Football</option>
-                    <option value="basketball">Basketball</option>
-                    <option value="volleyball">Volleyball</option>
-                    <option value="cricket">Cricket</option>
-                    <option value="badminton">Badminton</option>
-                    <option value="tabletennis">Table Tennis</option>
-                    <option value="chess">Chess</option>
+                    <option hidden></option>
+                    <option value="football">football</option>
+                    <option value="basketball">basketball</option>
+                    <option value="volleyball">volleyball</option>
+                    <option value="cricket">cricket</option>
+                    <option value="badminton">badminton</option>
+                    <option value="tabletennis">table tennis</option>
+                    <option value="chess">chess</option>
                 </select>
+                <!-- 
+                <select name="group" id="group" required>
+                    <option hidden></option>
+                </select> 
+                -->
             </div>
             <div>
                 <label for="gender">Gender:</label><br/>
                 <select name="gender" id="gender" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="Boys">Boys</option>
                     <option value="Girls">Girls</option>
                 </select>
@@ -62,7 +67,7 @@
             <div>
                 <label for="firstteam">First Team:</label><br/>
                 <select name="firstname" id="firstname" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
@@ -70,7 +75,7 @@
                     <option value="Staffs">Staffs</option>
                 </select>
                 <select name="firstfaculty" id="firstfaculty" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>
@@ -78,7 +83,7 @@
             <div>
                 <label for="secondteam">Second Team:</label><br/>
                 <select name="secondname" id="secondname" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="First Year">First Year</option>
                     <option value="Second Year">Second Year</option>
                     <option value="Third Year">Third Year</option>
@@ -86,7 +91,7 @@
                     <option value="Staffs">Staffs</option>
                 </select>
                 <select name="secondfaculty" id="secondfaculty" required>
-                    <option></option>
+                    <option hidden></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>
@@ -119,6 +124,26 @@
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
+
+    <!-- custom scripting -->
+    <script>
+        function groupIn() {
+
+            var x = document.getElementById('sports').value;
+
+            if (x == "football" || x == "basketball" || x == "volleyball" || x == "cricket") {
+                document.getElementById('group').innerHTML = "<option value='team'>Team</option>";
+            }
+
+            if (x == "badminton" || x == "tabletennis") {
+                document.getElementById('group').innerHTML = "<option value='team'>Team</option><option value='solo'>Solo</option>";
+            }
+
+            if (x == "chess") {
+                document.getElementById('group').innerHTML = "<option value='solo'>Solo</option>";
+            }
+        }
+    </script>
 
 </body>
 </html>

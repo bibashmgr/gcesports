@@ -116,6 +116,7 @@
 }
 
 .fixtures-panel-form form div #sports,
+.fixtures-panel-form form div #group,
 .fixtures-panel-form form div #gender,
 .fixtures-panel-form form div #firstname,
 .fixtures-panel-form form div #firstfaculty,
@@ -124,28 +125,13 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     font-size: 14px;
+    text-transform: capitalize;
+    padding: 5px;
     cursor: pointer;
 }
 
-.fixtures-panel-form form div #sports,
-.fixtures-panel-form form div #gender {
-    padding: 5px;
-}
-
-.fixtures-panel-form form div #firstname,
-.fixtures-panel-form form div #firstfaculty {
-    padding: 5px;
-}
-
-.fixtures-panel-form form div #firstfaculty {
-    margin-left: 5px;
-}
-
-.fixtures-panel-form form div #secondname,
-.fixtures-panel-form form div #secondfaculty {
-    padding: 5px;
-}
-
+.fixtures-panel-form form div #group,
+.fixtures-panel-form form div #firstfaculty,
 .fixtures-panel-form form div #secondfaculty {
     margin-left: 5px;
 }
