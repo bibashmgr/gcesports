@@ -50,11 +50,6 @@
                     <option value="tabletennis">table tennis</option>
                     <option value="chess">chess</option>
                 </select>
-                <!-- 
-                <select name="group" id="group" required>
-                    <option hidden></option>
-                </select> 
-                -->
             </div>
             <div>
                 <label for="gender">Gender:</label><br/>
@@ -126,24 +121,7 @@
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
     <!-- custom scripting -->
-    <script>
-        function groupIn() {
-
-            var x = document.getElementById('sports').value;
-
-            if (x == "football" || x == "basketball" || x == "volleyball" || x == "cricket") {
-                document.getElementById('group').innerHTML = "<option value='team'>Team</option>";
-            }
-
-            if (x == "badminton" || x == "tabletennis") {
-                document.getElementById('group').innerHTML = "<option value='team'>Team</option><option value='solo'>Solo</option>";
-            }
-
-            if (x == "chess") {
-                document.getElementById('group').innerHTML = "<option value='solo'>Solo</option>";
-            }
-        }
-    </script>
+    <script src=""></script>
 
 </body>
 </html>

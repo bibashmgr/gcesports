@@ -1,5 +1,175 @@
-    /* Styling for sidebar */
-    
-    .sidebar-container ul li:nth-child(4) {
-        background-color: #FFCD02;
-    }
+/* Styling for sidebar */
+
+.sidebar-container ul li:nth-child(4) {
+    background-color: #FFCD02;
+}
+
+
+/* Styling for teams-panel-table */
+
+.fixtures-panel-table {
+    margin-left: 325px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.fixtures-panel-table h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.fixtures-panel-table table {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+.fixtures-panel-table th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 3;
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+}
+
+.fixtures-panel-table th:nth-child(1) {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.fixtures-panel-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.fixtures-panel-table td {
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 2.5;
+    text-align: center;
+}
+
+.fixtures-panel-table td:nth-child(1) {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.fixtures-panel-table td a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.fixtures-panel-table td a:hover {
+    text-decoration: underline;
+}
+
+.fixtures-panel-table .add-link {
+    margin-top: 25px;
+}
+
+.add-link a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+}
+
+.add-link a:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
+
+
+/* Styling for news-panel-form */
+
+.teams-panel-form {
+    margin-left: 325px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.teams-panel-form h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.teams-panel-form form div {
+    margin-top: 20px
+}
+
+.teams-panel-form form div label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.teams-panel-form form div #sports,
+.teams-panel-form form div #group,
+.teams-panel-form form div #gender,
+.teams-panel-form form div #teamname,
+.teams-panel-form form div #teamfaculty {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.teams-panel-form form div #group,
+.teams-panel-form form div #gender,
+.teams-panel-form form div #teamfaculty {
+    margin-left: 5px;
+}
+
+.teams-panel-form form div #submit-btn {
+    color: #2b2b2b;
+    text-decoration: none;
+    border: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.teams-panel-form form div #submit-btn:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
+
+.teams-panel-form div {
+    margin-top: 15px;
+}
+
+.teams-panel-form div a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+}
+
+.teams-panel-form div a:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
