@@ -31,6 +31,15 @@
 
     <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
 
+    <!-- section: teams-panel -->
+
+    <section class="teams-panel-table">
+        <h1>Teams Panel</h1>
+        <div class="add-link">
+            <a href="./create.php">ADD TEAMS</a>
+        </div>
+    </section>
+
     
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
