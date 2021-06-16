@@ -39,12 +39,12 @@
         <h1>Select Sports</h1>
         <ul>
             <li><a href="./football.php">Football</a></li>
-            <li><a href="./football.php">Basketball</a></li>
-            <li><a href="./football.php">Volleyball</a></li>
-            <li><a href="./football.php">Cricket</a></li>
-            <li><a href="./football.php">Badminton</a></li>
-            <li><a href="./football.php">Table Tennis</a></li>
-            <li><a href="./football.php">Chess</a></li>
+            <li><a href="./basketball.php">Basketball</a></li>
+            <li><a href="./volleyball.php">Volleyball</a></li>
+            <li><a href="./cricket.php">Cricket</a></li>
+            <li><a href="./badminton.php">Badminton</a></li>
+            <li><a href="./tabletennis.php">Table Tennis</a></li>
+            <li><a href="./chess.php">Chess</a></li>
         </ul>
         <div>
             <a href="./index.php">MANAGE TEAMS</a>
