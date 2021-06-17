@@ -160,11 +160,10 @@
 .teams-panel-form form div #teamgender,
 .teams-panel-form form div #teamname,
 .teams-panel-form form div #teamfaculty,
-.teams-panel-form form div #playersname,
-.teams-panel-form form div .playersname,
-.teams-panel-form form div #positions,
 .teams-panel-form form div #grouped,
-.teams-panel-form form div #jerseynumbers {
+.teams-panel-form form div .playersname,
+.teams-panel-form form div .positions,
+.teams-panel-form form div .jerseynumbers {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -175,9 +174,9 @@
 
 .teams-panel-form form div #teamgender,
 .teams-panel-form form div #teamfaculty,
-.teams-panel-form form div #positions,
 .teams-panel-form form div #grouped,
-.teams-panel-form form div #jerseynumbers {
+.teams-panel-form form div .positions,
+.teams-panel-form form div .jerseynumbers {
     margin-left: 5px;
 }
 

@@ -67,8 +67,8 @@
                 <label for="starting">Starting XI:</label><br/>
                 <div>
                     <span style="font-weight: 700;">01.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -76,13 +76,13 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span style="font-weight: 700;">02.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -90,13 +90,13 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span style="font-weight: 700;">03.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -104,13 +104,13 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span style="font-weight: 700;">04.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -118,13 +118,13 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span style="font-weight: 700;">05.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -132,7 +132,7 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
             </div>
@@ -140,8 +140,8 @@
                 <label for="extras">Extras:</label><br/>
                 <div>
                     <span style="font-weight: 700;">01.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -149,13 +149,13 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
                     <span style="font-weight: 700;">02.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -163,13 +163,13 @@
                         <option value="PF">PF</option>                        
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
                     <span style="font-weight: 700;">03.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
@@ -177,7 +177,7 @@
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
             </div>

@@ -67,145 +67,145 @@
                 <label for="starting">Starting XI:</label><br/>
                 <div>
                     <span class="numbers">01.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">02.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">03.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">04.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">05.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">06.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">07.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">08.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">09.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">10.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
                     <span class="numbers">11.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
             </div>
@@ -213,67 +213,67 @@
                 <label for="extras">Extras:</label><br/>
                 <div>
                     <span class="numbers">01.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
                     <span class="numbers">02.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
                     <span class="numbers">03.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
                     <span class="numbers">04.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
                     <span class="numbers">05.</span>
-                    <input type="text" name="playersname[]" id="playersname" required />
-                    <select name="positions[]" id="positions" required>
+                    <input type="text" name="playersname[]" class="playersname" required />
+                    <select name="positions[]" class="positions" required>
                         <option hidden></option>
                         <option value="GK">GK</option>
                         <option value="DF">DF</option>
                         <option value="MF">MF</option>
                         <option value="FW">FW</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" id="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
             </div>
