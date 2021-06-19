@@ -59,18 +59,18 @@
 
                 <?php for($i=0; $i<7; $i++): ?>
                     <?php $counter = 1;?>
-                    <tr>
                         <?php foreach ($results as $key => $result): ?>
                             <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
-                                <td style="text-transform: uppercase; font-size:15px;" colspan="8">
-                                    <?php 
-                                        echo $result['sports'];
-                                        break;
-                                        ?>
-                                </td>
+                                <tr>
+                                    <td style="text-transform: uppercase; font-size:15px;" colspan="8">
+                                        <?php 
+                                            echo $result['sports'];
+                                            break;
+                                            ?>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
                         <?php endforeach; ?>
-                    </tr>
 
                     <?php foreach ($results as $key => $result): ?>
                         <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
@@ -88,10 +88,13 @@
                     <?php endforeach; ?>
 
                 <?php endfor; ?>
-                
+
+                <tr>
+                    <td colspan="8">&nbsp;</td>
+                </tr>
                 <tr>
                     <td colspan="8" style="font-weight: 700;font-size:16px;">PENDING MATCHES:</td>
-                </>
+                </tr>
 
                 <?php for($i=0; $i<7; $i++): ?>
                     <?php $counter = 1;?>

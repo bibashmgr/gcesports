@@ -58,6 +58,14 @@
     padding-left: 10px;
 }
 
+.teams-panel-table .sports-title {
+    text-transform: uppercase;
+}
+
+.teams-panel-table .team-title {
+    text-transform: capitalize;
+}
+
 .teams-panel-table td a {
     color: #2b2b2b;
     text-decoration: none;
@@ -114,31 +122,36 @@
 }
 
 .teams-panel-form ul {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    display: flex;
 }
 
 .teams-panel-form li {
     list-style: none;
-    margin-bottom: 10px;
+    padding-right: 30px;
 }
 
 .teams-panel-form li a {
     display: inline-block;
     color: #2b2b2b;
-    background-color: #FFCD02;
+    background-color: #f8f8f8;
     text-decoration: none;
     font-family: 'Opensans', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    padding: 7.5px 20px;
+    padding: 20px;
+    border: 1px solid #f8f8f8;
     border-radius: 20px;
     transition: 0.5s;
     cursor: pointer;
 }
 
 .teams-panel-form li a:hover {
-    color: #f8f8f8;
-    background-color: #2b2b2b;
+    border: 1px solid #2b2b2b;
+}
+
+.teams-panel-form li a img {
+    width: 50px;
 }
 
 .teams-panel-form form div {

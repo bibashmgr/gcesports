@@ -58,19 +58,19 @@
                         $counter = 1;
                         $currentDate = getdate();
                     ?>
-                    <tr>
                         <?php foreach ($fixtures as $key => $fixture): ?>
                             <?php $pastdate = strtotime($fixture['date']); ?>
                             <?php if($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)): ?>
-                                <td style="text-transform: uppercase; font-size:15px;" colspan="8">
-                                    <?php 
-                                        echo $fixture['sports'];
-                                        break;
-                                        ?>
-                                </td>
+                                <tr>
+                                    <td style="text-transform: uppercase; font-size:15px;" colspan="8">
+                                        <?php 
+                                            echo $fixture['sports'];
+                                            break;
+                                            ?>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
                         <?php endforeach; ?>
-                    </tr>
 
                     <?php foreach ($fixtures as $key => $fixture): ?>
                         <?php $pastdate = strtotime($fixture['date']); ?>

@@ -4,6 +4,8 @@
 
     include('../../../path.php');
 
+    include(ROOT_PATH . '/main/controllers/teamspanel.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +37,55 @@
 
     <section class="teams-panel-table">
         <h1>Teams Panel</h1>
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Team name</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+
+                <?php for ($i=0; $i < 7; $i++): ?>
+
+                    <?php $records = selectAll($tables[$i]); ?>
+
+                    <?php if(count($records) > 0) :?>
+                                    <tr>
+                                        <td colspan="3" class="sports-title"><?php echo $records[0]['sports']; ?></td>
+                                    </tr>
+                    <?php endif; ?>
+
+                        <?php for ($j=0; $j < 4; $j++): ?>
+
+                            <?php for ($k=0; $k < 2; $k++): ?>
+
+                                <?php for ($l=0; $l < 2; $l++): ?>
+
+                                    <?php
+                                        $conditions['teamname'] = $teamnames[$j];
+                                        $conditions['teamgender'] = $teamgenders[$k];
+                                        $conditions['teamfaculty'] = $teamfacultys[$l];
+
+                                        $datas = selectOne($tables[$i], $conditions);
+                                    ?>
+
+                                    <?php if($datas): ?>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="team-title"><?php echo $datas['teamname'] . ' ' . $datas['teamgender'] . ' (' . $datas['teamfaculty'] . ')'; ?></td>
+                                            <td><a href="./delete.php?s=<?php echo $datas['sports'];?>&tn=<?php echo $datas['teamname'];?>&tg=<?php echo $datas['teamgender'];?>&tf=<?php echo $datas['teamfaculty'];?>" style="color: red;">Delete</a></>
+                                        </tr>
+                                    <?php endif; ?>
+
+                                <?php endfor; ?>
+                                    
+                            <?php endfor; ?>
+                                    
+                        <?php endfor; ?>
+                
+                <?php endfor; ?>
+            </tbody>
+        </table>
         <div class="add-link">
             <a href="./create.php">ADD TEAMS</a>
         </div>

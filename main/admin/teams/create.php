@@ -4,8 +4,6 @@
 
     include('../../../path.php');
 
-    include(ROOT_PATH . '/main/controllers/teamspanel.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,15 +34,15 @@
     <!-- section: news-panel-form -->
 
     <section class="teams-panel-form">
-        <h1>Select Sports</h1>
+        <h1>Select Sports:</h1>
         <ul>
-            <li><a href="./football.php">Football</a></li>
-            <li><a href="./basketball.php">Basketball</a></li>
-            <li><a href="./volleyball.php">Volleyball</a></li>
-            <li><a href="./cricket.php">Cricket</a></li>
-            <li><a href="./badminton.php">Badminton</a></li>
-            <li><a href="./tabletennis.php">Table Tennis</a></li>
-            <li><a href="./chess.php">Chess</a></li>
+            <li><a href="./football.php"><img src="../../../media/teams/football.png" alt="football"></a></li>
+            <li><a href="./basketball.php"><img src="../../../media/teams/basketball.png" alt="basketball"></a></li>
+            <li><a href="./volleyball.php"><img src="../../../media/teams/volleyball.png" alt="volleyball"></a></li>
+            <li><a href="./cricket.php"><img src="../../../media/teams/cricket.png" alt="cricket"></a></li>
+            <li><a href="./badminton.php"><img src="../../../media/teams/badminton.png" alt="badminton"></a></li>
+            <li><a href="./tabletennis.php"><img src="../../../media/teams/tabletennis.png" alt="tabletennis"></a></li>
+            <li><a href="./chess.php"><img src="../../../media/teams/chess.png" alt="chess"></a></li>
         </ul>
         <div>
             <a href="./index.php">MANAGE TEAMS</a>

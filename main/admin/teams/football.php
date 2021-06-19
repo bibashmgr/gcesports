@@ -36,7 +36,7 @@
     <!-- section: teams-panel-form -->
 
     <section class="teams-panel-form">
-        <h1>Add Teams</h1>
+        <h1>ADD TEAMS</h1>
         <form action="football.php" method="POST" name="teamForm">
             <h3>Football:</h3>
             <div>
@@ -55,7 +55,6 @@
                 <select name="teamgender" id="teamgender" required>
                     <option hidden></option>
                     <option value="boys">Boys</option>
-                    <option value="girls">Girls</option>
                 </select>
                 <select name="teamfaculty" id="teamfaculty" required>
                     <option hidden></option>

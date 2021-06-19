@@ -5,13 +5,25 @@
     function dd($users) // to be deleted
     {
         echo '<pre>', print_r($users,true), '</pre>';
-        exit();
     }
 
+    
+    //variables
     $table = '';
+    
+    $teamname = '';
+    $teamgender = '';
+    $teamfaculty = '';
 
+    // making arrays
+    $tables = array("footballpanel","basketballpanel","volleyballpanel","cricketpanel","badmintonpanel","tabletennispanel","chesspanel");
+    $conditions = array();
+    $teamnames = array("first year", "second year", "third year", "fourth year");
+    $teamgenders = array("boys", "girls");
+    $teamfacultys = array("COM", "SOF");
+
+    
     // adding teams
-
     if (isset($_POST['add-teams'])) {
 
         // setting value for $table
@@ -43,8 +55,6 @@
             $jerseynumbers = $_POST['jerseynumbers'];
             $extras = $_POST['extras'];
 
-
-            unset($_POST['sports']);
             unset($_POST['playersname']);
             unset($_POST['positions']);
             unset($_POST['jerseynumbers']);
@@ -77,7 +87,6 @@
 
                 $playersname = $_POST['playersname'];
 
-                unset($_POST['sports']);
                 unset($_POST['playersname']);
                 unset($_POST['add-teams']);
 
@@ -98,8 +107,7 @@
             if($_POST['grouped'] === 'solo'){
 
                 $playersname = $_POST['playersname'];
-    
-                unset($_POST['sports']);
+                
                 unset($_POST['playersname']);
                 unset($_POST['add-teams']);
 
@@ -117,7 +125,7 @@
 
         if ($_POST['sports'] === 'chess')
         {
-            unset($_POST['sports']);
+            
             unset($_POST['add-teams']);
 
             $teams_id = create($table, $_POST);
@@ -125,6 +133,47 @@
             header('location: ' . BASE_URL . '/main/admin/teams/index.php');
             exit(); 
         }
+
+    }
+
+    //deleting teams
+
+    if(isset($_GET['s'])) {
+
+        $sports = $_GET['s'];
+
+        $cdtns = array();
+        $cdtns['teamname'] = $_GET['tn'];
+        $cdtns['teamgender'] = $_GET['tg'];
+        $cdtns['teamfaculty'] = $_GET['tf'];
+
+        if($sports === 'football'){
+            $table = 'footballpanel';
+        } elseif($sports === 'basketball'){
+            $table = 'basketballpanel';
+        } elseif($sports === 'vollleyball'){
+            $table = 'volleyballpanel';
+        } elseif($sports === 'cricket'){
+            $table = 'cricketpanel';
+        } elseif($sports === 'badminton'){
+            $table = 'badmintonpanel';
+        } elseif($sports === 'tabletennis'){
+            $table = 'tabletennispanel';
+        } elseif($sports === 'chess'){
+            $table = 'chesspanel';
+        } else {
+            $table = '';
+        }
+
+        $teams_id = selectAll($table, $cdtns);
+
+        foreach($teams_id as $key => $team_id){
+            $count = delete($table, $team_id['id']);
+        }
+
+
+        header('location: ' . BASE_URL . '/main/admin/teams/index.php');
+        exit();
 
     }
 
