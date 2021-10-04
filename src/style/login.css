@@ -75,6 +75,7 @@
 }
 
 .login-container input[type="text"],
+.login-container input[type="email"],
 .login-container input[type="password"] {
     border: none;
     border-bottom: 1px solid #2B2B2B;

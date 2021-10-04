@@ -3,6 +3,11 @@
 // including connect.php for database connection
 require('connect.php');
 
+function dd($users) // to be deleted
+{
+    echo '<pre>', print_r($users,true), '</pre>';
+    exit();
+}
 
 function executeQuery($sql, $data)
 {

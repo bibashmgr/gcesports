@@ -36,8 +36,9 @@
 
             $user = selectOne('adminlogin', ['admin' => $_POST['admin']]);
 
-            if(($user['admin'] === $_POST['admin']) && ($user['password'] === $_POST['password'])) {
+            if(!empty($user) && ($user['password'] === $_POST['password'])) {
 
+                $_SESSION['name'] = $user['name'];
                 $_SESSION['admin'] = $user['admin'];
 
                 header('location:' . BASE_URL . '/profile.php');

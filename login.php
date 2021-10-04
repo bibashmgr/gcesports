@@ -52,7 +52,7 @@
                     </div>
                     <div class="form-control">
                         <label for="admin">Email:</label>
-                        <input id="admin" type="text" name="admin" placeholder="Enter Email" value="<?php echo $adminEmail; ?>" />
+                        <input id="admin" type="email" name="admin" placeholder="Enter Email" value="<?php echo $adminEmail; ?>" autocomplete="off" />
                     </div>
                     <div class="form-control">
                         <label for="password">Password:</label>

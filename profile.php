@@ -7,6 +7,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -26,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
@@ -34,18 +36,41 @@
 
     <!-- section: user-profile -->
 
-    <section class="section-container">
-        <div class="section-heading">
-            WELCOME
-        </div>
-        <div class="admin-name">
-            <i><?php echo 'login as <u>' . $_SESSION['admin'] . '</u>'; ?></i>
-        </div>
-        <div class="logout-btn">
-            <a href="./main/controllers/logout.php">LOGOUT</a>
-        </div>
-        <div class="admin-panel-btn">
-            <a href="./main/admin/home/index.php">GO TO ADMIN PANEL</a>
+    <section class="container">
+        <div class="profile-container">
+
+            <div class="profile-pic-container">
+                <img src="./media/profile-pic.svg" alt="profile-pic" id="profile-pic" />
+            </div>
+
+            <div class="heading-container">
+                <span class="heading-span">Welcome,</span>
+            </div>
+
+            <div class="name-container">
+                <span class="name-span">
+                    <?php echo $_SESSION['name']; ?>
+                <span>
+            </div>
+
+            <div class="email-container">
+                <span class="email-icon">
+                    <i class="far fa-envelope"></i>
+                </span>
+                <span class="email-span">
+                    <?php echo $_SESSION['admin']; ?>
+                <span>
+            </div>
+
+            <div class="btn-container">
+                <div class="logout-btn">
+                    <a href="./main/controllers/logout.php" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+                <div class="admin-panel-btn">
+                    <a href="./main/admin/home/index.php" title="Admin Panel"><i class="fas fa-user-cog"></i></a>
+                </div>
+            </div>
+
         </div>
     </section>
     

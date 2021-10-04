@@ -18,42 +18,109 @@
 
 /* styling for section */
 
-.section-container {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    margin-top: 100px;
+}
+
+.profile-container {
+    width: 30%;
     text-align: center;
-    padding-top: 60px;
+    background-color: #f8f8f8;
+    position: relative;
+    height: 55vh;
 }
 
-.section-heading {
-    font-family: 'Oswald', sans-serif;
+.profile-pic-container {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-pic-container #profile-pic {
+    width: 150px;
+    height: 150px;
+}
+
+.heading-container {
+    margin-top: 120px;
+}
+
+.heading-span {
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
     font-weight: 700;
-    font-size: 40px;
+    text-transform: uppercase;
 }
 
-.admin-name {
+.name-container {
+    margin-top: 1px;
+}
+
+.name-span {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.email-container {
+    margin-top: 5px;
+}
+
+.email-icon {
     font-size: 16px;
-    margin-bottom: 50px;
+    font-weight: 500;
+    margin-right: 1px;
+}
+
+.email-span {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.btn-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logout-btn,
 .admin-panel-btn {
-    margin-top: 25px;
+    border: 2px solid #2B2B2B;
+    background-color: #f8f8f8;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
 .logout-btn a,
 .admin-panel-btn a {
-    font-family: 'Opensans', sans-serif;
-    background-color: #FFCD02;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 18px;
-    color: #2b2b2b;
     text-decoration: none;
-    padding: 7.5px 20px;
-    transition: all 0.5s;
+    color: #2B2B2B;
 }
 
-.logout-btn a:hover,
-.admin-panel-btn a:hover {
-    background-color: #2b2b2b;
-    color: #f8f8f8;
+.logout-btn a i,
+.admin-panel-btn a i {
+    font-size: 20px;
+}
+
+.logout-btn {
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.admin-panel-btn {
+    padding: 5px 2.5px;
+}
+
+.logout-btn:hover,
+.admin-panel-btn:hover {
+    background-color: #FFCD02;
 }

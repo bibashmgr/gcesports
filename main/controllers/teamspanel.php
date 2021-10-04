@@ -1,12 +1,6 @@
 <?php
 
     include(ROOT_PATH . '/main/database/db.php');
-
-    function dd($users) // to be deleted
-    {
-        echo '<pre>', print_r($users,true), '</pre>';
-    }
-
     
     //variables
     $table = '';
