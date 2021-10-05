@@ -103,9 +103,14 @@ nav li:nth-child(4) a {
     color: #f8f8f8;
 }
 
+#table-container {
+    display: none;
+}
+
 .team-table {
     font-family: 'Oswald', sans-serif;
     border-collapse: collapse;
+    width: 100%;
 }
 
 .team-table {

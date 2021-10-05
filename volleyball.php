@@ -20,7 +20,6 @@
     <!-- custom styling -->
     <link rel="stylesheet" href="./src/style/types.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="./src/style/header.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="./src/style/footer.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -164,10 +163,6 @@
             </tbody>
         </table>
     </section>
-    
-    <!-- footer: about-us, send-feedback and contact-us -->
-
-    <?php include(ROOT_PATH . '/main/includes/footer.php') ?>
 
     <!-- custom scripting -->
     <script src="./src/script/teams.js"></script>

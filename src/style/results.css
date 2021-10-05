@@ -18,10 +18,10 @@ nav li:nth-child(6) a {
 .results-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     transform: translateX(-1%);
     margin-top: 40px;
+    height: 75vh;
 }
 
 .results-container h1 {

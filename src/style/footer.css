@@ -7,7 +7,7 @@
     grid-template-columns: auto auto auto;
     grid-auto-rows: auto;
     grid-gap: 25rem;
-    height: 37.5rem;
+    height: 32rem;
     justify-content: center;
     align-content: center;
 }
