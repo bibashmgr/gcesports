@@ -79,58 +79,60 @@ include(ROOT_PATH . '/main/database/db.php');
 
         <?php
         $table = 'footballpanel';
-        $teamFirstCom = selectAll($table, ['teamname' => 'first year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
-        $teamFirstSof = selectAll($table, ['teamname' => 'first year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
-        $teamSecondCom = selectAll($table, ['teamname' => 'second year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
-        $teamsecondSof = selectAll($table, ['teamname' => 'second year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
-        $teamThirdCom = selectAll($table, ['teamname' => 'third year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
-        $teamThirdSof = selectAll($table, ['teamname' => 'third year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
-        $teamFourthCom = selectAll($table, ['teamname' => 'fourth year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
-        $teamFourthSof = selectAll($table, ['teamname' => 'fourth year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
 
         $teamnames = array("first year", "second year", "third year", "fourth year");
         $teamgenders = array("boys");
         $teamfacultys = array("COM", "SOF");
-        $teams = selectAll($table, ['teamname' => '', 'teamgender' => '', 'teamfaculty' => '']);
-
+        $x = 0;
         ?>
 
-        <div class="table-container" id="table-three-sof">
+        <?php for ($i = 0; $i < 4; $i++) : ?>
+            <?php for ($k = 0; $k < 2; $k++) : ?>
+                <?php $teams = selectAll($table, ['teamname' => $teamnames[$i], 'teamgender' => $teamgenders[0], 'teamfaculty' => $teamfacultys[$k]]); ?>
 
-            <h2 style="margin-top:30px; text-transform:capitalize;"><?php echo $teamThirdSof[0]['teamname'] . ' ' .  $teamThirdSof[0]['teamgender'] . '(' . $teamThirdSof[0]['teamfaculty'] . '):'; ?></h2>
+                <?php if (count($teams) != 0) : ?>
+                    <div class="table-container" id="<?php echo ("table-" . $x); ?>">
 
-            <table class="team-table">
+                        <h2 style="margin-top:30px; text-transform:capitalize;">
+                            <?php echo $teamnames[$i] . " " . $teamgenders[0] . " (" . $teamfacultys[$k] . "):"; ?>
+                        </h2>
 
-                <thead>
-                    <th>S.N</th>
-                    <th>NAME</th>
-                    <th>POS</th>
-                    <th>J.N</th>
-                </thead>
+                        <table class="team-table">
 
-                <tbody>
-                    <tr>
-                        <td colspan="4">STARTING XI</td>
-                    </tr>
-                    <?php foreach ($teamThirdSof as $key => $teamThirdSofx) : ?>
-                        <tr>
-                            <td><?php echo $key + 1; ?></td>
-                            <td><?php echo $teamThirdSofx['playername']; ?></td>
-                            <td><?php echo $teamThirdSofx['position']; ?></td>
-                            <td><?php echo $teamThirdSofx['jerseynumber']; ?></td>
-                        </tr>
-                        <?php if ($key == 10) : ?>
-                            <tr>
-                                <td colspan="4">EXTRAS</td>
-                            </tr>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
+                            <thead>
+                                <th>S.N</th>
+                                <th>NAME</th>
+                                <th>POS</th>
+                                <th>J.N</th>
+                            </thead>
 
-                </tbody>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">STARTING XI</td>
+                                </tr>
+                                <?php foreach ($teams as $key => $team) : ?>
+                                    <tr>
+                                        <td><?php echo $key + 1; ?></td>
+                                        <td><?php echo $team['playername']; ?></td>
+                                        <td><?php echo $team['position']; ?></td>
+                                        <td><?php echo $team['jerseynumber']; ?></td>
+                                    </tr>
+                                    <?php if ($key == 10) : ?>
+                                        <tr>
+                                            <td colspan="4">EXTRAS</td>
+                                        </tr>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
 
-            </table>
+                            </tbody>
 
-        </div>
+                        </table>
+
+                    </div>
+                <?php endif;  ?>
+                <?php $x++; ?>
+            <?php endfor; ?>
+        <?php endfor; ?>
 
     </section>
 
@@ -142,21 +144,79 @@ include(ROOT_PATH . '/main/database/db.php');
         const year = document.getElementById('year');
         const gender = document.getElementById('gender');
         const faculty = document.getElementById('faculty');
-        const teamThreeSof = document.getElementById('table-three-sof');
+
+        const teamOneCom = document.getElementById('table-0');
+        const teamOneSof = document.getElementById('table-1');
+        const teamTwoCom = document.getElementById('table-2');
+        const teamTwoSof = document.getElementById('table-3');
+        const teamThreeCom = document.getElementById('table-4');
+        const teamThreeSof = document.getElementById('table-5');
+        const teamFourCom = document.getElementById('table-6');
+        const teamFourSof = document.getElementById('table-7');
+
         const teamAll = document.querySelectorAll('.table-container');
 
         const selectTeam = () => {
-            if (year.value == 'third year' && gender.value == 'boys' && faculty.value == 'SOF') {
-                teamAll.forEach(function(element) {
-                    element.setAttribute("style", "display:none");
-                });
-                teamThreeSof.setAttribute("style", "display:block");
+            if (year.value == '' || gender.value == '' || faculty.value == '') {
+                window.alert("Invalid input")
             } else {
-                teamAll.forEach(function(element) {
-                    element.setAttribute("style", "display:none");
-                });
+                if (year.value == 'first year' && gender.value == 'boys' && faculty.value == 'COM') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamOneCom.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'first year' && gender.value == 'boys' && faculty.value == 'SOF') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamOneSof.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'second year' && gender.value == 'boys' && faculty.value == 'COM') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamTwoCom.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'second year' && gender.value == 'boys' && faculty.value == 'SOF') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamTwoSof.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'third year' && gender.value == 'boys' && faculty.value == 'COM') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamThreeCom.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'third year' && gender.value == 'boys' && faculty.value == 'SOF') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamThreeSof.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'fourth year' && gender.value == 'boys' && faculty.value == 'COM') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamFourCom.setAttribute("style", "display:block");
+                }
+
+                if (year.value == 'fourth year' && gender.value == 'boys' && faculty.value == 'SOF') {
+                    teamAll.forEach(function(element) {
+                        element.setAttribute("style", "display:none");
+                    });
+                    teamFourSof.setAttribute("style", "display:block");
+                }
             }
-        };
+        }
     </script>
 
 </body>

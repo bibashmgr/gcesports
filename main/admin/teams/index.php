@@ -55,6 +55,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <tr>
                             <td colspan="3" class="sports-title"><?php echo $records[0]['sports']; ?></td>
                         </tr>
+                        <?php $sn = 1; ?>
                     <?php endif; ?>
 
                     <?php for ($j = 0; $j < 4; $j++) : ?>
@@ -73,10 +74,11 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
 
                                 <?php if ($datas) : ?>
                                     <tr>
-                                        <td>1</td>
+                                        <td><?php echo $sn; ?></td>
                                         <td style="text-transform: capitalize;" class="team-title"><?php echo $datas['teamname'] . ' ' . $datas['teamgender'] . ' (' . $datas['teamfaculty'] . ')'; ?></td>
                                         <td><a href="./delete.php?s=<?php echo $datas['sports']; ?>&tn=<?php echo $datas['teamname']; ?>&tg=<?php echo $datas['teamgender']; ?>&tf=<?php echo $datas['teamfaculty']; ?>" style="color: red;">Delete</a></>
                                     </tr>
+                                    <?php $sn++; ?>
                                 <?php endif; ?>
 
                             <?php endfor; ?>

@@ -77,7 +77,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
@@ -91,7 +91,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
@@ -105,7 +105,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
@@ -119,7 +119,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
                 <div>
@@ -133,7 +133,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="0" hidden>
                 </div>
             </div>
@@ -150,7 +150,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
@@ -164,7 +164,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
                 <div>
@@ -178,7 +178,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
                         <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
-                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
+                    <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" maxlength="2" required />
                     <input type="number" name="extras[]" value="1" hidden>
                 </div>
             </div>
