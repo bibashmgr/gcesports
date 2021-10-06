@@ -4,6 +4,8 @@ session_start();
 
 include('./path.php');
 
+include(ROOT_PATH . '/main/database/db.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -40,10 +42,11 @@ include('./path.php');
 
         <h1>BADMINTON TEAM</h1>
 
-        <form action="" class="team-search-form">
+        <form action="./football.php" id="search-form" class="team-search-form">
             <div class="select-year">
                 <label for="year">Year:</label>
                 <select name="year" id="year">
+                    <option value="" hidden></option>
                     <option value="first year">First Year</option>
                     <option value="second year">Second Year</option>
                     <option value="third year">Third Year</option>
@@ -54,6 +57,7 @@ include('./path.php');
             <div class="select-gender">
                 <label for="gender">Gender:</label>
                 <select name="gender" id="gender">
+                    <option value="" hidden></option>
                     <option value="boys">Boys</option>
                     <option value="girls">Girls</option>
                 </select>
@@ -62,6 +66,7 @@ include('./path.php');
             <div class="select-faculty">
                 <label for="faculty">Faculty:</label>
                 <select name="faculty" id="faculty">
+                    <option value="" hidden></option>
                     <option value="COM">Computer</option>
                     <option value="SOF">Software</option>
                 </select>
@@ -70,12 +75,13 @@ include('./path.php');
             <div class="select-group">
                 <label for="group">Group:</label>
                 <select name="group" id="group">
+                    <option value="" hidden></option>
                     <option value="team">Team</option>
                     <option value="solo">Solo</option>
                 </select>
             </div>
 
-            <input type="submit" value="Search" class="select-search" />
+            <input type="button" value="Search" class="select-search" id="select-search" onclick="selectTeam()" />
 
         </form>
 
@@ -133,10 +139,8 @@ include('./path.php');
 
             </tbody>
         </table>
-    </section>
 
-    <!-- custom scripting -->
-    <script src="./src/script/teams.js"></script>
+    </section>
 
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
