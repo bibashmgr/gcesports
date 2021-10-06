@@ -1,14 +1,15 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('../../../path.php');
+include('../../../path.php');
 
-    include(ROOT_PATH . '/main/controllers/teamspanel.php');
+include(ROOT_PATH . '/main/controllers/teamspanel.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -27,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar & sidebar -->
@@ -43,14 +45,13 @@
                 <input type="text" name="sports" id="sports" value="tabletennis" hidden>
             </div>
             <div>
-                <label for="teamname">Choose:</label><br/>
+                <label for="teamname">Choose:</label><br />
                 <select name="teamname" id="teamname" required>
                     <option hidden></option>
                     <option value="first year">First Year</option>
                     <option value="second year">Second Year</option>
                     <option value="third year">Third Year</option>
                     <option value="fourth year">Fourth Year</option>
-                    <option value="staffs">Staffs</option>
                 </select>
                 <select name="teamgender" id="teamgender" required>
                     <option hidden></option>
@@ -94,14 +95,14 @@
             <a href="./index.php">MANAGE TEAMS</a>
         </div>
     </section>
-    
-    
+
+
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
     <!-- custom-scripting -->
     <script type="text/javascript">
-        function groupING(){
+        function groupING() {
             var groupVal = document.getElementById('grouped').value;
             var forTeam = document.getElementById('forteam');
             var forSolo = document.getElementById('forsolo');
@@ -109,7 +110,7 @@
             var nameTwo = document.getElementById('nametwo');
             var nameThree = document.getElementById('namethree');
 
-            if(groupVal == 'team'){
+            if (groupVal == 'team') {
                 forTeam.style.display = 'block';
                 forSolo.style.display = 'none';
 
@@ -118,7 +119,7 @@
                 nameThree.removeAttribute('required');
             }
 
-            if(groupVal == 'solo'){
+            if (groupVal == 'solo') {
                 forSolo.style.display = 'block';
                 forTeam.style.display = 'none';
 
@@ -131,4 +132,5 @@
     </script>
 
 </body>
+
 </html>

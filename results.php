@@ -1,15 +1,16 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('./path.php');
+include('./path.php');
 
-    include(ROOT_PATH . '/main/controllers/resultspanel.php');
+include(ROOT_PATH . '/main/controllers/resultspanel.php');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -29,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
@@ -50,42 +52,42 @@
                 <th>Learn More</th>
             </thead>
             <tbody>
-                
+
                 <?php $typesof = array(
                     'football', 'basketball', 'volleyball', 'cricket', 'badminton', 'tabletennis', 'chess'
-                    );
+                );
                 ?>
 
-                <?php for($i=0; $i<7; $i++): ?>
-                    
-                        <?php foreach ($results as $key => $result): ?>
-                            <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?' ): ?>
-                                <tr>
-                                    <td style="text-transform: uppercase; font-size:15px;" colspan="8">
-                                        <?php 
-                                            echo $result['sports'];
-                                            break;
-                                            ?>
-                                    </td>
-                                </tr>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    
+                <?php for ($i = 0; $i < 7; $i++) : ?>
 
-                    <?php foreach ($results as $key => $result): ?>
-                        <?php if($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?'): ?>
+                    <?php foreach ($results as $key => $result) : ?>
+                        <?php if ($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?') : ?>
+                            <tr>
+                                <td style="text-transform: uppercase; font-size:15px;" colspan="8">
+                                    <?php
+                                    echo $result['sports'];
+                                    break;
+                                    ?>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+
+
+                    <?php foreach ($results as $key => $result) : ?>
+                        <?php if ($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?') : ?>
                             <tr>
                                 <td>
-                                    <?php 
-                                        echo date('d', strtotime($result['date'])) . '.' . date('m', strtotime($result['date'])) . '.' . date('Y', strtotime($result['date'])) . 
+                                    <?php
+                                    echo date('d', strtotime($result['date'])) . '.' . date('m', strtotime($result['date'])) . '.' . date('Y', strtotime($result['date'])) .
                                         ' - ' . date('H', strtotime($result['time'])) . ':' . date('i', strtotime($result['time']));
                                     ?>
                                 </td>
-                                <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></>
-                                <td><?php echo $result['firstscore'];?></td>
+                                <td style="text-transform: capitalize;"><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></>
+                                <td><?php echo $result['firstscore']; ?></td>
                                 <td>-</td>
-                                <td><?php echo $result['secondscore'];?></td>
-                                <td><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
+                                <td><?php echo $result['secondscore']; ?></td>
+                                <td style="text-transform: capitalize;"><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
                                 <td><a href="#" class="info-link">View Info</a></td>
                             </tr>
                         <?php endif; ?>
@@ -109,4 +111,5 @@
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

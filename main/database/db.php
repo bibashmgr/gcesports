@@ -153,5 +153,3 @@ function delete($table, $id)
     return $stmt->affected_rows; // returns 1, if operation is sucessful
 
 }
-
-?>

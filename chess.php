@@ -1,13 +1,14 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('./path.php');
+include('./path.php');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -26,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
@@ -36,34 +38,34 @@
 
     <section class="teams-lists">
 
-    <h1>CHESS PARTICIPANTS</h1>
-    
-    <form action="" class="team-search-form">
-        <div class="select-year">
-            <label for="year">Year:</label>
-            <select name="year" id="year">
-                <option value="first-year">First Year</option>
-                <option value="second-year">Second Year</option>
-                <option value="third-year">Third Year</option>
-                <option value="fourth-year">Fourth Year</option>
-            </select>
-        </div>
-    
-        <div class="select-faculty">
-            <label for="faculty">Faculty:</label>
-            <select name="faculty" id="faculty">
-                <option value="software">Software</option>
-                <option value="computer">Computer</option>
-            </select>
-        </div>
-    
-        <input type="submit" value="Search" class="select-search"/>
-    
-    </form>
-    
-    <h2>FIRST YEAR BOYS</h2>
-    
-    <h2 style="margin-top:30px;">SOFTWARE:</h2>
+        <h1>CHESS PARTICIPANTS</h1>
+
+        <form action="" class="team-search-form">
+            <div class="select-year">
+                <label for="year">Year:</label>
+                <select name="year" id="year">
+                    <option value="first year">First Year</option>
+                    <option value="second year">Second Year</option>
+                    <option value="third year">Third Year</option>
+                    <option value="fourth year">Fourth Year</option>
+                </select>
+            </div>
+
+            <div class="select-faculty">
+                <label for="faculty">Faculty:</label>
+                <select name="faculty" id="faculty">
+                    <option value="COM">Computer</option>
+                    <option value="SOF">Software</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Search" class="select-search" />
+
+        </form>
+
+        <h2>FIRST YEAR BOYS</h2>
+
+        <h2 style="margin-top:30px;">SOFTWARE:</h2>
         <table class="team-table">
             <thead>
                 <th>S.N</th>
@@ -71,7 +73,7 @@
                 <th>GNDR</th>
             </thead>
             <tbody>
-    
+
                 <tr>
                     <td>01</td>
                     <td>Ram Bahadur</td>
@@ -97,7 +99,7 @@
                     <td>Sita Kumari</td>
                     <td>G</td>
                 </tr>
-                
+
             </tbody>
         </table>
     </section>
@@ -109,4 +111,5 @@
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

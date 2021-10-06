@@ -4,6 +4,8 @@ session_start();
 
 include('./path.php');
 
+include(ROOT_PATH . '/main/database/db.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -41,16 +43,16 @@ include('./path.php');
 
         <h1>FOOTBALL TEAM</h1>
 
-        <form action="./main/helpers/football.php" class="team-search-form">
+        <form action="./football.php" id="search-form" class="team-search-form">
 
             <div class="select-year">
                 <label for="year">Year:</label>
                 <select name="year" id="year" required>
                     <option value="" hidden></option>
-                    <option value="first-year">First Year</option>
-                    <option value="second-year">Second Year</option>
-                    <option value="third-year">Third Year</option>
-                    <option value="fourth-year">Fourth Year</option>
+                    <option value="first year">First Year</option>
+                    <option value="second year">Second Year</option>
+                    <option value="third year">Third Year</option>
+                    <option value="fourth year">Fourth Year</option>
                 </select>
             </div>
 
@@ -59,7 +61,6 @@ include('./path.php');
                 <select name="gender" id="gender" required>
                     <option value="" hidden></option>
                     <option value="boys">Boys</option>
-                    <option value="girls">Girls</option>
                 </select>
             </div>
 
@@ -67,18 +68,36 @@ include('./path.php');
                 <label for="faculty">Faculty:</label>
                 <select name="faculty" id="faculty" required>
                     <option value="" hidden></option>
-                    <option value="software">Software</option>
-                    <option value="computer">Computer</option>
+                    <option value="COM">Computer</option>
+                    <option value="SOF">Software</option>
                 </select>
             </div>
 
-            <input type="submit" value="Search" name="search-btn" class="select-search" />
+            <input type="button" value="Search" class="select-search" id="select-search" onclick="selectTeam()" />
 
         </form>
 
-        <div class="table-container" id="table-container">
+        <?php
+        $table = 'footballpanel';
+        $teamFirstCom = selectAll($table, ['teamname' => 'first year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
+        $teamFirstSof = selectAll($table, ['teamname' => 'first year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
+        $teamSecondCom = selectAll($table, ['teamname' => 'second year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
+        $teamsecondSof = selectAll($table, ['teamname' => 'second year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
+        $teamThirdCom = selectAll($table, ['teamname' => 'third year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
+        $teamThirdSof = selectAll($table, ['teamname' => 'third year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
+        $teamFourthCom = selectAll($table, ['teamname' => 'fourth year', 'teamgender' => 'boys', 'teamfaculty' => 'COM']);
+        $teamFourthSof = selectAll($table, ['teamname' => 'fourth year', 'teamgender' => 'boys', 'teamfaculty' => 'SOF']);
 
-            <h2 style="margin-top:30px;">FIRST YEAR BOYS(SOF):</h2>
+        $teamnames = array("first year", "second year", "third year", "fourth year");
+        $teamgenders = array("boys");
+        $teamfacultys = array("COM", "SOF");
+        $teams = selectAll($table, ['teamname' => '', 'teamgender' => '', 'teamfaculty' => '']);
+
+        ?>
+
+        <div class="table-container" id="table-three-sof">
+
+            <h2 style="margin-top:30px; text-transform:capitalize;"><?php echo $teamThirdSof[0]['teamname'] . ' ' .  $teamThirdSof[0]['teamgender'] . '(' . $teamThirdSof[0]['teamfaculty'] . '):'; ?></h2>
 
             <table class="team-table">
 
@@ -93,117 +112,52 @@ include('./path.php');
                     <tr>
                         <td colspan="4">STARTING XI</td>
                     </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>04</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>05</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>06</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>07</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>08</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>09</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="4">EXTRAS</td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>04</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <td>05</td>
-                        <td>Ram Bahadur</td>
-                        <td>GK</td>
-                        <td>99</td>
-                    </tr>
+                    <?php foreach ($teamThirdSof as $key => $teamThirdSofx) : ?>
+                        <tr>
+                            <td><?php echo $key + 1; ?></td>
+                            <td><?php echo $teamThirdSofx['playername']; ?></td>
+                            <td><?php echo $teamThirdSofx['position']; ?></td>
+                            <td><?php echo $teamThirdSofx['jerseynumber']; ?></td>
+                        </tr>
+                        <?php if ($key == 10) : ?>
+                            <tr>
+                                <td colspan="4">EXTRAS</td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
 
                 </tbody>
+
             </table>
+
         </div>
+
     </section>
 
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
     <!-- custom scripting -->
-    <script></script>
+    <script>
+        const year = document.getElementById('year');
+        const gender = document.getElementById('gender');
+        const faculty = document.getElementById('faculty');
+        const teamThreeSof = document.getElementById('table-three-sof');
+        const teamAll = document.querySelectorAll('.table-container');
+
+        const selectTeam = () => {
+            if (year.value == 'third year' && gender.value == 'boys' && faculty.value == 'SOF') {
+                teamAll.forEach(function(element) {
+                    element.setAttribute("style", "display:none");
+                });
+                teamThreeSof.setAttribute("style", "display:block");
+            } else {
+                teamAll.forEach(function(element) {
+                    element.setAttribute("style", "display:none");
+                });
+            }
+        };
+    </script>
 
 </body>
 

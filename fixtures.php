@@ -1,15 +1,16 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('./path.php');
+include('./path.php');
 
-    include(ROOT_PATH . '/main/controllers/fixturespanel.php');
+include(ROOT_PATH . '/main/controllers/fixturespanel.php');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -29,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
@@ -52,37 +54,37 @@
                     'football', 'basketball', 'volleyball', 'cricket', 'badminton', 'tabletennis', 'chess'
                 ); ?>
 
-                <?php for($i=0; $i<7; $i++): ?>
-                    <?php 
-                        $currentDate = getdate();
+                <?php for ($i = 0; $i < 7; $i++) : ?>
+                    <?php
+                    $currentDate = getdate();
                     ?>
-                        <?php foreach ($fixtures as $key => $fixture): ?>
-                            <?php $pastdate = strtotime($fixture['date']); ?>
-                            <?php if($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)): ?>
-                                <tr>
-                                    <td style="text-transform: uppercase;" colspan="5">
-                                        <?php 
-                                            echo $fixture['sports'];
-                                            break;
-                                        ?>
-                                    </td>
-                                </tr>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-
-                    <?php foreach ($fixtures as $key => $fixture): ?>
+                    <?php foreach ($fixtures as $key => $fixture) : ?>
                         <?php $pastdate = strtotime($fixture['date']); ?>
-                        <?php if($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)): ?>
+                        <?php if ($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)) : ?>
+                            <tr>
+                                <td style="text-transform: uppercase;" colspan="5">
+                                    <?php
+                                    echo $fixture['sports'];
+                                    break;
+                                    ?>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+
+                    <?php foreach ($fixtures as $key => $fixture) : ?>
+                        <?php $pastdate = strtotime($fixture['date']); ?>
+                        <?php if ($fixture['sports'] === $typesof[$i] && $currentDate[0] < ($pastdate + 86400)) : ?>
                             <tr>
                                 <td>
-                                    <?php 
-                                        echo date('d', strtotime($fixture['date'])) . '.' . date('m', strtotime($fixture['date'])) . '.' . date('Y', strtotime($fixture['date'])) . 
+                                    <?php
+                                    echo date('d', strtotime($fixture['date'])) . '.' . date('m', strtotime($fixture['date'])) . '.' . date('Y', strtotime($fixture['date'])) .
                                         ' - ' . date('H', strtotime($fixture['time'])) . ':' . date('i', strtotime($fixture['time']));
                                     ?>
                                 </td>
-                                <td><?php echo $fixture['firstname'] . ' ' . $fixture['gender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
+                                <td style="text-transform: capitalize;"><?php echo $fixture['firstname'] . ' ' . $fixture['gender'] . ' (' . $fixture['firstfaculty'] . ')'; ?></td>
                                 <td>VS</td>
-                                <td><?php echo $fixture['secondname']  . ' ' . $fixture['gender'] . ' (' . $fixture['secondfaculty'] . ')'; ?></td>
+                                <td style="text-transform: capitalize;"><?php echo $fixture['secondname']  . ' ' . $fixture['gender'] . ' (' . $fixture['secondfaculty'] . ')'; ?></td>
                                 <td><a href="#" class="info-link">View Info</a></td>
                             </tr>
                         <?php endif; ?>
@@ -104,4 +106,5 @@
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

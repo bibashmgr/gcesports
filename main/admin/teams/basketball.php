@@ -1,14 +1,15 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('../../../path.php');
+include('../../../path.php');
 
-    include(ROOT_PATH . '/main/controllers/teamspanel.php');
+include(ROOT_PATH . '/main/controllers/teamspanel.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -27,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar & sidebar -->
@@ -43,14 +45,13 @@
                 <input type="text" name="sports" id="sports" value="basketball" hidden>
             </div>
             <div>
-                <label for="teamname">Team:</label><br/>
+                <label for="teamname">Team:</label><br />
                 <select name="teamname" id="teamname" required>
                     <option hidden></option>
                     <option value="first year">First Year</option>
                     <option value="second year">Second Year</option>
                     <option value="third year">Third Year</option>
                     <option value="fourth year">Fourth Year</option>
-                    <option value="staffs">Staffs</option>
                 </select>
                 <select name="teamgender" id="teamgender" required>
                     <option hidden></option>
@@ -64,7 +65,7 @@
                 </select>
             </div>
             <div id="starting">
-                <label for="starting">Starting XI:</label><br/>
+                <label for="starting">Starting XI:</label><br />
                 <div>
                     <span style="font-weight: 700;">01.</span>
                     <input type="text" name="playersname[]" class="playersname" required />
@@ -137,7 +138,7 @@
                 </div>
             </div>
             <div id="extras">
-                <label for="extras">Extras:</label><br/>
+                <label for="extras">Extras:</label><br />
                 <div>
                     <span style="font-weight: 700;">01.</span>
                     <input type="text" name="playersname[]" class="playersname" required />
@@ -160,7 +161,7 @@
                         <option value="PG">PG</option>
                         <option value="SG">SG</option>
                         <option value="SF">SF</option>
-                        <option value="PF">PF</option>                        
+                        <option value="PF">PF</option>
                         <option value="C">C</option>
                     </select>
                     <input type="text" name="jerseynumbers[]" class="jerseynumbers" size="1" required />
@@ -189,10 +190,11 @@
             <a href="./index.php">MANAGE TEAMS</a>
         </div>
     </section>
-    
-    
+
+
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

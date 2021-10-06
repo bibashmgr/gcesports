@@ -103,7 +103,7 @@ nav li:nth-child(4) a {
     color: #f8f8f8;
 }
 
-#table-container {
+.table-container {
     display: none;
 }
 

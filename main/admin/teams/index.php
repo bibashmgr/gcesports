@@ -1,14 +1,15 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('../../../path.php');
+include('../../../path.php');
 
-    include(ROOT_PATH . '/main/controllers/teamspanel.php');
+include(ROOT_PATH . '/main/controllers/teamspanel.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -27,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar & sidebar -->
@@ -45,44 +47,44 @@
             </thead>
             <tbody>
 
-                <?php for ($i=0; $i < 7; $i++): ?>
+                <?php for ($i = 0; $i < 7; $i++) : ?>
 
                     <?php $records = selectAll($tables[$i]); ?>
 
-                    <?php if(count($records) > 0) :?>
-                                    <tr>
-                                        <td colspan="3" class="sports-title"><?php echo $records[0]['sports']; ?></td>
-                                    </tr>
+                    <?php if (count($records) > 0) : ?>
+                        <tr>
+                            <td colspan="3" class="sports-title"><?php echo $records[0]['sports']; ?></td>
+                        </tr>
                     <?php endif; ?>
 
-                        <?php for ($j=0; $j < 4; $j++): ?>
+                    <?php for ($j = 0; $j < 4; $j++) : ?>
 
-                            <?php for ($k=0; $k < 2; $k++): ?>
+                        <?php for ($k = 0; $k < 2; $k++) : ?>
 
-                                <?php for ($l=0; $l < 2; $l++): ?>
+                            <?php for ($l = 0; $l < 2; $l++) : ?>
 
-                                    <?php
-                                        $conditions['teamname'] = $teamnames[$j];
-                                        $conditions['teamgender'] = $teamgenders[$k];
-                                        $conditions['teamfaculty'] = $teamfacultys[$l];
+                                <?php
+                                $conditions['teamname'] = $teamnames[$j];
+                                $conditions['teamgender'] = $teamgenders[$k];
+                                $conditions['teamfaculty'] = $teamfacultys[$l];
 
-                                        $datas = selectOne($tables[$i], $conditions);
-                                    ?>
+                                $datas = selectOne($tables[$i], $conditions);
+                                ?>
 
-                                    <?php if($datas): ?>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="team-title"><?php echo $datas['teamname'] . ' ' . $datas['teamgender'] . ' (' . $datas['teamfaculty'] . ')'; ?></td>
-                                            <td><a href="./delete.php?s=<?php echo $datas['sports'];?>&tn=<?php echo $datas['teamname'];?>&tg=<?php echo $datas['teamgender'];?>&tf=<?php echo $datas['teamfaculty'];?>" style="color: red;">Delete</a></>
-                                        </tr>
-                                    <?php endif; ?>
+                                <?php if ($datas) : ?>
+                                    <tr>
+                                        <td>1</td>
+                                        <td style="text-transform: capitalize;" class="team-title"><?php echo $datas['teamname'] . ' ' . $datas['teamgender'] . ' (' . $datas['teamfaculty'] . ')'; ?></td>
+                                        <td><a href="./delete.php?s=<?php echo $datas['sports']; ?>&tn=<?php echo $datas['teamname']; ?>&tg=<?php echo $datas['teamgender']; ?>&tf=<?php echo $datas['teamfaculty']; ?>" style="color: red;">Delete</a></>
+                                    </tr>
+                                <?php endif; ?>
 
-                                <?php endfor; ?>
-                                    
                             <?php endfor; ?>
-                                    
+
                         <?php endfor; ?>
-                
+
+                    <?php endfor; ?>
+
                 <?php endfor; ?>
             </tbody>
         </table>
@@ -91,9 +93,10 @@
         </div>
     </section>
 
-    
+
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

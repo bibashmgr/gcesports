@@ -1,14 +1,15 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('../../../path.php');
+include('../../../path.php');
 
-    include(ROOT_PATH . '/main/controllers/fixturespanel.php');
+include(ROOT_PATH . '/main/controllers/fixturespanel.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -27,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar & sidebar -->
@@ -39,7 +41,7 @@
         <h1>Add Fixtures</h1>
         <form action="create.php" method="POST">
             <div>
-                <label for="sports">Sports:</label><br/>
+                <label for="sports">Sports:</label><br />
                 <select name="sports" id="sports" required>
                     <option hidden></option>
                     <option value="football">football</option>
@@ -52,22 +54,21 @@
                 </select>
             </div>
             <div>
-                <label for="gender">Gender:</label><br/>
+                <label for="gender">Gender:</label><br />
                 <select name="gender" id="gender" required>
                     <option hidden></option>
-                    <option value="Boys">Boys</option>
-                    <option value="Girls">Girls</option>
+                    <option value="boys">Boys</option>
+                    <option value="girls">Girls</option>
                 </select>
             </div>
             <div>
-                <label for="firstteam">First Team:</label><br/>
+                <label for="firstteam">First Team:</label><br />
                 <select name="firstname" id="firstname" required>
                     <option hidden></option>
-                    <option value="First Year">First Year</option>
-                    <option value="Second Year">Second Year</option>
-                    <option value="Third Year">Third Year</option>
-                    <option value="Fourth Year">Fourth Year</option>
-                    <option value="Staffs">Staffs</option>
+                    <option value="first year">First Year</option>
+                    <option value="second year">Second Year</option>
+                    <option value="third year">Third Year</option>
+                    <option value="fourth year">Fourth Year</option>
                 </select>
                 <select name="firstfaculty" id="firstfaculty" required>
                     <option hidden></option>
@@ -76,14 +77,13 @@
                 </select>
             </div>
             <div>
-                <label for="secondteam">Second Team:</label><br/>
+                <label for="secondteam">Second Team:</label><br />
                 <select name="secondname" id="secondname" required>
                     <option hidden></option>
-                    <option value="First Year">First Year</option>
-                    <option value="Second Year">Second Year</option>
-                    <option value="Third Year">Third Year</option>
-                    <option value="Fourth Year">Fourth Year</option>
-                    <option value="Staffs">Staffs</option>
+                    <option value="first year">First Year</option>
+                    <option value="second year">Second Year</option>
+                    <option value="third year">Third Year</option>
+                    <option value="fourth year">Fourth Year</option>
                 </select>
                 <select name="secondfaculty" id="secondfaculty" required>
                     <option hidden></option>
@@ -92,19 +92,19 @@
                 </select>
             </div>
             <div>
-                <label for="date">Date:</label><br/>
-                <input type="date" id="date" name="date" value="<?php echo $date;?>" required />
+                <label for="date">Date:</label><br />
+                <input type="date" id="date" name="date" value="<?php echo $date; ?>" required />
             </div>
             <div>
-                <label for="time">Time:</label><br/>
-                <input type="time" id="time" name="time" value="<?php echo $time;?>" required />
+                <label for="time">Time:</label><br />
+                <input type="time" id="time" name="time" value="<?php echo $time; ?>" required />
             </div>
             <div>
-                <label for="title">Title:</label><br/>
-                <input type="text" id="title" name="title" value="<?php echo $title;?>" required />
+                <label for="title">Title:</label><br />
+                <input type="text" id="title" name="title" value="<?php echo $title; ?>" required />
             </div>
             <div>
-                <label for="info">Info:</label><br/>
+                <label for="info">Info:</label><br />
                 <textarea id="info" name="info" rows="5" style="resize: none;" required><?php echo $info; ?></textarea>
             </div>
             <div>
@@ -115,8 +115,8 @@
             <a href="./index.php">MANAGE FIXTURES</a>
         </div>
     </section>
-    
-    
+
+
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
@@ -124,4 +124,5 @@
     <script src=""></script>
 
 </body>
+
 </html>
