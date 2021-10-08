@@ -39,7 +39,7 @@ include(ROOT_PATH . '/main/controllers/teamspanel.php');
 
     <section class="teams-panel-form">
         <h1>Add Teams</h1>
-        <form action="tabletennis.php" method="POST" name="teamform">
+        <form action="badminton.php" method="POST" name="teamform">
             <h3>Table Tennis:</h3>
             <div>
                 <input type="text" name="sports" id="sports" value="tabletennis" hidden>
