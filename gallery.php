@@ -1,15 +1,16 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('./path.php');
+include('./path.php');
 
-    include(ROOT_PATH . '/main/controllers/gallerypanel.php');
+include(ROOT_PATH . '/main/database/db.php');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -33,11 +34,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
 
     <?php include(ROOT_PATH . '/main/includes/header.php') ?>
+
+    <?php
+    $table = 'gallerypanel';
+    $gallerys = selectDesc($table);
+
+    function selectDesc($table)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table ORDER BY date DESC";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+    ?>
 
     <!-- section: gallery -->
     <section class="section-container">
@@ -47,21 +65,21 @@
             </div>
             <div class="gallery-section">
 
-                <?php 
-                    if(isset($_GET['i'])){
-                        $i = $_GET['i'];
-                    } else {
-                        $i = 0;
-                    }
-                    $counter = $i + 18;
+                <?php
+                if (isset($_GET['i'])) {
+                    $i = $_GET['i'];
+                } else {
+                    $i = 0;
+                }
+                $counter = $i + 18;
                 ?>
 
-                <?php for($i; $i < $counter; $i++): ?>
+                <?php for ($i; $i < $counter; $i++) : ?>
 
-                    <?php if($i<count($gallerys)): ?>
+                    <?php if ($i < count($gallerys)) : ?>
 
-                        <a href="<?php echo './media/gallery/' . $gallerys[$i]['image'] ; ?>" data-lightbox="<?php echo $gallerys[$i]['image']; ?>">
-                            <img src="<?php echo './media/gallery/' . $gallerys[$i]['image'] ; ?>" alt="<?php echo $gallerys[$i]['image']; ?>" />
+                        <a href="<?php echo './media/gallery/' . $gallerys[$i]['image']; ?>" data-lightbox="<?php echo $gallerys[$i]['image']; ?>">
+                            <img src="<?php echo './media/gallery/' . $gallerys[$i]['image']; ?>" alt="<?php echo $gallerys[$i]['image']; ?>" />
                         </a>
 
                     <?php endif; ?>
@@ -71,12 +89,11 @@
             </div>
             <div class="more-galley">
                 <a href="./gallery.php?i=<?php echo $i; ?>" class="more-gallery-links"><i>
-                    <?php if(count($gallerys) > $i){
+                        <?php if (count($gallerys) > $i) {
 
-                        echo 'See More...';
-
-                    }?>
-                </i></a>
+                            echo 'See More...';
+                        } ?>
+                    </i></a>
             </div>
         </div>
     </section>
@@ -95,4 +112,5 @@
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

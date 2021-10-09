@@ -1,15 +1,16 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('./path.php');
+include('./path.php');
 
-    include(ROOT_PATH . '/main/controllers/newspanel.php');
+include(ROOT_PATH . '/main/database/db.php');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta-tags -->
     <meta charset="UTF-8" />
@@ -28,8 +29,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    
+
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
@@ -38,28 +40,44 @@
 
     <!-- section: news -->
 
+    <?php
+    $table = 'newspanel';
+    $news = selectDesc($table);
+
+    function selectDesc($table)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table ORDER BY date DESC";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+    ?>
+
     <section class="section-container">
         <div class="news-container">
             <div class="news-container-heading">
                 NEWS & UPDATES
             </div>
             <div class="news-box">
-                <?php 
-                    if(isset($_GET['i'])){
-                        $i = $_GET['i'];
-                    } else {
-                        $i = 0;
-                    }
-                    $counter = $i + 5;
+                <?php
+                if (isset($_GET['i'])) {
+                    $i = $_GET['i'];
+                } else {
+                    $i = 0;
+                }
+                $counter = $i + 5;
                 ?>
-                <?php for($i; $i < $counter; $i++): ?>
+                <?php for ($i; $i < $counter; $i++) : ?>
 
-                    <?php if($i<count($news)): ?>
-                    
+                    <?php if ($i < count($news)) : ?>
+
                         <div class="news-sub-box">
                             <!-- news-image -->
                             <div class="news-image">
-                                <img src="<?php echo './media/news/' . $news[$i]['image'] ; ?>" alt="<?php echo $news[$i]['image']; ?>">
+                                <img src="<?php echo './media/news/' . $news[$i]['image']; ?>" alt="<?php echo $news[$i]['image']; ?>">
                             </div>
                             <!-- news-text -->
                             <div class="news-text">
@@ -74,8 +92,8 @@
                                     <a href="./page.php?page_id=<?php echo $i; ?>""><?php echo $news[$i]['title']; ?></a>
                                 </div>
                                 <!-- news-text-description -->
-                                <div class="news-desc">
-                                    <?php echo $news[$i]['body']; ?>
+                                <div class=" news-desc">
+                                        <?php echo $news[$i]['body']; ?>
                                 </div>
                                 <!-- news-text-link -->
                                 <div class="news-link">
@@ -87,16 +105,15 @@
                     <?php endif; ?>
 
                 <?php endfor; ?>
-                
+
             </div>
             <div class="more-news">
-                <a href="./news.php?i=<?php echo $i; ?>" ><i>
-                    <?php if(count($news) > $i){
+                <a href="./news.php?i=<?php echo $i; ?>"><i>
+                        <?php if (count($news) > $i) {
 
-                        echo 'See More...';
-                    
-                    }?>    
-                </i></a>
+                            echo 'See More...';
+                        } ?>
+                    </i></a>
             </div>
         </div>
     </section>
@@ -107,9 +124,10 @@
 
     <!-- custom scripting -->
     <script src="./src/script/news.js"></script>
-    
+
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

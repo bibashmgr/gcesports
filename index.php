@@ -1,14 +1,15 @@
-<?php 
+<?php
 
-    session_start();
+session_start();
 
-    include('./path.php');
+include('./path.php');
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8" />
@@ -28,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- header: nav-bar -->
@@ -36,35 +38,35 @@
 
     <!-- section-one: background-theme and text-animation -->
     <section class="section-one">
-         <div class="content-one-a">
+        <div class="content-one-a">
             <div class="content-one-bg">
 
             </div>
-    
+
             <div class="content-one-text">
-               <div class="content-one-heading-a">
-                WELCOME TO
-               </div>
+                <div class="content-one-heading-a">
+                    WELCOME TO
+                </div>
 
-               <div class="content-one-heading-b">
-                GCES<span style="color: #FFCD02;">ports.</span>
-               </div>
+                <div class="content-one-heading-b">
+                    GCES<span style="color: #FFCD02;">ports.</span>
+                </div>
 
-               <div class="content-one-desc">A site that keeps updating news and moments<br/> 
-                of sport meet events held by Gandaki College <br/>
-                Of Engineering And Science(GCES) every year.</div>
+                <div class="content-one-desc">A site that keeps updating news and moments<br />
+                    of sport meet events held by Gandaki College <br />
+                    Of Engineering And Science(GCES) every year.</div>
 
                 <div class="content-one-button">
                     <a href="#footer-email">CONTACT US!</a>
                 </div>
             </div>
 
-         </div>
+        </div>
 
         <!-- text-animation -->
         <div class="content-one-b">
             LATEST RESULTS:
-                        <span id="animated-text"></span>
+            <span id="animated-text"></span>
         </div>
     </section>
 
@@ -74,35 +76,35 @@
 
             <!-- Latest news -->
             <div class="content-two-a">
-                <div class="content-two-a-heading">
+                <div class="content-heading">
                     LATEST NEWS
                 </div>
-                <div class="content-two-a-news1">
-                    <div class="content-two-a-news1-image">
-
+                <div class="content-news">
+                    <div class="news-image">
+                        <img src="./media/index/news01.jpg" alt="">
                     </div>
-                    <div class="content-two-a-news1-text">
-                        <div class="content-two-a-news1-date">
-                            <div class="a-news1-day">16</div>
-                            <div class="a-news1-month">MAR</div>
-                            <div class="a-news1-year">2021</div>
+                    <div class="news-text">
+                        <div class="news-date">
+                            <div class="news-day">16</div>
+                            <div class="news-month">MAR</div>
+                            <div class="news-year">2021</div>
                         </div>
-                        <div class="content-two-a-news1-heading">
+                        <div class="news-heading">
                             <a href="">Nepal to Play a friendly match Against Qatar!</a>
                         </div>
                     </div>
                 </div>
-                <div class="content-two-a-news2">
-                    <div class="content-two-a-news2-image">
-
+                <div class="content-news">
+                    <div class="news-image">
+                        <img src="./media/index/news02.jpg" alt="">
                     </div>
-                    <div class="content-two-a-news2-text">
-                        <div class="content-two-a-news2-date">
-                            <div class="a-news2-day">04</div>
-                            <div class="a-news2-month">APR</div>
-                            <div class="a-news2-year">2020</div>
+                    <div class="news-text">
+                        <div class="news-date">
+                            <div class="news-day">04</div>
+                            <div class="news-month">APR</div>
+                            <div class="news-year">2020</div>
                         </div>
-                        <div class="content-two-a-news2-heading">
+                        <div class="news-heading">
                             <a href="">Eight Nepali Cricketers Register for IPL 2021 Player Auction!</a>
                         </div>
                     </div>
@@ -111,36 +113,36 @@
 
             <!-- Trending news -->
             <div class="content-two-b">
-                <div class="content-two-b-heading">
+                <div class="content-heading">
                     TOP NEWS
                 </div>
-                <div class="content-two-b-news1">
-                    <div class="content-two-b-news1-image">
-
+                <div class="content-news">
+                    <div class="news-image">
+                        <img src="./media/index/news03.jpg" alt="">
                     </div>
-                    <div class="content-two-b-news1-text">
-                        <div class="content-two-b-news1-date">
-                            <div class="b-news1-day">21</div>
-                            <div class="b-news1-month">SEP</div>
-                            <div class="b-news1-year">2020</div>
+                    <div class="news-text">
+                        <div class="news-date">
+                            <div class="news-day">21</div>
+                            <div class="news-month">SEP</div>
+                            <div class="news-year">2020</div>
                         </div>
-                        <div class="content-two-b-news1-heading">
+                        <div class="news-heading">
                             <a href="">LIVE: Kathmandu Mayor’s Cup 2021 – Tribhuwan Army Club vs Kathmandu Mayor</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="content-two-b-news2">
-                    <div class="content-two-b-news2-image">
-
+                <div class="content-news">
+                    <div class="news-image">
+                        <img src="./media/index/news04.jpg" alt="">
                     </div>
-                    <div class="content-two-b-news2-text">
-                        <div class="content-two-b-news2-date">
-                            <div class="b-news2-day">30</div>
-                            <div class="b-news2-month">MAY</div>
-                            <div class="b-news2-year">2020</div>
+                    <div class="news-text">
+                        <div class="news-date">
+                            <div class="news-day">30</div>
+                            <div class="news-month">MAY</div>
+                            <div class="news-year">2020</div>
                         </div>
-                        <div class="content-two-b-news2-heading">
+                        <div class="news-heading">
                             <a href="">Gary Phillips Becomes New Head Coach of Men’s Volleyball Team!</a>
                         </div>
                     </div>
@@ -160,7 +162,7 @@
                     (CRICKET MATCH)
                 </div>
                 <div class="content-two-c-image">
-                    
+
                 </div>
                 <div class="content-two-c-time">
                     <i class="fas fa-clock"></i> 21 March 2020
@@ -228,7 +230,7 @@
                         <div class="score-c">
                             <div class="score-c-num">21</div>
                             <div class="score-c-unit">points</div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div class="content-three-d">
@@ -257,7 +259,7 @@
         <div class="content-four">
 
             <!-- gallery-section -->
-           <div class="content-four-a">
+            <div class="content-four-a">
                 <div class="content-four-a-heading">
                     GALLERY
                 </div>
@@ -268,7 +270,7 @@
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
                         <input type="radio" name="radio-btn" id="radio5">
-                        
+
                         <div class="slide first">
                             <img src="./media/index/news01.jpg" alt="">
                         </div>
@@ -293,19 +295,19 @@
                         </div>
                     </div>
                     <div class="manual-navigation">
-                         <label for="radio1" class="manual-btn"></label>
-                         <label for="radio2" class="manual-btn"></label>
-                         <label for="radio3" class="manual-btn"></label>
-                         <label for="radio4" class="manual-btn"></label>
-                         <label for="radio5" class="manual-btn"></label>   
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
                     </div>
                 </div>
-           </div>
+            </div>
 
-           <!-- leaderboard-section -->
-           <div class="content-four-b">
+            <!-- leaderboard-section -->
+            <div class="content-four-b">
                 <div class="content-four-b-heading">
-                    LEADERBOARD
+                    RESULTS
                 </div>
                 <div class="content-four-b-game">
                     (FOOTBALL)
@@ -362,7 +364,7 @@
                         </tr>
                     </table>
                 </div>
-           </div> 
+            </div>
         </div>
     </section>
 
@@ -370,12 +372,12 @@
 
     <?php include(ROOT_PATH . '/main/includes/footer.php') ?>
 
-    <!-- custom scripting -->
-
-    <script src="./src/script/index.js"></script>
-
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>
- 
+
+    <!-- custom scripting -->
+    <script src="./src/script/index.js"></script>
+
 </body>
+
 </html>
