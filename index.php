@@ -74,8 +74,11 @@ include(ROOT_PATH . '/main/database/db.php');
 
     <?php
     $newstable = 'newspanel';
+    $fixturetable = 'fixturespanel';
+
     $latestnews = selectDesc($newstable);
     $featurednews = selectByFeatured($newstable);
+    $upcomings = selectUpcoming($fixturetable);
 
     function selectDesc($table)
     {
@@ -93,6 +96,17 @@ include(ROOT_PATH . '/main/database/db.php');
         global $conn;
 
         $sql = "SELECT * FROM $table WHERE featured = '1' LIMIT 2";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+
+    function selectUpcoming($table)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -158,20 +172,46 @@ include(ROOT_PATH . '/main/database/db.php');
                 <div class="content-two-c-heading">
                     UPCOMING GAMES
                 </div>
-                <div class="content-two-c-title">
-                    <a href="">TEAM FOURTH SEM. <span style="opacity: 0.25;"> VS </span> SECOND SEM.</a>
-                </div>
-                <div class="content-two-c-game">
-                    (CRICKET MATCH)
-                </div>
-                <div class="content-two-c-image">
-
-                </div>
-                <div class="content-two-c-time">
-                    <i class="fas fa-clock"></i> 21 March 2020
-                </div>
+                <?php $currentDate = getdate(); ?>
+                <?php for ($i = 0; $i < count($upcomings); $i++) : ?>
+                    <?php $pastdate = strtotime($upcomings[$i]['date']); ?>
+                    <?php if ($currentDate[0] < ($pastdate + 86400)) : ?>
+                        <div>
+                            <div class="content-two-c-title">
+                                <?php echo $upcomings[$i]['firstname'] . ' (' . $upcomings[$i]['firstfaculty'] . ')'; ?>
+                                <span style="opacity: 0.25;"> VS </span>
+                                <?php echo $upcomings[$i]['secondname'] . ' (' . $upcomings[$i]['secondfaculty'] . ')'; ?>
+                            </div>
+                            <div class="content-two-c-game">
+                                <?php echo "(" . $upcomings[$i]['sports'] . " MATCH)"; ?>
+                            </div>
+                            <div class="content-two-c-image">
+                                <?php
+                                $imagename = '';
+                                if ($upcomings[$i]['sports'] == 'football') {
+                                    $imagename = 'football.jpg';
+                                } else if ($upcomings[$i]['sports'] == 'basketball') {
+                                    $imagename = 'basketball.jpg';
+                                } else if ($upcomings[$i]['sports'] == 'circket') {
+                                    $imagename = 'circket.jpg';
+                                } else if ($upcomings[$i]['sports'] == 'volleyball') {
+                                    $imagename = 'volleyball.jpg';
+                                } else {
+                                    $imagename = 'loading.jpg';
+                                }
+                                ?>
+                                <img src="./media/index/<?php echo $imagename; ?>" alt="<?php echo $imagename; ?>" />
+                            </div>
+                            <div class=" content-two-c-time">
+                                <i class="fas fa-clock"></i>
+                                <?php echo date('H', strtotime($upcomings[$i]['time'])) . ':' . date('i', strtotime($upcomings[$i]['time'])) . ' - ' . date('d', strtotime($upcomings[$i]['date'])) . ' ' . date('M', strtotime($upcomings[$i]['date'])) . ' ' . date('Y', strtotime($upcomings[$i]['date'])); ?>
+                            </div>
+                        </div>
+                        <?php break; ?>
+                    <?php endif; ?>
+                <?php endfor; ?>
                 <div class="content-two-c-extras">
-                    No upcoming events.
+                    <a href="./fixtures.php">SEE MORE</a>
                 </div>
             </div>
 
@@ -264,15 +304,15 @@ include(ROOT_PATH . '/main/database/db.php');
     function selectRand($table)
     {
         global $conn;
-        $randomNum = time() % 10;
+        $randomNum = rand(0, 10);
 
         if ($randomNum < 2) {
             $sql = "SELECT * FROM $table LIMIT 5";
-        } elseif ($randomNum > 2 && $randomNum < 4) {
+        } elseif ($randomNum >= 2 && $randomNum < 4) {
             $sql = "SELECT * FROM $table ORDER BY name LIMIT 5";
-        } elseif ($randomNum > 4 && $randomNum < 6) {
+        } elseif ($randomNum >= 4 && $randomNum < 6) {
             $sql = "SELECT * FROM $table ORDER BY image LIMIT 5";
-        } elseif ($randomNum > 6 && $randomNum < 8) {
+        } elseif ($randomNum >= 6 && $randomNum < 8) {
             $sql = "SELECT * FROM $table ORDER BY date ASC LIMIT 5";
         } else {
             $sql = "SELECT * FROM $table ORDER BY date DESC LIMIT 5";

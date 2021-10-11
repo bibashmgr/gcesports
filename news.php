@@ -42,7 +42,18 @@ include(ROOT_PATH . '/main/database/db.php');
 
     <?php
     $table = 'newspanel';
-    $news = selectAll($table);
+    $news = SelectDesc($table);
+
+    function selectDesc($table)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table ORDER BY date DESC";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
     ?>
 
     <section class="section-container">

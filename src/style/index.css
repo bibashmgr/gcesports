@@ -278,18 +278,14 @@ nav li:nth-child(1) a {
 }
 
 .content-two-c-title {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
     width: 300px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-.content-two-c-title a {
-    text-decoration: none;
-    color: #2B2B2B;
-}
-
-.content-two-c-title a:hover {
+.content-two-c-title:hover {
     text-shadow: 2px 2px #FFCD02;
 }
 
@@ -300,20 +296,22 @@ nav li:nth-child(1) a {
 }
 
 .content-two-c-image {
-    background-image: url(../../media/index/upcoming.jpg);
-}
-
-.content-two-c-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     height: 200px;
     width: 400px;
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
 
+.content-two-c-image img {
+    height: 200px;
+    width: 400px;
+}
+
 .content-two-c-image:hover {
+    /* opacity: 0.9; */
+}
+
+.content-two-c-image img:hover {
     opacity: 0.9;
 }
 
@@ -331,7 +329,18 @@ nav li:nth-child(1) a {
     font-size: 16px;
     font-weight: 500;
     opacity: 0.6;
-    padding-top: 10px;
+    text-align: center;
+    border: 1px dotted #2B2B2B;
+    margin-top: 20px;
+}
+
+.content-two-c-extras a {
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.content-two-c-extras:hover {
+    opacity: 0.8;
 }
 
 
