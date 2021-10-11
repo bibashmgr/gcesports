@@ -42,18 +42,7 @@ include(ROOT_PATH . '/main/database/db.php');
 
     <?php
     $table = 'newspanel';
-    $news = selectDesc($table);
-
-    function selectDesc($table)
-    {
-        global $conn;
-
-        $sql = "SELECT * FROM $table ORDER BY date DESC";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $records;
-    }
+    $news = selectAll($table);
     ?>
 
     <section class="section-container">
@@ -89,15 +78,15 @@ include(ROOT_PATH . '/main/database/db.php');
                                 </div>
                                 <!-- news-text-heading -->
                                 <div class="news-heading">
-                                    <a href="./page.php?page_id=<?php echo $i; ?>""><?php echo $news[$i]['title']; ?></a>
+                                    <a href="./page.php?page_id=<?php echo $news[$i]['id'];; ?>"><?php echo $news[$i]['title']; ?></a>
                                 </div>
                                 <!-- news-text-description -->
                                 <div class=" news-desc">
-                                        <?php echo $news[$i]['body']; ?>
+                                    <?php echo $news[$i]['body']; ?>
                                 </div>
                                 <!-- news-text-link -->
                                 <div class="news-link">
-                                    <a href="./page.php?page_id=<?php echo $i; ?>"><i>Read more...</i></a>
+                                    <a href="./page.php?page_id=<?php echo $news[$i]['id']; ?>"><i>Read more...</i></a>
                                 </div>
                             </div>
                         </div>

@@ -5,6 +5,14 @@
 }
 
 
+/* styling for header */
+
+nav li:nth-child(2) a {
+    background-color: #FFCD02;
+    padding: 0px 5px;
+}
+
+
 /* Styling for section-container */
 
 .section-container {
@@ -12,8 +20,7 @@
 }
 
 .section-image img {
-    width: 1000px;
-    height: 562.5px;
+    width: 100%;
 }
 
 .section-head {

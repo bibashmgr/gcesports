@@ -4,6 +4,8 @@ session_start();
 
 include('./path.php');
 
+include(ROOT_PATH . '/main/database/db.php');
+
 ?>
 
 
@@ -70,83 +72,84 @@ include('./path.php');
         </div>
     </section>
 
-    <!-- section-two: latest-news, top-news and upcoming-events -->
+    <?php
+    $newstable = 'newspanel';
+    $latestnews = selectDesc($newstable);
+    $featurednews = selectByFeatured($newstable);
+
+    function selectDesc($table)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table ORDER BY date DESC LIMIT 2";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+
+    function selectByFeatured($table)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table WHERE featured = '1' LIMIT 2";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+    ?>
+
+    <!-- section-two: latest-news, featured-news and upcoming-events -->
     <section class="section-two">
         <div class="content-two">
 
-            <!-- Latest news -->
-            <div class="content-two-a">
+            <!-- latest news -->
+            <div class="content-two-b">
                 <div class="content-heading">
                     LATEST NEWS
                 </div>
-                <div class="content-news">
-                    <div class="news-image">
-                        <img src="./media/index/news01.jpg" alt="">
-                    </div>
-                    <div class="news-text">
-                        <div class="news-date">
-                            <div class="news-day">16</div>
-                            <div class="news-month">MAR</div>
-                            <div class="news-year">2021</div>
+                <?php foreach ($latestnews as $key => $latestnew) : ?>
+                    <div class="content-news">
+                        <div class="news-image">
+                            <img src="<?php echo './media/news/' . $latestnew['image']; ?>" alt="<?php echo $latestnew['image']; ?>">
                         </div>
-                        <div class="news-heading">
-                            <a href="">Nepal to Play a friendly match Against Qatar!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-news">
-                    <div class="news-image">
-                        <img src="./media/index/news02.jpg" alt="">
-                    </div>
-                    <div class="news-text">
-                        <div class="news-date">
-                            <div class="news-day">04</div>
-                            <div class="news-month">APR</div>
-                            <div class="news-year">2020</div>
-                        </div>
-                        <div class="news-heading">
-                            <a href="">Eight Nepali Cricketers Register for IPL 2021 Player Auction!</a>
+                        <div class="news-text">
+                            <div class="news-date">
+                                <div class="news-day"><?php echo date('d', strtotime($latestnew['date'])); ?></div>
+                                <div class="news-month"><?php echo date('M', strtotime($latestnew['date'])); ?></div>
+                                <div class="news-year"><?php echo date('Y', strtotime($latestnew['date'])); ?></div>
+                            </div>
+                            <div class="news-heading">
+                                <a href="./page.php?page_id=<?php echo $latestnew['id']; ?>"><?php echo $latestnew['title']; ?></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
 
-            <!-- Trending news -->
-            <div class="content-two-b">
+            <!-- featured news -->
+            <div class="content-two-a">
                 <div class="content-heading">
-                    TOP NEWS
+                    FEATURED NEWS
                 </div>
-                <div class="content-news">
-                    <div class="news-image">
-                        <img src="./media/index/news03.jpg" alt="">
-                    </div>
-                    <div class="news-text">
-                        <div class="news-date">
-                            <div class="news-day">21</div>
-                            <div class="news-month">SEP</div>
-                            <div class="news-year">2020</div>
+                <?php foreach ($featurednews as $key => $featurednew) : ?>
+                    <div class="content-news">
+                        <div class="news-image">
+                            <img src="<?php echo './media/news/' . $featurednew['image']; ?>" alt="<?php echo $featurednew['image']; ?>">
                         </div>
-                        <div class="news-heading">
-                            <a href="">LIVE: Kathmandu Mayor’s Cup 2021 – Tribhuwan Army Club vs Kathmandu Mayor</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-news">
-                    <div class="news-image">
-                        <img src="./media/index/news04.jpg" alt="">
-                    </div>
-                    <div class="news-text">
-                        <div class="news-date">
-                            <div class="news-day">30</div>
-                            <div class="news-month">MAY</div>
-                            <div class="news-year">2020</div>
-                        </div>
-                        <div class="news-heading">
-                            <a href="">Gary Phillips Becomes New Head Coach of Men’s Volleyball Team!</a>
+                        <div class="news-text">
+                            <div class="news-date">
+                                <div class="news-day"><?php echo date('d', strtotime($featurednew['date'])); ?></div>
+                                <div class="news-month"><?php echo date('M', strtotime($featurednew['date'])); ?></div>
+                                <div class="news-year"><?php echo date('Y', strtotime($featurednew['date'])); ?></div>
+                            </div>
+                            <div class="news-heading">
+                                <a href="./page.php?page_id=<?php echo $featurednew['id']; ?>"><?php echo $featurednew['title']; ?></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
 
             <!-- Upcoming games -->
@@ -254,6 +257,34 @@ include('./path.php');
         </div>
     </section>
 
+    <?php
+    $gallerytable = 'gallerypanel';
+    $sliderRand = selectRand($gallerytable);
+
+    function selectRand($table)
+    {
+        global $conn;
+        $randomNum = time() % 10;
+
+        if ($randomNum < 2) {
+            $sql = "SELECT * FROM $table LIMIT 5";
+        } elseif ($randomNum > 2 && $randomNum < 4) {
+            $sql = "SELECT * FROM $table ORDER BY name LIMIT 5";
+        } elseif ($randomNum > 4 && $randomNum < 6) {
+            $sql = "SELECT * FROM $table ORDER BY image LIMIT 5";
+        } elseif ($randomNum > 6 && $randomNum < 8) {
+            $sql = "SELECT * FROM $table ORDER BY date ASC LIMIT 5";
+        } else {
+            $sql = "SELECT * FROM $table ORDER BY date DESC LIMIT 5";
+        }
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+    ?>
+
     <!-- section-four: gallery and leaderboards -->
     <section class="section-four">
         <div class="content-four">
@@ -272,19 +303,19 @@ include('./path.php');
                         <input type="radio" name="radio-btn" id="radio5">
 
                         <div class="slide first">
-                            <img src="./media/index/news01.jpg" alt="">
+                            <img src="<?php echo './media/gallery/' . $sliderRand[0]['image']; ?>" alt="<?php echo $sliderRand[0]['image']; ?>">
                         </div>
                         <div class="slide">
-                            <img src="./media/index/news02.jpg" alt="">
+                            <img src="<?php echo './media/gallery/' . $sliderRand[1]['image']; ?>" alt="<?php echo $sliderRand[1]['image']; ?>">
                         </div>
                         <div class="slide">
-                            <img src="./media/index/news03.jpg" alt="">
+                            <img src="<?php echo './media/gallery/' . $sliderRand[2]['image']; ?>" alt="<?php echo $sliderRand[2]['image']; ?>">
                         </div>
                         <div class="slide">
-                            <img src="./media/index/news04.jpg" alt="">
+                            <img src="<?php echo './media/gallery/' . $sliderRand[3]['image']; ?>" alt="<?php echo $sliderRand[3]['image']; ?>">
                         </div>
                         <div class="slide">
-                            <img src="./media/index/upcoming.jpg" alt="">
+                            <img src="<?php echo './media/gallery/' . $sliderRand[4]['image']; ?>" alt="<?php echo $sliderRand[4]['image']; ?>">
                         </div>
                         <div class="auto-navigation">
                             <div class="auto-btn1"></div>
