@@ -172,10 +172,14 @@ include(ROOT_PATH . '/main/database/db.php');
                 <div class="content-two-c-heading">
                     UPCOMING GAMES
                 </div>
-                <?php $currentDate = getdate(); ?>
+                <?php
+                $currentDate = getdate();
+                $eventCounter = 0;
+                ?>
                 <?php for ($i = 0; $i < count($upcomings); $i++) : ?>
                     <?php $pastdate = strtotime($upcomings[$i]['date']); ?>
                     <?php if ($currentDate[0] < ($pastdate + 86400)) : ?>
+                        <?php $eventCounter++; ?>
                         <div>
                             <div class="content-two-c-title">
                                 <?php echo $upcomings[$i]['firstname'] . ' (' . $upcomings[$i]['firstfaculty'] . ')'; ?>
@@ -211,7 +215,12 @@ include(ROOT_PATH . '/main/database/db.php');
                     <?php endif; ?>
                 <?php endfor; ?>
                 <div class="content-two-c-extras">
-                    <a href="./fixtures.php">SEE MORE</a>
+                    <?php if ($eventCounter == 0) : ?>
+                        <span>No Upcomings events</span>
+                    <?php endif; ?>
+                    <?php if ($eventCounter == 1) : ?>
+                        <a href="./fixtures.php">SEE MORE</a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -220,79 +229,94 @@ include(ROOT_PATH . '/main/database/db.php');
 
     <!-- section-three: top-players -->
     <section class="section-three">
+
         <div class="content-three">
+
             <div class="content-three-heading">
                 TOP <span style="color: #FFCD02;">PLAYERS</span>
             </div>
-            <div class="content-three-details">
-                <div class="content-three-a">
-                    <div class="content-three-image-a">
 
+            <div class="content-three-details">
+
+                <div class="player-box">
+                    <div class="player-image">
+                        <img src="./media/players/players01.jpg" alt="" />
                     </div>
-                    <div class="content-three-name-a">
-                        <div class="name-a">
-                            LEBRON JAMES
-                            <div class="type-a">
+                    <div class="player-details-box">
+                        <div class="player-info">
+                            <div class="player-name">
+                                LEBRON JAMES
+                            </div>
+                            <div class="player-sports">
                                 BASKETBALL
                             </div>
                         </div>
-                        <div class="score-a">
-                            <div class="score-a-num">37</div>
-                            <div class="score-a-unit">points</div>
+                        <div class="player-score">
+                            <div class="score-num">37</div>
+                            <div class="score-unit">points</div>
                         </div>
                     </div>
                 </div>
-                <div class="content-three-b">
-                    <div class="content-three-image-b">
-
+                <div class="player-box">
+                    <div class="player-image">
+                        <img src="./media/players/players02.jpg" alt="" />
                     </div>
-                    <div class="content-three-name-b">
-                        <div class="name-b">
-                            C.RONALDO
-                            <div class="type-b">
-                                FOOTBALL
+                    <div class="player-details-box">
+                        <div class="player-info">
+                            <div class="player-name">
+                                LEBRON JAMES
+                            </div>
+                            <div class="player-sports">
+                                BASKETBALL
                             </div>
                         </div>
-                        <div class="score-b">
-                            <div class="score-b-num">07</div>
-                            <div class="score-b-unit">goals</div>
+                        <div class="player-score">
+                            <div class="score-num">37</div>
+                            <div class="score-unit">points</div>
                         </div>
                     </div>
                 </div>
-                <div class="content-three-c">
-                    <div class="content-three-image-c">
 
+                <div class="player-box">
+                    <div class="player-image">
+                        <img src="./media/players/players03.jpg" alt="" />
                     </div>
-                    <div class="content-three-name-c">
-                        <div class="name-c">
-                            CHARLIE WHITE
-                            <div class="type-c">
-                                VOLLEYBALL
+                    <div class="player-details-box">
+                        <div class="player-info">
+                            <div class="player-name">
+                                LEBRON JAMES
+                            </div>
+                            <div class="player-sports">
+                                BASKETBALL
                             </div>
                         </div>
-                        <div class="score-c">
-                            <div class="score-c-num">21</div>
-                            <div class="score-c-unit">points</div>
+                        <div class="player-score">
+                            <div class="score-num">37</div>
+                            <div class="score-unit">points</div>
                         </div>
                     </div>
                 </div>
-                <div class="content-three-d">
-                    <div class="content-three-image-d">
 
+                <div class="player-box">
+                    <div class="player-image">
+                        <img src="./media/players/players04.jpeg" alt="" />
                     </div>
-                    <div class="content-three-name-d">
-                        <div class="name-d">
-                            VIRAT KOHLI
-                            <div class="type-d">
-                                CRICKET
+                    <div class="player-details-box">
+                        <div class="player-info">
+                            <div class="player-name">
+                                LEBRON JAMES
+                            </div>
+                            <div class="player-sports">
+                                BASKETBALL
                             </div>
                         </div>
-                        <div class="score-d">
-                            <div class="score-d-num">72</div>
-                            <div class="score-d-unit">runs</div>
+                        <div class="player-score">
+                            <div class="score-num">37</div>
+                            <div class="score-unit">points</div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
