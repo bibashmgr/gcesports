@@ -1,68 +1,71 @@
 <?php
 
-    include(ROOT_PATH . '/main/database/db.php');
+include(ROOT_PATH . '/main/database/db.php');
 
-    $table = 'gallerypanel';
+$table = 'gallerypanel';
 
-    $id = '';
-    $name = '';
-    $image = '';
+$id = '';
+$name = '';
+$image = '';
 
-    $gallerys = selectAll($table);
-    
-    // adding gallery
+$gallerys = selectAll($table);
 
-    if (isset($_POST['add-gallery'])) {
+// adding gallery
 
-        $image_name = time() . $_FILES['image']['name'];
-        $destination = ROOT_PATH . '/media/gallery/' . $image_name;
+if (isset($_POST['add-gallery'])) {
 
-        $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
+    $image_name = time() . $_FILES['image']['name'];
+    $destination = ROOT_PATH . '/media/gallery/' . $image_name;
 
-        $_POST['image'] = $image_name;
+    $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
-        unset($_POST['add-gallery']);
+    $_POST['image'] = $image_name;
 
-        $gallery_id = create($table, $_POST);
+    unset($_POST['add-gallery']);
 
-        header('location: ' . BASE_URL . '/main/admin/gallery/index.php');
-        exit();
+    $gallery_id = create($table, $_POST);
 
-    }
+    header('location: ' . BASE_URL . '/main/admin/gallery/index.php');
+    exit();
+}
 
-    // editing gallery
+// editing gallery
 
-    if(isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $gallery = selectOne($table, ['id' => $id]);
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $gallery = selectOne($table, ['id' => $id]);
 
-        $id = $gallery['id'];
-        $name = $gallery['name'];
-        $image = $gallery['image'];
-    }
+    $id = $gallery['id'];
+    $name = $gallery['name'];
+    $image = $gallery['image'];
+}
 
-    if (isset($_POST['edit-gallery'])) {
+if (isset($_POST['edit-gallery'])) {
 
-        $id = $_POST['id'];
+    $id = $_POST['id'];
 
-        unset($_POST['edit-gallery'], $_POST['id']);
+    $image_name = time() . $_FILES['image']['name'];
+    $destination = ROOT_PATH . '/media/players/' . $image_name;
 
-        $gallery_id = update($table, $id, $_POST);
+    $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
-        header('location: ' . BASE_URL . '/main/admin/gallery/index.php');
-        exit();
-    }
+    $_POST['image'] = $image_name;
 
-    // deleting gallery
+    unset($_POST['edit-gallery'], $_POST['id']);
 
-    if(isset($_GET['del_id'])) {
+    $gallery_id = update($table, $id, $_POST);
 
-        $id = $_GET['del_id'];
-        $count = delete($table, $id);
+    header('location: ' . BASE_URL . '/main/admin/gallery/index.php');
+    exit();
+}
 
-        header('location: ' . BASE_URL . '/main/admin/gallery/index.php');
-        exit();
-    
-    }
+// deleting gallery
 
-?>
+if (isset($_GET['del_id'])) {
+
+    $id = $_GET['del_id'];
+    $count = delete($table, $id);
+
+    header('location: ' . BASE_URL . '/main/admin/gallery/index.php');
+    exit();
+}

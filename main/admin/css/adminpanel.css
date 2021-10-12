@@ -3,3 +3,169 @@
 .sidebar-container ul li:nth-child(1) {
     background-color: #FFCD02;
 }
+
+.players-table {
+    margin-left: 325px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.players-table h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.players-table table {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+.players-table th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+    text-align: left;
+}
+
+.players-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.players-table td {
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.players-table td a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.players-table td a:hover {
+    text-decoration: underline;
+}
+
+.players-table div {
+    margin-top: 25px;
+}
+
+.players-table div a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+}
+
+.players-table div a:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
+
+
+/* Styling for news-panel-form */
+
+.players-form {
+    margin-left: 325px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.players-form h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.players-form form div {
+    margin-top: 20px
+}
+
+.players-form form div label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.players-form form div #sports {
+    cursor: pointer;
+}
+
+.players-form form div #playername,
+.players-form form div #sports {
+    width: 25%;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.players-form form div #image {
+    width: 25%;
+    margin-top: 5px;
+    border: 1px solid #2b2b2b;
+    padding: 10px;
+}
+
+.players-form form div #points {
+    width: 25%;
+    margin-top: 5px;
+    border: 1px solid #2b2b2b;
+    padding: 10px;
+}
+
+.players-form form div #submit-btn {
+    color: #2b2b2b;
+    text-decoration: none;
+    border: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.players-form form div #submit-btn:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}
+
+.players-form div {
+    margin-top: 15px;
+}
+
+.players-form div a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7.5px 20px;
+    border-radius: 20px;
+    background-color: #FFCD02;
+    transition: 0.5s;
+}
+
+.players-form div a:hover {
+    color: #f8f8f8;
+    background-color: #2b2b2b;
+}

@@ -1,77 +1,79 @@
 <?php
 
-    include(ROOT_PATH . '/main/database/db.php');
-    
-    $table = 'newspanel';
+include(ROOT_PATH . '/main/database/db.php');
 
-    $id = '';
-    $title = '';
-    $body = '';
-    $image = '';
+$table = 'newspanel';
 
-    $news = selectAll($table);
-    
-    // adding news
+$id = '';
+$title = '';
+$body = '';
+$image = '';
 
-    if (isset($_POST['add-news'])) {
+$news = selectAll($table);
 
-        $image_name = time() . $_FILES['image']['name'];
-        $destination = ROOT_PATH . '/media/news/' . $image_name;
+// adding news
 
-        $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
+if (isset($_POST['add-news'])) {
 
-        $_POST['image'] = $image_name;
+    $image_name = time() . $_FILES['image']['name'];
+    $destination = ROOT_PATH . '/media/news/' . $image_name;
 
-        unset($_POST['add-news']);
+    $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
-        $news_id = create($table, $_POST);
+    $_POST['image'] = $image_name;
 
-        header('location: ' . BASE_URL . '/main/admin/news/index.php');
-        exit();
+    unset($_POST['add-news']);
 
-    }
+    $news_id = create($table, $_POST);
 
-    // editing news
+    header('location: ' . BASE_URL . '/main/admin/news/index.php');
+    exit();
+}
 
-    if(isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $new = selectOne($table, ['id' => $id]);
+// editing news
 
-        $id = $new['id'];
-        $title = $new['title'];
-        $body = $new['body'];
-        $image = $new['image'];
-    }
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $new = selectOne($table, ['id' => $id]);
 
-    if (isset($_POST['edit-news'])) {
+    $id = $new['id'];
+    $title = $new['title'];
+    $body = $new['body'];
+    $image = $new['image'];
+}
 
-        $id = $_POST['id'];
+if (isset($_POST['edit-news'])) {
 
-        unset($_POST['edit-news'], $_POST['id']);
+    $id = $_POST['id'];
 
-        $news_id = update($table, $id, $_POST);
+    $image_name = time() . $_FILES['image']['name'];
+    $destination = ROOT_PATH . '/media/players/' . $image_name;
 
-        header('location: ' . BASE_URL . '/main/admin/news/index.php');
-        exit();
-    }
+    $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 
-    // deleting news
+    $_POST['image'] = $image_name;
 
-    if(isset($_GET['del_id'])) {
+    unset($_POST['edit-news'], $_POST['id']);
 
-        $id = $_GET['del_id'];
-        $count = delete($table, $id);
+    $news_id = update($table, $id, $_POST);
 
-        header('location: ' . BASE_URL . '/main/admin/news/index.php');
-        exit();
-    
-    }
+    header('location: ' . BASE_URL . '/main/admin/news/index.php');
+    exit();
+}
 
-    // for news-post
+// deleting news
 
-    if(isset($_GET['page_id'])) {
-        $page_id = $_GET['page_id'];
-    }
+if (isset($_GET['del_id'])) {
 
+    $id = $_GET['del_id'];
+    $count = delete($table, $id);
 
-?>
+    header('location: ' . BASE_URL . '/main/admin/news/index.php');
+    exit();
+}
+
+// for news-post
+
+if (isset($_GET['page_id'])) {
+    $page_id = $_GET['page_id'];
+}

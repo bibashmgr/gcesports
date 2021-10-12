@@ -196,8 +196,8 @@ include(ROOT_PATH . '/main/database/db.php');
                                     $imagename = 'football.jpg';
                                 } else if ($upcomings[$i]['sports'] == 'basketball') {
                                     $imagename = 'basketball.jpg';
-                                } else if ($upcomings[$i]['sports'] == 'circket') {
-                                    $imagename = 'circket.jpg';
+                                } else if ($upcomings[$i]['sports'] == 'cricket') {
+                                    $imagename = 'cricket.jpg';
                                 } else if ($upcomings[$i]['sports'] == 'volleyball') {
                                     $imagename = 'volleyball.jpg';
                                 } else {
@@ -257,6 +257,7 @@ include(ROOT_PATH . '/main/database/db.php');
                         </div>
                     </div>
                 </div>
+
                 <div class="player-box">
                     <div class="player-image">
                         <img src="./media/players/players02.jpg" alt="" />

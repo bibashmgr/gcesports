@@ -4,7 +4,7 @@ session_start();
 
 include('../../../path.php');
 
-include(ROOT_PATH . '/main/controllers/newspanel.php');
+include(ROOT_PATH . '/main/controllers/homepanel.php');
 
 ?>
 <!DOCTYPE html>
@@ -17,11 +17,11 @@ include(ROOT_PATH . '/main/controllers/newspanel.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GCESports" />
 
-    <title>Edit News</title>
+    <title>Add Player</title>
 
     <!-- custom styling -->
     <link rel="stylesheet" href="../css/panelheader.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/newspanel.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="../css/adminpanel.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,36 +35,42 @@ include(ROOT_PATH . '/main/controllers/newspanel.php');
 
     <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
 
-    <!-- section: news-panel-form -->
+    <!-- section: players-form -->
 
-    <section class="news-panel-form">
-        <h1>Edit News</h1>
-        <form action="edit.php" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo $id; ?>" />
+    <section class="players-form">
+        <h1>Add Player</h1>
+        <form action="create.php" method="POST" enctype="multipart/form-data">
             <div>
-                <label for="title">Title:</label><br />
-                <input type="text" name="title" id="title" value="<?php echo $title; ?>" required />
+                <label for="sports">Sports:</label><br />
+                <select name="sports" id="sports" required>
+                    <option hidden></option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="volleyball">Volleyball</option>
+                    <option value="cricket">Cricket</option>
+                </select>
             </div>
             <div>
-                <label for="body">Body:</label><br />
-                <textarea name="body" id="body" rows="5" style="resize: none;" required><?php echo $body; ?></textarea>
+                <label for="playername">Name:</label><br />
+                <input type="text" name="playername" id="playername" required />
             </div>
             <div>
                 <label for="image">Images:</label><br />
-                <input type="file" id="image" name="image" required>
+                <input type="file" id="image" name="image" required />
             </div>
             <div>
-                <label for="date">Date:</label><br />
-                <input type="date" id="date" name="date" required>
+                <label for="points">Points:</label><br />
+                <input type="text" id="points" name="points" required />
             </div>
             <div>
-                <input type="submit" name="edit-news" id="submit-btn" value="UPDATE NEWS">
+                <input type="submit" name="add-player" id="submit-btn" value="ADD PLAYER">
             </div>
         </form>
         <div>
-            <a href="./index.php">MANAGE NEWS</a>
+            <a href="./index.php">MANAGE PLAYERS</a>
         </div>
     </section>
+
 
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/d3be705053.js" crossorigin="anonymous"></script>

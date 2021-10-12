@@ -4,7 +4,7 @@ session_start();
 
 include('../../../path.php');
 
-include(ROOT_PATH . '/main/controllers/gallerypanel.php');
+include(ROOT_PATH . '/main/controllers/homepanel.php');
 
 ?>
 <!DOCTYPE html>
@@ -17,11 +17,11 @@ include(ROOT_PATH . '/main/controllers/gallerypanel.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GCESports" />
 
-    <title>Edit Gallery</title>
+    <title>Edit Player</title>
 
     <!-- custom styling -->
     <link rel="stylesheet" href="../css/panelheader.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../css/gallerypanel.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="../css/adminpanel.css?v=<?php echo time(); ?>" />
 
     <!-- goggle fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,30 +35,40 @@ include(ROOT_PATH . '/main/controllers/gallerypanel.php');
 
     <?php include(ROOT_PATH . '/main/admin/includes/header.php') ?>
 
-    <!-- section: news-panel-form -->
+    <!-- section: players-form -->
 
-    <section class="gallery-panel-form">
-        <h1>Edit News</h1>
+    <section class="players-form">
+        <h1>Edit Player</h1>
         <form action="edit.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $id; ?>" />
             <div>
-                <label for="name">Name:</label><br />
-                <input type="text" name="name" id="name" value="<?php echo $name; ?>" required />
+                <label for="sports">Sports:</label><br />
+                <select name="sports" id="sports" required>
+                    <option hidden></option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="volleyball">Volleyball</option>
+                    <option value="cricket">Cricket</option>
+                </select>
+            </div>
+            <div>
+                <label for="playername">Name:</label><br />
+                <input type="text" name="playername" id="playername" value="<?php echo $playername; ?>" required />
             </div>
             <div>
                 <label for="image">Images:</label><br />
-                <input type="file" id="image" name="image" value="<?php echo $image; ?>" required>
+                <input type="file" id="image" name="image" required />
             </div>
             <div>
-                <label for="date">Date:</label><br />
-                <input type="date" id="date" name="date" value="<?php echo $date; ?>" required>
+                <label for="points">Points:</label><br />
+                <input type="text" id="points" name="points" value="<?php echo $points; ?>" required />
             </div>
             <div>
-                <input type="submit" name="edit-gallery" id="submit-btn" value="UPDATE GALLERY">
+                <input type="submit" name="edit-player" id="submit-btn" value="UPDATE PLAYER">
             </div>
         </form>
         <div>
-            <a href="./index.php">MANAGE GALLERY</a>
+            <a href="./index.php">MANAGE PLAYERS</a>
         </div>
     </section>
 
