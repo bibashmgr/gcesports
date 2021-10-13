@@ -383,7 +383,7 @@ nav li:nth-child(1) a {
     height: 250px;
 }
 
-.player-image:hover {
+.player-box:hover {
     opacity: 0.75;
 }
 
@@ -391,9 +391,11 @@ nav li:nth-child(1) a {
 /* styling for name and total-score */
 
 .player-details-box {
+    margin-top: 1px;
     display: grid;
     grid-template-columns: 75% 25%;
-    /* background-color: #FFFFFF; */
+    /* background-color: #f8f8f8; */
+    /* background-color: #FFCD02; */
 }
 
 .player-info {
@@ -403,11 +405,15 @@ nav li:nth-child(1) a {
 
 .player-name {
     font-size: 25px;
+    text-transform: capitalize;
+    color: #f8f8f8;
     /* color: #2B2B2B; */
 }
 
 .player-sports {
     color: #FFCD02;
+    /* color: #2B2B2B; */
+    text-transform: capitalize;
 }
 
 .player-score {
@@ -418,11 +424,14 @@ nav li:nth-child(1) a {
 
 .score-num {
     /* color: #2B2B2B; */
+    color: #f8f8f8;
     font-size: 25px;
 }
 
 .score-unit {
     color: #FFCD02;
+    /* color: #2B2B2B; */
+    margin-left: 3px;
 }
 
 
@@ -436,7 +445,7 @@ nav li:nth-child(1) a {
 
 .content-four {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     padding-top: 50px;
     padding-left: 50px;
 }
@@ -575,53 +584,12 @@ nav li:nth-child(1) a {
 
 /* styling for leaderboard-section */
 
+.content-four-b {
+    width: 650px;
+}
+
 .content-four-b-heading {
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-.content-four-b-game {
-    font-family: "Oswald", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    opacity: 0.5;
-    padding-top: 25px;
-}
-
-.content-four-b-table {
-    width: 650px;
-}
-
-.content-four-b-table table {
-    width: 675px;
-    height: 300px;
-    border-collapse: collapse;
-}
-
-.content-four-b-table table tr:nth-child(even) {
-    background-color: #FFFFFF;
-}
-
-.content-four-b-table table th {
-    font-family: "Oswald", sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    text-transform: uppercase;
-    background-color: #2B2B2B;
-    color: #FFFFFF;
-    border-bottom: 5px solid #FFCD02;
-    text-align: left;
-    vertical-align: middle;
-    padding-left: 20px;
-}
-
-.content-four-b-table table td {
-    font-family: "Oswald", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #2B2B2B;
-    vertical-align: middle;
-    padding-left: 20px;
 }

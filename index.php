@@ -227,6 +227,22 @@ include(ROOT_PATH . '/main/database/db.php');
         </div>
     </section>
 
+    <?php
+    $playerstable = 'players';
+    $typesOf = array("football", "basketball", "cricket", "volleyball");
+
+    function selectByPoints($table, $sports)
+    {
+        global $conn;
+
+        $sql = "SELECT * FROM $table WHERE sports = '$sports' ORDER BY points DESC LIMIT 1";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
+    ?>
+
     <!-- section-three: top-players -->
     <section class="section-three">
 
@@ -238,85 +254,42 @@ include(ROOT_PATH . '/main/database/db.php');
 
             <div class="content-three-details">
 
-                <div class="player-box">
-                    <div class="player-image">
-                        <img src="./media/players/players01.jpg" alt="" />
-                    </div>
-                    <div class="player-details-box">
-                        <div class="player-info">
-                            <div class="player-name">
-                                LEBRON JAMES
-                            </div>
-                            <div class="player-sports">
-                                BASKETBALL
-                            </div>
-                        </div>
-                        <div class="player-score">
-                            <div class="score-num">37</div>
-                            <div class="score-unit">points</div>
-                        </div>
-                    </div>
-                </div>
+                <?php for ($i = 0; $i < 4; $i++) : ?>
+                    <?php $topplayers = selectByPoints($playerstable, $typesOf[$i]); ?>
 
-                <div class="player-box">
-                    <div class="player-image">
-                        <img src="./media/players/players02.jpg" alt="" />
-                    </div>
-                    <div class="player-details-box">
-                        <div class="player-info">
-                            <div class="player-name">
-                                LEBRON JAMES
+                    <div class="player-box">
+                        <div class="player-image">
+                            <img src="<?php echo './media/players/' . $topplayers[0]['image']; ?>" alt="<?php echo $topplayers[0]['image']; ?>">
+                        </div>
+                        <div class="player-details-box">
+                            <div class="player-info">
+                                <div class="player-name">
+                                    <?php echo $topplayers[0]['playername'] ?>
+                                </div>
+                                <div class="player-sports">
+                                    <?php echo $topplayers[0]['sports'] ?>
+                                </div>
                             </div>
-                            <div class="player-sports">
-                                BASKETBALL
+                            <div class="player-score">
+                                <div class="score-num"><?php echo $topplayers[0]['points'] ?></div>
+                                <div class="score-unit">
+                                    <?php
+                                    if ($topplayers[0]['sports'] == "football") {
+                                        echo "goals";
+                                    } else if ($topplayers[0]['sports'] == "basketball") {
+                                        echo "points";
+                                    } else if ($topplayers[0]['sports'] == "cricket") {
+                                        echo "runs";
+                                    } else {
+                                        echo "scores";
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
-                        <div class="player-score">
-                            <div class="score-num">37</div>
-                            <div class="score-unit">points</div>
-                        </div>
                     </div>
-                </div>
 
-                <div class="player-box">
-                    <div class="player-image">
-                        <img src="./media/players/players03.jpg" alt="" />
-                    </div>
-                    <div class="player-details-box">
-                        <div class="player-info">
-                            <div class="player-name">
-                                LEBRON JAMES
-                            </div>
-                            <div class="player-sports">
-                                BASKETBALL
-                            </div>
-                        </div>
-                        <div class="player-score">
-                            <div class="score-num">37</div>
-                            <div class="score-unit">points</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="player-box">
-                    <div class="player-image">
-                        <img src="./media/players/players04.jpeg" alt="" />
-                    </div>
-                    <div class="player-details-box">
-                        <div class="player-info">
-                            <div class="player-name">
-                                LEBRON JAMES
-                            </div>
-                            <div class="player-sports">
-                                BASKETBALL
-                            </div>
-                        </div>
-                        <div class="player-score">
-                            <div class="score-num">37</div>
-                            <div class="score-unit">points</div>
-                        </div>
-                    </div>
-                </div>
+                <?php endfor; ?>
 
             </div>
         </div>
@@ -405,63 +378,7 @@ include(ROOT_PATH . '/main/database/db.php');
                 <div class="content-four-b-heading">
                     RESULTS
                 </div>
-                <div class="content-four-b-game">
-                    (FOOTBALL)
-                </div>
-                <div class="content-four-b-table">
-                    <table>
-                        <tr>
-                            <th>TEAM</th>
-                            <th>P</th>
-                            <th>W</th>
-                            <th>D</th>
-                            <th>L</th>
-                            <th>PTS</th>
-                        </tr>
-                        <tr>
-                            <td>SECOND YEAR</td>
-                            <td>5</td>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>15</td>
-                        </tr>
-                        <tr>
-                            <td>FOURTH YEAR</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>SECOND YEAR</td>
-                            <td>5</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>FIRST YEAR-C</td>
-                            <td>4</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>FIRST YEAR-S</td>
-                            <td>4</td>
-                            <td>2</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>7</td>
-                        </tr>
-                    </table>
-                </div>
             </div>
-        </div>
     </section>
 
     <!-- footer: about-us, send-feedback and contact-us -->
