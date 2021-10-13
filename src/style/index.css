@@ -391,47 +391,40 @@ nav li:nth-child(1) a {
 /* styling for name and total-score */
 
 .player-details-box {
-    margin-top: 1px;
+    margin-top: 2px;
+    padding-bottom: 10px;
     display: grid;
-    grid-template-columns: 75% 25%;
-    /* background-color: #f8f8f8; */
-    /* background-color: #FFCD02; */
+    grid-template-columns: 85% 15%;
+    background-color: #f8f8f8;
 }
 
 .player-info {
     text-align: center;
-    transform: translateX(12.5%);
+    transform: translateX(10%);
 }
 
 .player-name {
     font-size: 25px;
     text-transform: capitalize;
-    color: #f8f8f8;
-    /* color: #2B2B2B; */
+    color: #2B2B2B;
 }
 
 .player-sports {
     color: #FFCD02;
-    /* color: #2B2B2B; */
     text-transform: capitalize;
 }
 
 .player-score {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+    text-align: center;
 }
 
 .score-num {
-    /* color: #2B2B2B; */
-    color: #f8f8f8;
+    color: #2B2B2B;
     font-size: 25px;
 }
 
 .score-unit {
     color: #FFCD02;
-    /* color: #2B2B2B; */
-    margin-left: 3px;
 }
 
 
@@ -592,4 +585,69 @@ nav li:nth-child(1) a {
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.results-container {
+    font-family: 'Oswald', sans-serif;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.results-container th {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #2b2b2b;
+    color: #f8f8f8;
+    border-bottom: 5px solid #FFCD02;
+    vertical-align: middle;
+    line-height: 3;
+}
+
+.results-container tr {
+    line-height: 3;
+    color: #2b2b2b;
+}
+
+.results-container tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.results-container td {
+    font-weight: 500;
+    font-size: 15px;
+    color: #2b2b2b;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+.results-container th:nth-child(1),
+.results-container tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.results-container th:nth-child(7),
+.results-container tr td:nth-child(7) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.results-container tr td:nth-child(2),
+.results-container tr td:nth-child(3),
+.results-container tr td:nth-child(4),
+.results-container tr td:nth-child(5),
+.results-container tr td:nth-child(6) {
+    text-align: center;
+}
+
+.info-link {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.info-link:hover {
+    text-decoration: underline;
 }

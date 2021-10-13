@@ -373,11 +373,55 @@ include(ROOT_PATH . '/main/database/db.php');
                 </div>
             </div>
 
-            <!-- leaderboard-section -->
+            <?php
+            $results = selectAll('resultspanel');
+            $randType = rand(0, 3);
+            ?>
+
+            <!-- results-section -->
             <div class="content-four-b">
                 <div class="content-four-b-heading">
                     RESULTS
                 </div>
+                <table class="results-container">
+                    <thead>
+                        <th>Match Details</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Learn More</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7">
+                                <?php echo $typesOf[$randType]; ?>
+                            </td>
+                        </tr>
+
+                        <?php foreach ($results as $key => $result) : ?>
+                            <?php if ($result['sports'] === $typesOf[$randType] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?') : ?>
+                                <tr>
+                                    <td>
+                                        <?php
+                                        echo date('d', strtotime($result['date'])) . '.' . date('m', strtotime($result['date'])) . '.' . date('Y', strtotime($result['date'])) .
+                                            ' - ' . date('H', strtotime($result['time'])) . ':' . date('i', strtotime($result['time']));
+                                        ?>
+                                    </td>
+                                    <td style="text-transform: capitalize;"><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></>
+                                    <td><?php echo $result['firstscore']; ?></td>
+                                    <td>-</td>
+                                    <td><?php echo $result['secondscore']; ?></td>
+                                    <td style="text-transform: capitalize;"><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
+                                    <td><a href="#" class="info-link">View Info</a></td>
+                                </tr>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+
+                    </tbody>
+                </table>
+
             </div>
     </section>
 

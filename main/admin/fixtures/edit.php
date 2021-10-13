@@ -49,9 +49,6 @@ include(ROOT_PATH . '/main/controllers/fixturespanel.php');
                     <option value="basketball">Basketball</option>
                     <option value="volleyball">Volleyball</option>
                     <option value="cricket">Cricket</option>
-                    <option value="badminton">Badminton</option>
-                    <option value="tabletennis">Table Tennis</option>
-                    <option value="chess">Chess</option>
                 </select>
             </div>
             <div>

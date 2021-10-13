@@ -51,7 +51,7 @@ include(ROOT_PATH . '/main/controllers/resultspanel.php');
             <tbody>
 
                 <?php $typesof = array(
-                    'football', 'basketball', 'volleyball', 'cricket', 'badminton', 'tabletennis', 'chess'
+                    'football', 'basketball', 'volleyball', 'cricket'
                 );
                 ?>
 
