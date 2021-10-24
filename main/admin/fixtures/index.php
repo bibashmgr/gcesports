@@ -55,7 +55,7 @@ include(ROOT_PATH . '/main/controllers/fixturespanel.php');
                 );
                 ?>
 
-                <?php for ($i = 0; $i < 7; $i++) : ?>
+                <?php for ($i = 0; $i < 4; $i++) : ?>
                     <?php
                     $counter = 1;
                     $currentDate = getdate();

@@ -59,7 +59,7 @@ include(ROOT_PATH . '/main/controllers/resultspanel.php');
                     <td colspan="8" style="font-weight: 700;font-size:16px;">HELD MATCHES:</td>
                 </tr>
 
-                <?php for ($i = 0; $i < 7; $i++) : ?>
+                <?php for ($i = 0; $i < 4; $i++) : ?>
                     <?php $counter = 1; ?>
                     <?php foreach ($results as $key => $result) : ?>
                         <?php if ($result['sports'] === $typesof[$i] && $result['firstscore'] <> '?' && $result['secondscore'] <> '?') : ?>
@@ -98,7 +98,7 @@ include(ROOT_PATH . '/main/controllers/resultspanel.php');
                     <td colspan="8" style="font-weight: 700;font-size:16px;">PENDING MATCHES:</td>
                 </tr>
 
-                <?php for ($i = 0; $i < 7; $i++) : ?>
+                <?php for ($i = 0; $i < 4; $i++) : ?>
                     <?php $counter = 1; ?>
                     <tr>
                         <?php foreach ($results as $key => $result) : ?>
@@ -117,9 +117,9 @@ include(ROOT_PATH . '/main/controllers/resultspanel.php');
                         <?php if ($result['sports'] === $typesof[$i] && $result['firstscore'] === '?' && $result['firstscore'] === '?') : ?>
                             <tr>
                                 <td><?php echo $counter; ?></td>
-                                <td><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
+                                <td style="text-transform: capitalize;"><?php echo $result['firstname'] . ' ' . $result['gender'] . ' (' . $result['firstfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['firstscore'] . ' - ' . $result['secondscore']; ?></td>
-                                <td><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
+                                <td style="text-transform: capitalize;"><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['date'] . '.' . $result['time']; ?></td>
                                 <td><a href="./edit.php?id=<?php echo $result['id']; ?>" style="color: #ffcd02;">Edit</a></td>
                                 <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td>
