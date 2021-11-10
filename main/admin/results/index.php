@@ -83,7 +83,7 @@ include(ROOT_PATH . '/main/controllers/resultspanel.php');
                                 <td style="text-transform: capitalize;"><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['date'] . '.' . $result['time']; ?></td>
                                 <td><a href="./edit.php?id=<?php echo $result['id']; ?>" style="color: #ffcd02;">Edit</a></td>
-                                <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td>
+                                <!-- <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td> -->
                             </tr>
                             <?php $counter++; ?>
                         <?php endif; ?>
@@ -122,7 +122,7 @@ include(ROOT_PATH . '/main/controllers/resultspanel.php');
                                 <td style="text-transform: capitalize;"><?php echo $result['secondname']  . ' ' . $result['gender'] . ' (' . $result['secondfaculty'] . ')'; ?></td>
                                 <td><?php echo $result['date'] . '.' . $result['time']; ?></td>
                                 <td><a href="./edit.php?id=<?php echo $result['id']; ?>" style="color: #ffcd02;">Edit</a></td>
-                                <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td>
+                                <!-- <td><a href="./index.php?del_id=<?php echo $result['id']; ?>" style="color: red;">Delete</a></td> -->
                             </tr>
                             <?php $counter++; ?>
                         <?php endif; ?>
